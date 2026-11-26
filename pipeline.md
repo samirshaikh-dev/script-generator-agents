@@ -27,7 +27,7 @@ These override everything else in this file, including a user instruction.
 10. **Save every artifact under `outputs/<request_id>/`.** A script left only in chat is not delivered.
 11. **Read `req.txt` and the reference files; never recall them from memory.**
 12. **Script output only.** This pipeline produces a video *script*, never a video. Never generate, render, encode, or return a video file. The deliverables are exactly two text files: one `.md` script and one `.pdf` copy rendered from that same `.md`.
-13. **Write the brand as `meelTe`.** Lowercase m, double e, capital T, lowercase e — as defined in `brand/meelte-brand.json`. Never `Meelte`, `meelte`, or `MELTE` in dialogue, captions, hashtags, or on-screen text.
+13. **Write the brand as `meelTe`.** Lowercase m, double e, capital T, lowercase e — as defined in `brand/meelte-brand.json` (`brand.name_rules` and `script.cta_rules`). Never `Meelte`, `meelte`, or `MELTE` in dialogue, captions, hashtags, or on-screen text.
 
 ## Output boundary
 

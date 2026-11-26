@@ -3,7 +3,7 @@
   "updated": "2026-11-11",
   "status": "active",
   "source_of_truth": true,
-  "_note": "Single source of truth for meelTe visual identity. Skills and agents READ this file. Do not copy hex values into prompts or skill files; reference the token name instead so a palette change propagates everywhere.",
+  "_note": "Single source of truth for meelTe visual identity and script voice. Skills and agents READ this file. Do not copy hex values into prompts or skill files; reference the token name instead so a palette change propagates everywhere.",
   "brand": {
     "name": "meelTe",
     "name_rules": [
@@ -289,5 +289,67 @@
     ],
     "text_rendering_default": "in_image",
     "text_rendering_note": "Project default is in_image: the generation host is a text-capable model (Nano Banana Pro, Ideogram), so the headline is rendered and QA'd character by character. Switch to overlay_after_generation when the model is unreliable at text or when a deterministic overlay layer is available. Either way, a price, date, or legal line may appear only if the user supplied the exact string."
+  },
+  "script": {
+    "purpose": "Script-writing extension of the same brand voice. The visual sections above govern images; this block governs spoken and written script copy.",
+    "tone_source": "Same tone as brand.tone_rules and brand.tone_avoid: speak to the owner, lead with the business benefit, warm and plain-spoken, confident but never boastful.",
+    "voice_rules": [
+      "The local business owner is the hero; meelTe is the helpful tool.",
+      "Write lines a person would actually say aloud, not copy that reads like a brochure.",
+      "Use short, concrete, everyday situations the audience recognises.",
+      "Keep it community-first: viewers become participants, not just an audience."
+    ],
+    "dialogue_rules": [
+      "Name every speaker and keep each line short enough to breathe.",
+      "Use the language set by research — Hinglish for local-shop scenarios, English for the CTA unless the brief says otherwise.",
+      "Preserve the user's verbatim intent anchor; never paraphrase a supplied line into a different promise."
+    ],
+    "hook_rules": [
+      "Earn the first 3 seconds with a real situation, question, or observation.",
+      "Never promise what the script cannot deliver.",
+      "No fabricated statistics, testimonials, invented urgency, or manufactured social proof."
+    ],
+    "engagement_rules": [
+      "Place one answerable question inside the content, before the CTA.",
+      "Ask for one small action with a real path back; never default to 'follow us for more'."
+    ],
+    "cta_rules": [
+      "Give 3-5 variations in different styles, then choose one.",
+      "Keep the ask small, natural, and free of pressure or fear.",
+      "Always spell the brand 'meelTe', including in hashtags."
+    ],
+    "caption_rules": [
+      "Write like a neighbour, not a marketing team.",
+      "Include the mandatory hashtag set verbatim, with #meelTe in the correct casing.",
+      "Never add a price, offer, discount, deadline, or result that is not in the brief."
+    ],
+    "on_screen_text_rules": [
+      "Short, readable phrases; no small text buried in busy visuals.",
+      "A price, date, or legal line appears only when the user supplied the exact string."
+    ],
+    "claim_rules": [
+      "Never invent prices, offers, discounts, statistics, product capabilities, deadlines, testimonials, member stories, reward values, voucher partners, or redemption limits.",
+      "Carry unverified reward and offer details as claims_to_verify, never as facts."
+    ],
+    "script_avoid": [
+      "corporate stock-photo optimism in words",
+      "technical product-brochure language",
+      "urgency pressure or fear-based selling",
+      "infantilising or patronising copy",
+      "generic motivational statements and superlatives that cannot be substantiated",
+      "a product pitch that pushes the owner out of the story"
+    ],
+    "mandatory_hashtags": [
+      "#meelTe",
+      "#LocalDiscovery",
+      "#ShopLocal",
+      "#Bengaluru",
+      "#Ranchi",
+      "#Gaya",
+      "#SupportLocal",
+      "#LocalBusiness"
+    ],
+    "format_reference": "refernces/test Script.md for the house scene table; req.txt section 6 for the 11 output items.",
+    "integrity_rule": "This block inherits brand.name_rules and never overrides them."
   }
 }
