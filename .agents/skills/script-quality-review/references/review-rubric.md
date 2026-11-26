@@ -28,7 +28,18 @@ Run every line against the 11 output items in `req.txt` §6. Tag each failure cr
 
 Any of these is critical regardless of which item it appears in:
 
-- Invented price, statistic, testimonial, deadline, guarantee, or result.
+- The final script drops, replaces, or contradicts an explicit element of the verbatim original user input.
+- `research_summary`, `improved_prompt`, or `video_script` is missing at the final stage.
+- The deliverable is a video file, or the prompt requests video generation/rendering instead of a written script.
+- Invented price, statistic, testimonial, deadline, guarantee, reward value, voucher partner, or result.
+- Mandatory hashtag set from `refernces/Videos Scripts.md` is missing or reordered.
+
+## Major failures specific to the house format
+
+- Scene table is not four columns (`Time`, `What we see`, `Dialogue`, `Phone screen`).
+- Timings are not contiguous, or no speaker is named in a dialogue line.
+- A clip id is invented instead of naming a known screen or describing it in words.
+- No CTA voiceover over the end card, or no 2–3 alternate hook lines.
 - Fabricated urgency, scarcity, or social proof.
 - Advertisement tone, corporate language, or generic motivational statements.
 - Hook promises something the script does not deliver.

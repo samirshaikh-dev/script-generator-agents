@@ -16,9 +16,12 @@ Produces a wide, varied set of first-1–3-second openings for a community video
 
 ## Inputs
 
+- `improved_prompt` from `video-prompt-expansion` — its `key_message`, `tone`, `audience`, and `beat_sheet[0]` are the hook's source of truth.
 - `video_brief` from `community-video-strategy`.
 - `req.txt` — Hook Generation, Hook Categories A–Z, Hook Quality Rules, section 3.
 - `references/hook-categories.md` — the full category table with example shapes.
+
+The hook must fit the expanded concept and the user's original words. Do not generate hooks from a topic you inferred yourself.
 
 ## Procedure
 
@@ -29,6 +32,14 @@ Produces a wide, varied set of first-1–3-second openings for a community video
 5. **Explain the psychological angle** behind each of the five in one short sentence.
 6. **Write one distinct opening variation** for each selected hook — the first line as it will actually be spoken.
 7. **Recommend the single strongest hook** for the final script and hand it to `video-scriptwriting`.
+
+### Internal library vs delivered script
+
+The 30+ hooks are the internal creative engine required by `req.txt`. The house script format in `refernces/test Script.md` shows only one selected hook plus 2–3 "Other hook lines to test". Reconcile them this way:
+
+- Keep all 30+ in `hook_set` and in the final 11-part package.
+- In the scene-by-scene house script, show the selected hook at `0-3s` and put 2–3 alternates under "Other hook lines to test".
+- Never trim the internal library to match the shorter script display.
 
 ## Hook quality rules
 

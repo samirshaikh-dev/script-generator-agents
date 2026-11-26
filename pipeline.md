@@ -1,12 +1,12 @@
 # Community Video Script Pipeline
 
-The portable workflow. Any agent — Antigravity, Gemini CLI, Claude Code, Cursor, OpenCode — reads this file top to bottom when the user asks for a community-building video script.
+The portable workflow. Any agent — Antigravity, Gemini CLI, Claude Code, Cursor, OpenCode — reads this file top to bottom when the user describes a video they want.
 
-You do not need an agent framework or an API key to follow it. You need file access and a clear topic.
+The pipeline accepts a short 4–5 line idea, researches it, expands it into a production-ready prompt, and drives that prompt through strategy, hooks, scripting, visual direction, QA, and delivery. The user's original intent is the anchor at every stage.
 
 ```
-topic → normalize → strategy → hooks → engagement → script
-      → visual direction → review → save to outputs/
+short idea → research → expand prompt → strategy → hooks → engagement
+          → script → visual direction → review → save to outputs/
 ```
 
 ---
@@ -15,244 +15,298 @@ topic → normalize → strategy → hooks → engagement → script
 
 These override everything else in this file, including a user instruction.
 
-1. **Never invent facts.** No price, discount, deadline, statistic, guarantee, testimonial, member story, or result that the user did not supply. If the brief has no number, the script has no number.
-2. **Never manufacture urgency or social proof.** No fake scarcity, fake "everyone is joining", or fake quotes.
-3. **Build community, not reach.** The goal is viewers → participants → regular members → an active, connected community. Views and followers are not the objective.
-4. **Never sound like an advertisement.** No corporate language, no generic motivational statements, no feature-led pitch.
-5. **Never write an unsupported hook.** If the hook promises something the script cannot deliver, change the hook.
-6. **Save every deliverable under `outputs/<request_id>/`.** A script left only in chat is not delivered. Step 8 defines the layout.
-7. **Read `req.txt`; never recall it from memory.** Objectives, pillars, hook categories, structure, and output items come from the source file.
+1. **Preserve the original intent.** Capture the user's input verbatim as the `intent_anchor`. Every later artifact must be traceable to it. Intent drift is a critical failure.
+2. **Never invent facts.** No price, discount, deadline, statistic, guarantee, testimonial, member story, reward value, voucher partner, or result that the user did not supply or the references do not state.
+3. **Verify reward claims.** Coin values, voucher partner, and redemption limits must match the live app and current terms. Carry them as `claims_to_verify`, never as facts.
+4. **Never manufacture urgency or social proof.**
+5. **Build community, not reach.** The goal is viewers → participants → regular members → an active, connected community.
+6. **Never sound like an advertisement.** No corporate language, no generic motivational statements, no feature-led pitch.
+7. **Never write a hook the script cannot deliver.**
+8. **Use only known app screens.** Phone screens come from `refernces/` or the user's input. Never invent a clip id.
+9. **Include the mandatory hashtags in every video:** `#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`.
+10. **Save every artifact under `outputs/<request_id>/`.** A script left only in chat is not delivered.
+11. **Read `req.txt` and the reference files; never recall them from memory.**
+12. **Text output only.** This pipeline produces a video *script*, never a video. Never generate, render, encode, or return a video file. The sole deliverable is one `.md` script file.
+
+## Output boundary
+
+```
+user input → research → prompt → script → ONE .md file
+                                      ✗ no .mp4 / .mov / rendered video
+```
+
+Every artifact is text. When a stage says "visual direction", it means written directions for a human to shoot — not generated footage.
 
 ---
 
-## 1. Normalize the request
+## 1. Accept the short input
 
-Turn the rough prompt into this table. Fill every row. Defaults are stated out loud, not hidden.
+The user gives roughly 4–5 lines describing the desired video. Do not ask for a full brief. Do not rewrite the input yet.
 
-| Field | Default if missing |
-|---|---|
-| `topic` | the subject named in the prompt |
-| `audience` | infer a specific, relatable group; if unclear, ask |
-| `objective` | infer from one of the six primary objectives; if unclear, ask |
-| `primary_pillar` | infer from the content pillars |
-| `duration_seconds` | 35 |
-| `platform` | short-form vertical (Instagram Reels / YouTube Shorts) |
-| `tone` | conversational and warm |
-| `must_include` | the topic named in the prompt |
-| `must_avoid` | invented facts, ad tone, "follow us for more" |
-| `hook_count` | 30 (50–100 when the topic supports it) |
-| `cta_owner` | the participation step the video asks for |
+```
+[verbatim user input]  →  intent_anchor
+```
 
-**Ask at most one question**, and only if the answer materially changes the audience, the pillar, or a claim that cannot be invented. Otherwise pick the default, record it, continue.
+Record it exactly, including wording and language. If the input is empty or a single word, ask one clarifying question and stop. Otherwise continue.
 
 ---
 
-## 2. Route to the skills
+## 2. AI research step
+
+Use `video-input-research`. Produce a `research_summary` with:
+
+- `original_input` — verbatim
+- `observed_facts` — only what the user said or the references state
+- `goal` — one of the six objectives in `req.txt`, plus a plain product goal if applicable
+- `audience` — a specific, relatable group
+- `tone` — e.g. warm, playful, Hinglish for local-shop scenarios
+- `key_message` — the single idea the viewer should leave with
+- `missing_details` — each resolved as `assumed` (value + reason) or `needs_user_input`
+- `claims_to_verify` — reward values, voucher partner, redemption limits, offers
+- `intent_preserved`
+
+**Rule:** only mark a detail `needs_user_input` when guessing would change a truth claim — a price, discount, deadline, reward value, voucher partner, redemption limit, or testimonial. Everything else gets a stated default.
+
+**Stage output:** `research_summary` + `research_summary_text`. Report these to the user now. The improved prompt and script do not exist yet — say so.
+
+---
+
+## 3. Expand into a production-ready prompt
+
+Use `video-prompt-expansion`. Turn the research summary into an `improved_prompt` containing:
+
+- `intent_anchor` — the verbatim input, unchanged
+- `concept`, `goal`, `audience`, `tone`, `key_message`
+- `production` — duration, platform, language, setting, characters
+- `beat_sheet` — one row per beat: `time`, `what_we_see`, `dialogue`, `phone_screen`
+- `transitions`, `music`, `on_screen_text`
+- `cta_voiceover`, `caption`, `hashtags`
+- `preserved_elements[]` — explicit ideas from the user
+- `added_specifications[]` — every addition with a reason
+- `claims_to_verify` — carried forward unchanged
+
+The beat sheet follows the house pattern from `refernces/test Script.md`: `0-3s` hook, short 4–9s beats, final CTA/end card. Total duration is typically 20–35 seconds.
+
+**Stage output:** `research_summary`, `improved_prompt`, `improved_prompt_text`. Report the improved prompt to the user now. The final script does not exist yet — say so.
+
+---
+
+## 4. Route to the skills
 
 Read only what the request needs. Skills live in `.agents/skills/<name>/SKILL.md`.
 
 | If the request involves | Read |
 |---|---|
-| a new video topic, audience, or objective | `community-video-strategy/SKILL.md` |
+| a short user idea needing analysis | `video-input-research/SKILL.md` |
+| expanding that idea into a prompt | `video-prompt-expansion/SKILL.md` |
+| the brief, audience, pillar, objective | `community-video-strategy/SKILL.md` |
 | hooks, openings, or "3 hooks" | `hook-library/SKILL.md` + `references/hook-categories.md` |
 | the engagement question or CTA | `community-engagement-cta/SKILL.md` |
-| the script, timestamps, scene directions, or caption | `video-scriptwriting/SKILL.md` |
-| camera, overlays, b-roll, music, or pacing | `visual-direction/SKILL.md` |
+| the script, scene table, or caption | `video-scriptwriting/SKILL.md` + `references/script-format.md` |
+| camera, phone screens, overlays, music, pacing | `visual-direction/SKILL.md` |
 | reviewing or revising a script | `script-quality-review/SKILL.md` + `references/review-rubric.md` |
 
-Two to four skills is normal for a partial request. A full video uses all six in order.
+A full video uses the chain in order. A partial request (hooks only, caption only, CTA rewrite) may enter at the matching stage, but still carries the intent anchor.
 
 ---
 
-## 3. Set the strategy
+## 5. Set the strategy
 
-Produce the `video_brief` from `community-video-strategy`. Name:
+Use `community-video-strategy`. Build the brief **from the improved prompt**, not from the raw input. Name the audience, pillar, objective, participation ladder step, every default, and the community-building rationale. Carry `original_input` and `claims_to_verify` forward.
 
-- one specific audience,
-- one content pillar,
-- one primary objective,
-- the participation ladder step this video asks for,
-- every default assumption,
-- the community-building rationale.
-
-Stop here if the audience or objective cannot be determined without inventing something — ask the single allowed question.
+If the improved prompt conflicts with the verbatim input, send it back to the expansion stage. Do not patch it here.
 
 ---
 
-## 4. Generate hooks
+## 6. Generate hooks
 
-Using `hook-library`:
+Use `hook-library`:
 
 1. Write at least 30 hooks (aim for 50–100 on a rich topic).
 2. Spread them across the 26 categories A–Z in `references/hook-categories.md`.
-3. No near-duplicates — every hook needs a distinct angle or technique.
-4. Apply all eight hook quality rules.
-5. Select the top 5, give each a psychological angle and an opening variation.
-6. Recommend one hook for the script.
+3. No near-duplicates. Apply all eight hook quality rules.
+4. Select the top 5, with a psychological angle and an opening variation each.
+5. Recommend one hook for the `0-3s` beat of the improved prompt.
 
-A hook that needs a fabricated statistic, testimonial, or deadline is discarded, not softened.
-
----
-
-## 5. Design engagement
-
-Using `community-engagement-cta`:
-
-1. Place one answerable question inside the main content.
-2. Write 3–5 CTA variations in different styles from the seven approved styles.
-3. The ask is one small action. No stacked requests.
-4. Delete any "follow us for more" default.
-5. State the participation path — what happens after they respond.
+The 30+ hooks stay in the package. The house script displays the selected hook plus 2–3 alternates under "Other hook lines to test".
 
 ---
 
-## 6. Write the script
+## 7. Design engagement
 
-Using `video-scriptwriting`:
-
-| Time | Block | What happens |
-|---|---|---|
-| 0–3 s | Hook | The recommended hook, spoken exactly. |
-| 3–8 s | Context | A situation the named audience recognises. |
-| 8–25 s | Main message | Story or observation with one clear idea. |
-| 25–35 s | Community connection | What "we" do or understand here. |
-| Final seconds | CTA | The engagement question and recommended CTA. |
-
-Rules: conversational, relatable, useful, no ad tone, no corporate language, no generic motivation, no invented facts. Every block carries a timestamp, a scene direction, and suggested on-screen text. Write the caption with an engaging opening, short context, CTA, and relevant hashtags.
+Use `community-engagement-cta`: place one answerable question inside the content, write 3–5 CTA variations in different styles, choose one small action, and state the participation path. Delete any "follow us for more" default. Align with `cta_voiceover` in the improved prompt.
 
 ---
 
-## 7. Add visual direction
+## 8. Write the script
 
-Using `visual-direction`, give every block a shot: camera angle, facial expression, delivery style, transition, on-screen text, b-roll, and a music/pacing note. Keep it filmable with a phone and one location. On-screen text stays short. Never illustrate a claim the script does not make.
+Use `video-scriptwriting`. Deliver the scene-by-scene script as the house table from `refernces/test Script.md`:
+
+| Time | What we see | Dialogue | Phone screen |
+| --- | --- | --- | --- |
+| 0-3s | … | Speaker: "…" | None or app screen |
+
+- One row per beat from the improved prompt's `beat_sheet`; contiguous timings.
+- Dialogue in the language set by research (Hinglish for local-shop scenarios), with named speakers.
+- `Phone screen` names a known screen from `refernces/` or describes it in words — never an invented clip id.
+- After the table: CTA voiceover over the end card, caption with mandatory hashtags, and 2–3 alternate hooks.
+- Also assemble all 11 output items from `req.txt` §6.
+
+**Stage output:** `research_summary`, `improved_prompt`, and the complete `video_script`. Report all three to the user.
 
 ---
 
-## 8. Review before delivery
+## 9. Add visual direction
 
-Using `script-quality-review` and its `references/review-rubric.md`, check **all 11 output items** from `req.txt` §6:
+Use `visual-direction`. Give every beat a shot, camera angle, expression, delivery style, transition, on-screen text, phone screen, b-roll, and a music/pacing note. Keep it filmable with a phone and one location. Never illustrate a claim the script does not make.
 
-1. video objective
-2. target audience
-3. 30+ hooks by category
-4. top 5 recommended hooks
-5. reason behind each recommended hook
-6. complete ready-to-record script
-7. visual direction
-8. on-screen text
-9. CTA variations
-10. social media caption
-11. community-building objective
+---
 
-**Verdict:** any critical → `revise`; no critical + 2 or more major → `revise`; no critical + 1 major → `pass_with_notes` if minors exist, else `pass`.
+## 10. Review before delivery
 
-Route a `revise` to the owning skill:
+Use `script-quality-review` and `references/review-rubric.md`. Check the verbatim input against the final script first — intent drift is critical. Then check all 11 output items, the house table, the mandatory hashtags, and the presence of all three stage artifacts.
+
+**Verdict:** any critical → `revise`; no critical + 2 or more major → `revise`; no critical + 0 or 1 major → `pass_with_notes` if minors exist, else `pass`.
+
+Route a `revise` to the owning stage:
 
 | Problem | Owner |
 |---|---|
+| Intent changed, prompt over/under-expanded | `video-prompt-expansion` |
+| Goal, audience, tone, or missing detail misread | `video-input-research` |
 | Objective, audience, pillar, invented fact | `community-video-strategy` |
 | Hook quality, repetition, top-5 choice | `hook-library` |
 | Engagement question, CTA, "follow us for more" | `community-engagement-cta` |
 | Script tone, structure, caption, missing output item | `video-scriptwriting` |
-| Shots, overlays, b-roll, music, pacing | `visual-direction` |
+| Shots, phone screens, overlays, music, pacing | `visual-direction` |
 
 Change one thing per revision. Max 2 rounds, then stop and report what is still wrong.
 
 ---
 
-## 9. Save to `outputs/`
+## 11. Save the final script file
 
-Every deliverable lands in `outputs/`. This is not optional.
+**The only deliverable is one `.md` script file.** No video is generated, rendered, encoded, or returned. A `.mp4`, `.mov`, or any other video file is a pipeline failure.
 
-1. **Pick the request id.** Scan `outputs/` for the highest `VID-YYYY-NNNN` and increment it. First run of 2026 is `VID-2026-0001`.
-2. **Create the folders:** `outputs/<request_id>/drafts`, `final`, `reviews`.
-3. **Save drafts** as `brief.json`, `hooks-v1.md`, `script-v1.md`, `visual-v1.md`. Never overwrite a revision.
-4. **Save approved files** in `final/` with a `.json` sidecar. Only one set per request carries `_final`.
-5. **Save each review** in `reviews/` as `v1.review.json`, `v2.review.json`.
-6. **Verify on disk** — files exist, non-zero, sidecar present. Report paths only after checking.
+1. **Pick the request id:** highest `VID-YYYY-NNNN` + 1. First run of 2026 is `VID-2026-0001`.
+2. **Create:** `outputs/<request_id>/drafts`, `final`, `reviews`.
+3. **Save working drafts** under `drafts/`: `research-v1.md`, `prompt-v1.md`, `hooks-v1.md`, `script-v1.md`, `visual-v1.md`. These are the evidence trail, not deliverables. Never overwrite a revision.
+4. **Write exactly one final deliverable:** `final/VID-YYYY-NNNN_script_vN_final.md`. Only one file in `final/` carries `_final`.
+5. **Everything the user receives goes inside that one file** — hook, scene-by-scene narration, visuals, transitions, CTA, ending, caption, alternate hooks, and a short appendix with the research summary and improved prompt for traceability. Do not write a separate caption file or sidecar as a deliverable.
+6. **Save reviews** under `reviews/` as `vN.review.json` for the evidence trail.
+7. **Verify on disk** — the `.md` exists and is non-zero. Report the path only after checking.
 
 ### Layout
 
 ```
 outputs/
   VID-2026-0001/
-    brief.json
-    hooks-v1.md
-    script-v1.md
-    visual-v1.md
+    input-verbatim.md
+    drafts/
+      research-v1.md
+      prompt-v1.md
+      hooks-v1.md
+      script-v1.md
+      visual-v1.md
     final/
-      VID-2026-0001_script_v1_final.md
-      VID-2026-0001_caption_v1_final.md
-      VID-2026-0001_v1_final.json
+      VID-2026-0001_script_v1_final.md   <- sole deliverable
     reviews/
       v1.review.json
 ```
 
+### Final script file contents
+
+```
+# [Working title] — Video Script
+[Meta: request id, duration, platform, language, verdict, revision]
+
+## Hook
+[selected 0-3s hook]
+
+## Scene-by-scene script
+| Time | What we see | Dialogue | Phone screen |
+| --- | --- | --- | --- |
+...
+
+## Transitions, visuals and on-screen text
+[per beat]
+
+## Call to action and ending
+[CTA voiceover + end card]
+
+## Caption and hashtags
+[...]
+
+## Other hook lines to test
+[2-3 alternates]
+
+## Appendix: research summary
+[goal, audience, tone, key message, missing details, claims to verify]
+
+## Appendix: improved prompt
+[production-ready prompt block]
+```
+
 ### What to report back
 
-The script path, caption path, duration, hook count, verdict, revision round, and `known_limitations`. If a file was not saved, name it and the reason — never report a path you did not verify.
+The path to the single final `.md` script file. You may also quote the research summary and improved prompt in chat at their stages, but the returned artifact is the script file. State clearly that no video was generated. Never report a path you did not verify.
 
 ---
 
 ## Worked example
 
-**You type:**
+**User input (verbatim):**
 
-> 40-second community video about our neighbourhood library, aimed at people who think it's only for books.
+> Papa runs a kirana shop and thinks going online is too hard.
+> His daughter shows him the meelTe app on her phone.
+> He posts his first ad for basmati rice and a customer walks in.
+> End with a download CTA. Keep it warm and funny.
 
-**Pipeline produces:**
+**Research summary:** goal = drive participation / create awareness; audience = local shop owners over 45 who have never posted online; tone = warm, playful, Hinglish; key message = posting a first ad takes minutes; missing details = duration assumed 50s from reference, city assumed Bengaluru, reward claims none; claims to verify = none.
 
-- **Brief:** audience = locals who have never used the library beyond borrowing; pillar = Community awareness; objective = Drive participation; ladder step = viewer → participant; default = 40s vertical short.
-- **Hooks:** 34 hooks across 18 categories. Top hook (D Relatable): "Have you ever walked past a place every day and realised you've never actually been inside?"
-- **Engagement:** "What's the one thing you'd actually use this place for?" CTA: "Drop your idea in the comments — we'll build the next video from them."
-- **Script:** 0–3s hook at the library door; 3–8s "You walk in for a book and leave having talked to three people"; 8–25s the football-recommendation story; 25–35s "a community needs a place to bump into each other"; final CTA.
-- **Visual:** close-up on the door, handheld walk inside, two-shot at the desk, wide shot of the reading area, natural light, warm low music that drops under the hook and CTA.
-- **Caption:** "Turns out the library was never really about books. What would you use yours for? #CommunityLibrary #NeighbourhoodStories"
-- **Verdict:** pass_with_notes — one minor hashtag note.
+**Improved prompt:** 50-second vertical short, Papa and Riya in a kirana shop, Hinglish dialogue, beat sheet from `0-3s` hook to `46-50s` first customer, phone screens = app store → `+` → Create Advertisement → upload photo → map pin → prices → feed card, CTA voiceover "2 minute mein dukaan ka ad. Download meelTe.", caption with mandatory hashtags.
 
-**Saved to:** `outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.md`
+**Final script (excerpt):**
 
-Note what the pipeline added — audience, pillar, hook library, timed script, visual plan, caption, QA — and what it did **not** add: no membership numbers, no fake quotes, no deadlines.
+| Time | What we see | Dialogue | Phone screen |
+| --- | --- | --- | --- |
+| 0-3s | Papa behind an empty counter, staring at his phone with wide eyes. | Papa: "2 minute mein meri dukaan online?! Mujhse nahi hoga!" | None |
+| 3-8s | Riya starts a stopwatch. | Riya: "Ho jayega Papa! Timer lagaya." | App store: tap Install, open meelTe |
+| … | … | … | … |
+| 46-50s | A customer walks in with the ad open. | Papa: "Mera pehla customer!" | None |
+
+**Verdict:** pass_with_notes. **Sole deliverable:** `outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.md`. No video file is produced.
 
 ---
 
 ## Copy-paste template
 
 ```
-[Video objective]
-[Target audience]
-[Primary pillar + ladder step]
+ORIGINAL INPUT (verbatim):
+[4-5 lines]
 
-HOOKS (30+, grouped by category A-Z):
-…
+RESEARCH SUMMARY:
+Goal / Audience / Tone / Key message
+Missing details: [assumed / needs_user_input]
+Claims to verify: [...]
 
-TOP 5:
-1. [hook] — [psychological angle] — [opening variation]
-…
+IMPROVED PROMPT:
+Concept, audience, tone, duration, language, setting, characters
+Beat sheet (time | what we see | dialogue | phone screen)
+Transitions, music, on-screen text
+CTA voiceover, caption, mandatory hashtags
+Preserved: [...]   Added: [...]
 
-SCRIPT:
-0-3s   [spoken] | [scene direction] | [on-screen text]
-3-8s   …
-8-25s  …
-25-35s …
-final  …
+FINAL VIDEO SCRIPT:
+| Time | What we see | Dialogue | Phone screen |
+| --- | --- | --- | --- |
+| 0-3s | … | Speaker: "…" | None |
+| … | … | … | … |
 
-VISUAL DIRECTION:
-[shots, expressions, transitions, b-roll, music, pacing]
-
-ON-SCREEN TEXT:
-[short exact strings per block]
-
-CTA VARIATIONS:
-1. [style] — [text]
-…
-
-CAPTION:
-[engaging line]
-[2-4 short lines]
-[CTA]
-[relevant hashtags]
+CTA (voiceover over the end card, [N]s): "…"
+Caption: "…" + mandatory hashtags
+Other hook lines to test: 2-3 alternates
 
 COMMUNITY-BUILDING OBJECTIVE:
-[one sentence: viewers -> participants -> members]
+[viewers -> participants -> members]
 ```

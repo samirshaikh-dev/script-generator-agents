@@ -1,4 +1,4 @@
-**Mandatory Hashtag  in all Videos : #Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness**
+**Mandatory Hashtag  in all Videos : #Meelte #LocalDiscovery #ShopLocal #SupportLocal #LocalBusiness**
 
 ## Part 1: Shop and discover nearby
 

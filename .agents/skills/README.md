@@ -8,10 +8,12 @@ Each folder is a self-contained skill: a `SKILL.md` with YAML frontmatter (`name
 
 | Skill | Owns | Output contract |
 |---|---|---|
+| [`video-input-research`](video-input-research/SKILL.md) | short-input analysis: goal, audience, tone, key message, missing details | `research_summary` |
+| [`video-prompt-expansion`](video-prompt-expansion/SKILL.md) | expanding the idea into a production-ready prompt without intent drift | `improved_prompt` |
 | [`community-video-strategy`](community-video-strategy/SKILL.md) | objective, audience, purpose, content pillar, participation ladder | `video_brief`, `community_building_rationale` |
 | [`hook-library`](hook-library/SKILL.md) | 30+ hooks across categories A–Z, top 5, psychological angles | `hook_set` |
 | [`community-engagement-cta`](community-engagement-cta/SKILL.md) | engagement question, CTA styles, participation path | `engagement_plan` |
-| [`video-scriptwriting`](video-scriptwriting/SKILL.md) | ready-to-record script, timestamps, scene directions, caption, 11-part assembly | `video_script` |
+| [`video-scriptwriting`](video-scriptwriting/SKILL.md) | ready-to-record script, house scene table, caption, 11-part assembly | `video_script` |
 | [`visual-direction`](visual-direction/SKILL.md) | camera, expressions, delivery, transitions, on-screen text, b-roll, music, pacing | `visual_direction` |
 | [`script-quality-review`](script-quality-review/SKILL.md) | severity-tagged verdict, routing, bounded revisions | `quality_review` |
 
@@ -20,17 +22,27 @@ Each folder is a self-contained skill: a `SKILL.md` with YAML frontmatter (`name
 ## Workflow order
 
 ```
-topic
+short user input (4-5 lines)
+  -> video-input-research           (research summary: goal, audience, tone, message, gaps)
+  -> video-prompt-expansion         (production-ready improved prompt, intent preserved)
   -> community-video-strategy       (brief, pillar, objective, ladder)
   -> hook-library                   (30+ hooks, top 5, recommended hook)
   -> community-engagement-cta       (engagement question, CTA variations)
-  -> video-scriptwriting            (timed script + caption + 11-part assembly)
-  -> visual-direction               (shots, overlays, b-roll, music, pacing)
+  -> video-scriptwriting            (house scene table + caption + 11-part assembly)
+  -> visual-direction               (shots, phone screens, b-roll, music, pacing)
   -> script-quality-review          (verdict + targeted revisions)
   -> deliver when verdict is pass or pass_with_notes
 ```
 
-`script-quality-review` routes a `revise` verdict to the owning skill, never to a generic rewrite. Two revision rounds per script; deterministic copy fixes do not consume the budget.
+**Stage outputs.** Every stage returns its own artifact, and from research onward the orchestrator carries forward all three headline artifacts: `research_summary`, `improved_prompt`, and `video_script`. The research stage returns only the summary; the expansion stage adds the improved prompt; the scripting stage adds the final script. Never report a later artifact before its stage has produced it.
+
+`script-quality-review` routes a `revise` verdict to the owning skill, never to a generic rewrite. Two revision rounds per script; deterministic copy fixes do not consume the budget. Intent drift routes to `video-prompt-expansion`.
+
+**Text-only deliverable.** This system produces a script file, not a video. The single deliverable is `outputs/<request_id>/final/VID-YYYY-NNNN_script_vN_final.md`; it contains the script, caption, and appendices with the research summary and improved prompt. Never generate, render, or return a video file.
+
+## Reference material
+
+`refernces/test Script.md` and `refernces/Videos Scripts.md` are the source of the house script format (four-column scene table, Hinglish dialogue, phone-screen beats, CTA voiceover, caption) and the mandatory hashtag set. Coin values, voucher partner, and redemption limits must match the live app and current terms — treat those as claims to verify, never as facts to invent.
 
 ## Source of truth
 

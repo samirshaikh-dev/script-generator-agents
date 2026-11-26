@@ -27,7 +27,10 @@ You are the Hook Writer. You decide how the video earns its first three seconds.
 
 - Skill: `hook-library`
 - `hook-library/references/hook-categories.md` — the 26 categories A–Z.
+- The verbatim `original_input`, `research_summary`, and `improved_prompt` (its `key_message`, `tone`, and `beat_sheet[0]`).
 - The approved `video_brief` from `community-strategist`.
+
+Keep all 30+ hooks in the package; the house script will show only the chosen hook plus 2–3 alternates.
 
 ## Do
 

@@ -1,6 +1,6 @@
 # Community Video Script Agent Roster
 
-Eight agents implementing the workflow in [`pipeline.md`](pipeline.md). Agent definitions live in `.agents/agents/`. Each host discovers them through its own path (OpenCode uses `.opencode/agents/`); the definitions themselves are host-neutral.
+Ten agents implementing the workflow in [`pipeline.md`](pipeline.md). Agent definitions live in `.agents/agents/`. Each host discovers them through its own path (OpenCode uses `.opencode/agents/`); the definitions themselves are host-neutral.
 
 > **Canonical workflow: [`pipeline.md`](pipeline.md).** It is host-agnostic — Antigravity, Gemini CLI, Claude Code, Cursor, and OpenCode all read it. This file describes the implementation; when the two disagree, `pipeline.md` wins.
 
@@ -10,14 +10,16 @@ Eight agents implementing the workflow in [`pipeline.md`](pipeline.md). Agent de
 
 | Agent | Mode | Skills loaded | Writes | Owns |
 |---|---|---|---|---|
-| `orchestrator` | primary | — | `outputs/**` | brief, sequencing, retries, delivery decision |
+| `orchestrator` | primary | — | `outputs/**` | brief, sequencing, retries, stage outputs, delivery decision |
+| `video-researcher` | subagent | `video-input-research` | nothing | research summary, goal, audience, tone, key message, missing details |
+| `prompt-expander` | subagent | `video-prompt-expansion` | nothing | production-ready improved prompt, intent preservation |
 | `community-strategist` | subagent | `community-video-strategy` | nothing | objective, audience, purpose, pillar, participation ladder |
 | `hook-writer` | subagent | `hook-library` | nothing | 30+ hooks, top 5, psychological angles |
 | `engagement-designer` | subagent | `community-engagement-cta` | nothing | engagement question, CTA variations, participation path |
 | `scriptwriter` | subagent | `video-scriptwriting` | `outputs/**` | timed script, on-screen text, caption, 11-part assembly |
 | `visual-director` | subagent | `visual-direction` | nothing | shots, expressions, transitions, b-roll, music, pacing |
 | `script-qa` | subagent | `script-quality-review` | nothing | verdict, severity, routing, revision instructions |
-| `finalizer` | subagent | — (uses the delivery contract below) | `outputs/**` | final package, `outputs/` layout, metadata sidecar |
+| `finalizer` | subagent | — (uses the delivery contract below) | `outputs/**` | the single final `.md` script file; no video output |
 
 Read-only agents have no `edit` and no `shell` permission. `scriptwriter` and `finalizer` may write under `outputs/**` and ask before running shell commands. `orchestrator` has no shell at all.
 
@@ -25,18 +27,24 @@ Read-only agents have no `edit` and no `shell` permission. `scriptwriter` and `f
 
 ```
                  ┌──────────────┐
-   topic ───────►│ orchestrator │
+  4-5 line idea ►│ orchestrator │
                  └──────┬───────┘
-                        │ VideoBrief
+                        ▼
+             video-researcher ──► research_summary
+                        ▼
+             prompt-expander ──► improved_prompt
+                        ▼
+              community-strategist ──► video_brief
+                        │
         ┌───────────────┼──────────────────┐
         ▼               ▼                  ▼
- community-strategist  hook-writer   engagement-designer
-        │               │                  │
+   hook-writer   engagement-designer   (brief locked)
+        │               │
         └───────┬───────┴──────────────────┘
                 ▼
-          scriptwriter ──► timed script + caption
+          scriptwriter ──► house scene table + caption
                 ▼
-          visual-director ──► shot-by-shot direction
+          visual-director ──► phone screens + shot direction
                 ▼
             script-qa ──► QualityReview
                 │
@@ -48,12 +56,16 @@ Read-only agents have no `edit` and no `shell` permission. `scriptwriter` and `f
   FinalDeliverable
 ```
 
+Every handoff after `video-researcher` carries `research_summary`, `improved_prompt`, and whatever script artifacts exist so far. Do not report an artifact before its stage has produced it.
+
 ## Contracts
 
 Each agent returns the object defined in its skill's Output contract, mirroring `req.txt` §6:
 
 | Agent | Returns |
 |---|---|
+| `video-researcher` | `research_summary` + `research_summary_text` |
+| `prompt-expander` | `improved_prompt` + `improved_prompt_text` |
 | `community-strategist` | `video_brief` + `community_building_rationale` |
 | `hook-writer` | `hook_set` (`hooks[]`, `top_hooks[]`, `recommended_hook_id`) |
 | `engagement-designer` | `engagement_plan` |
@@ -67,21 +79,36 @@ Each agent returns the object defined in its skill's Output contract, mirroring 
 ```json
 {
   "request_id": "VID-2026-0001",
-  "script_path": "outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.md",
-  "caption_path": "outputs/VID-2026-0001/final/VID-2026-0001_caption_v1_final.md",
-  "metadata_path": "outputs/VID-2026-0001/final/VID-2026-0001_v1_final.json",
+  "deliverable_path": "outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.md",
+  "deliverable_type": "script_md",
+  "video_generated": false,
   "verdict": "pass | pass_with_notes",
   "revision_round": 1,
   "known_limitations": []
 }
 ```
 
+**There is exactly one deliverable: the final `.md` script file.** No video is generated, rendered, or returned. The research summary and improved prompt are reported at their stages and embedded in an appendix of that same file; they are not separate deliverables.
+
+## Stage outputs
+
+The pipeline returns three headline artifacts, each introduced at its own stage:
+
+| Stage | Artifacts returned |
+|---|---|
+| research | `research_summary`, `research_summary_text` |
+| expansion | `research_summary`, `improved_prompt`, `improved_prompt_text` |
+| scripting and QA | `research_summary`, `improved_prompt`, final `video_script` (house scene table, CTA voiceover, caption) |
+| delivery | all three embedded in the single final `.md` script file plus `FinalDeliverable` |
+
+The orchestrator reports these at each stage to the user, not only at the end. It never invents a later artifact early.
+
 ## Using them
 
 **Explicit delegation** (works from any session):
 
 ```
-Use the orchestrator agent to create a 45-second community video about our neighbourhood library.
+Use the orchestrator agent to make a 25-second video. Papa runs a kirana shop and thinks going online is too hard. His daughter shows him the meelTe app. He posts his first ad and a customer walks in. End with a download CTA.
 ```
 
 **Direct specialist call** when you only need one step:
@@ -96,6 +123,7 @@ If a host config sets a default agent, point it at `orchestrator`.
 
 - Default 2 revision rounds per script, configurable.
 - Deterministic fixes (copy trim, caption edit, overlay text) do not consume the budget.
+- Intent drift or over/under-expansion routes to `prompt-expander`; misread goal, audience, tone, or missing detail routes to `video-input-research`.
 - Brief problems route to `community-strategist`; hooks to `hook-writer`; CTA to `engagement-designer`; script tone or structure to `scriptwriter`; visual direction to `visual-director`.
 - On exhaustion, the orchestrator stops and reports the script with the issue list.
 

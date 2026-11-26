@@ -16,8 +16,10 @@ Turns a written script into something a person can actually record and edit, wit
 
 ## Inputs
 
+- `improved_prompt` (its `beat_sheet` and `phone_screen` values).
 - `video_script` from `video-scriptwriting`.
 - `video_brief` from `community-video-strategy`.
+- `refernces/test Script.md` and `refernces/Videos Scripts.md` — the house `Phone screen` column and known app screens.
 - `req.txt` — Visual Direction, Video Script Structure, section 4.
 
 ## Procedure
@@ -27,10 +29,11 @@ Turns a written script into something a person can actually record and edit, wit
 3. **Set facial expression and delivery style** per block — warm, curious, matter-of-fact, amused. Keep it human, not presenter-polished.
 4. **Define scene transitions** between blocks (cut, match cut, push in, handheld walk, freeze frame). Keep transitions simple.
 5. **Write the on-screen text** for each block. Short, exact, legible. No paragraph of text on screen.
-6. **List b-roll** that adds information, not decoration — the place, the hands, the ordinary detail the hook mentions.
-7. **Set the background music mood** in one or two words (warm, low, playful, quiet) and note where it drops so the hook and CTA land clearly.
-8. **Set editing and pacing** — fast cuts in the hook, slower in the story, a clean hold on the CTA.
-9. **Flag anything that cannot be filmed** with the available resources and propose a simple alternative (phone on a window ledge, natural light, one location).
+6. **Handle the phone-screen column.** The house format expects an app screen or UI action per beat. Use only screens named in `refernces/` or the user's input; if one applies, name its clip id, otherwise describe the screen in words. Never invent a clip id. Use `None` when no screen is shown.
+7. **List b-roll** that adds information, not decoration — the place, the hands, the ordinary detail the hook mentions.
+8. **Set the background music mood** in one or two words (warm, low, playful, quiet) and note where it drops so the hook and CTA land clearly.
+9. **Set editing and pacing** — fast cuts in the hook, slower in the story, a clean hold on the CTA.
+10. **Flag anything that cannot be filmed** with the available resources and propose a simple alternative (phone on a window ledge, natural light, one location).
 
 ## Output contract
 
@@ -47,6 +50,7 @@ Return a `visual_direction` object:
       "delivery": "direct to camera",
       "scene": "…",
       "transition": "hard cut",
+      "phone_screen": "None | known clip id | plain description",
       "on_screen_text": "…",
       "b_roll": ["…"],
       "notes": "…"
@@ -64,6 +68,7 @@ Return a `visual_direction` object:
 - [ ] Every script block has a shot.
 - [ ] Shot sizes vary; the video is not one static talking head.
 - [ ] Expressions and delivery are described, not left to the actor.
+- [ ] Phone screens are known or plainly described; no invented clip id.
 - [ ] On-screen text is short and matches the spoken line.
 - [ ] B-roll adds meaning rather than filler.
 - [ ] Music mood is stated and does not cover the hook or CTA.

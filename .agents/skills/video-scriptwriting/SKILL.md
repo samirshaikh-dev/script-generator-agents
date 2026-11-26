@@ -16,10 +16,12 @@ Writes the complete, ready-to-record short-form script from an approved brief, h
 
 ## Inputs
 
+- `improved_prompt` — `video-prompt-expansion`. Its `beat_sheet`, `language`, `production`, `cta_voiceover`, `caption`, and `hashtags` drive the script.
 - `video_brief` — `community-video-strategy`.
 - `hook_set` with `recommended_hook_id` — `hook-library`.
 - `engagement_plan` — `community-engagement-cta`.
 - `visual_direction` — `visual-direction` (merge before final delivery).
+- `references/script-format.md` — the house scene-table format from `refernces/`.
 - `req.txt` — Scriptwriting Guidelines, Video Script Structure, Output Requirements, section 6.
 
 ## Script structure
@@ -32,7 +34,23 @@ Writes the complete, ready-to-record short-form script from an approved brief, h
 | 25–35 s | Community connection | Connect the message to the community and its purpose. |
 | Final seconds | CTA | The engagement moment / call to action. |
 
-Adjust the durations to the topic; a 20-second script may compress the middle blocks, never the hook.
+Adjust the durations to the topic; a 20-second script may compress the middle blocks, never the hook. The exact block boundaries come from the improved prompt's `beat_sheet`, which follows the house pattern in `references/script-format.md` (0–3s hook, 4–9s beats, final CTA/end card).
+
+## House scene table
+
+Deliver the scene-by-scene script as a four-column table, exactly as in `refernces/test Script.md`:
+
+| Time | What we see | Dialogue | Phone screen |
+| --- | --- | --- | --- |
+| 0-3s | … | Speaker: "…" | None or app screen |
+
+- Use the speaker names and language from the improved prompt (Hinglish for local-shop scenarios).
+- The `Phone screen` column names a screen from `refernces/` or describes it in words. Never invent a clip id.
+- After the table, add the CTA voiceover over the end card, the caption with mandatory hashtags, and 2–3 alternate hook lines.
+
+Mandatory hashtags in every video, from `refernces/Videos Scripts.md`:
+
+`#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
 
 ## Writing rules
 
@@ -45,6 +63,7 @@ Adjust the durations to the topic; a 20-second script may compress the middle bl
 - End with the natural CTA from `engagement_plan`.
 - Avoid generic motivational statements and unnecessary corporate language.
 - No invented price, statistic, testimonial, deadline, guarantee, or result.
+- This skill produces a text script only. No video is generated, rendered, or returned.
 
 ## Procedure
 
@@ -53,10 +72,12 @@ Adjust the durations to the topic; a 20-second script may compress the middle bl
 3. Deliver the main message as a short story or observation with one clear idea.
 4. Connect to the community in one or two sentences — what "we" do here, what "we" understand.
 5. Place the engagement question at the natural pivot, then close with the recommended CTA.
-6. Add timestamps and scene directions to every block.
-7. Add suggested on-screen text per block.
-8. Write the caption: an engaging opening line, 2–4 short lines of context, the CTA, and relevant hashtags. Keep hashtags specific to the community and topic, not a wall of tags.
-9. Assemble the final 11-part output (below).
+6. Build the house scene table: one row per beat from the improved prompt's `beat_sheet`, with `Time`, `What we see`, `Dialogue`, `Phone screen`.
+7. Add transitions and suggested on-screen text per block from the improved prompt and visual direction.
+8. Write the CTA voiceover over the end card, using `cta_voiceover` from the improved prompt and the recommended CTA from `engagement_plan`.
+9. Write the caption: an engaging opening line, 2–4 short lines of context, the CTA, and the mandatory hashtag set. Do not trim or reorder the mandatory hashtags.
+10. Add 2–3 alternate hook lines under "Other hook lines to test".
+11. Assemble the final 11-part output (below).
 
 ## Output contract
 
@@ -73,7 +94,10 @@ Return a `video_script` object:
       "on_screen_text": "…"
     }
   ],
-  "caption": "…\n\n#hashtag #hashtag",
+  "caption": "…\n\n#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness",
+  "scene_table": "| Time | What we see | Dialogue | Phone screen |…",
+  "cta_voiceover": "…",
+  "alternate_hooks": ["…", "…"],
   "duration_seconds": 35,
   "assembled_output": {
     "video_objective": "…",
@@ -91,7 +115,11 @@ Return a `video_script` object:
 }
 ```
 
-The `assembled_output` mirrors `req.txt` §6 and must contain all 11 items before delivery.
+The `assembled_output` mirrors `req.txt` §6 and must contain all 11 items before delivery. The `scene_table` is the same script in house format for recording.
+
+## Stage output
+
+At this stage, return `research_summary`, `improved_prompt`, and the complete `video_script`. This is the final video script stage — the improved prompt and research summary are carried forward, not regenerated. The deliverable is a `.md` script file, never a video file.
 
 ## Quality checklist
 
@@ -101,7 +129,10 @@ The `assembled_output` mirrors `req.txt` §6 and must contain all 11 items befor
 - [ ] No advertisement tone, corporate language, or generic motivation.
 - [ ] The engagement question appears inside the content.
 - [ ] CTA is the recommended one from `engagement_plan`.
-- [ ] Caption has hashtags relevant to the community and topic.
+- [ ] Caption contains the full mandatory hashtag set, unchanged.
+- [ ] Scene table has four columns, contiguous timings, and a named speaker per dialogue line.
+- [ ] Phone screen column uses a known screen from `refernces/` or a plain description — no invented clip id.
+- [ ] CTA voiceover and 2–3 alternate hooks are present after the table.
 - [ ] All 11 output items are present.
 - [ ] No invented facts, prices, statistics, quotes, or results.
 

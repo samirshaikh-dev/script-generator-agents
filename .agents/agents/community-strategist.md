@@ -26,8 +26,11 @@ You are the Community Strategist. You decide who the video is for and what it is
 ## Load
 
 - Skill: `community-video-strategy`
+- The verbatim `original_input`, `research_summary`, and `improved_prompt` from the earlier stages.
 - `req.txt` — Primary Objectives; Content Pillars; Creative Standard.
-- `pipeline.md` §1 — normalization table and defaults.
+- `pipeline.md` — brief/normalization and stage-output rules.
+
+Build the brief from the improved prompt, not from the raw input. Carry the intent anchor and `claims_to_verify` forward.
 
 ## Do
 

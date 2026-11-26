@@ -16,31 +16,35 @@ Final gate. Reviews a complete script package against the brief and the communit
 
 ## Inputs
 
-- `video_brief`, `hook_set`, `engagement_plan`, `video_script`, `visual_direction`.
+- `original_input`, `research_summary`, `improved_prompt`, `video_brief`, `hook_set`, `engagement_plan`, `video_script`, `visual_direction`.
+- `refernces/test Script.md` and `refernces/Videos Scripts.md` — house format and mandatory hashtags.
 - `req.txt` — Scriptwriting Guidelines, Hook Quality Rules, Final Output Format, Creative Standard.
 - `references/review-rubric.md` — the full checklist with severity tags.
 
 ## Procedure
 
-1. **Read the brief first.** Judge against the stated objective, audience, pillar, and ladder step — not against personal taste.
-2. **Run the rubric in `references/review-rubric.md`** across all 11 output items.
-3. **Tag each issue** critical, major, or minor.
-4. **Return a verdict:**
+1. **Read the verbatim original input first**, then the research summary and improved prompt. Check that every explicit element of the user's idea survived. Intent drift is a critical failure.
+2. **Read the brief.** Judge against the stated objective, audience, pillar, and ladder step — not against personal taste.
+3. **Run the rubric in `references/review-rubric.md`** across all 11 output items.
+4. **Tag each issue** critical, major, or minor.
+5. **Return a verdict:**
    - `pass` — no critical or major issues.
    - `pass_with_notes` — only minor issues, listed.
    - `revise` — any critical issue, or two or more major issues.
-5. **Route each issue to its owner**, never to a generic "rewrite":
+6. **Route each issue to its owner**, never to a generic "rewrite":
 
    | Issue type | Route to |
    |---|---|
+   | Original intent changed, over/under-expanded prompt | `video-prompt-expansion` |
+   | Goal, audience, tone, or missing detail misread | `video-input-research` |
    | Objective, audience, pillar, invented fact in brief | `community-video-strategy` |
    | Hook quality, repetition, category gap, top-5 choice | `hook-library` |
    | Engagement question, CTA, "follow us for more" | `community-engagement-cta` |
    | Script tone, structure, timestamps, caption, missing output item | `video-scriptwriting` |
    | Shots, overlays, b-roll, music, pacing, filmability | `visual-direction` |
 
-6. **Write one targeted instruction per issue** — name the block and the single change required.
-7. **Cap revisions** at two rounds per script. On exhaustion, stop and report the remaining issues honestly.
+7. **Write one targeted instruction per issue** — name the block and the single change required.
+8. **Cap revisions** at two rounds per script. On exhaustion, stop and report the remaining issues honestly.
 
 ## Output contract
 
@@ -60,14 +64,24 @@ Return a `quality_review` object:
     }
   ],
   "checked_items": ["all 11 output items"],
+  "intent_preserved": true,
+  "stage_outputs_present": ["research_summary", "improved_prompt", "video_script"],
   "revision_round": 1,
   "max_revision_rounds": 2,
   "summary": "one honest sentence"
 }
 ```
 
+## Stage output
+
+At this stage, return `research_summary`, `improved_prompt`, and the final `video_script` alongside the `quality_review`. This is the last stage before delivery, so all three artifacts must be present.
+
 ## Quality checklist for the reviewer
 
+- [ ] The verbatim original input was compared with the final script; intent is preserved.
+- [ ] Research summary, improved prompt, and final script are all present.
+- [ ] Mandatory hashtag set is present in the caption, unchanged.
+- [ ] Scene table has four columns, contiguous timings, and a named speaker per line.
 - [ ] All 11 output items were checked, not sampled.
 - [ ] Every issue has a severity, a location, an owner, and a one-change instruction.
 - [ ] No issue was fixed silently by the reviewer.

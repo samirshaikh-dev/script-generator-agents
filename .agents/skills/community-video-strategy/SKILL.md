@@ -16,19 +16,22 @@ Turns a rough topic into a community-first brief before any hook or script is wr
 
 ## Inputs
 
-- The raw topic or "make a video about X" request.
-- Any supplied audience, community, platform, or duration hints.
+- The `improved_prompt` from `video-prompt-expansion`. This is the brief's source of truth.
+- The verbatim `original_input` and `research_summary` carried from the earlier stages.
 - `req.txt` — role, primary objectives, content pillars, creative standard.
+
+Do not derive the brief directly from the raw user input. The research and expansion stages have already resolved goal, audience, tone, and key message; use their output.
 
 ## Procedure
 
-1. **Identify the domain and real audience.** Who experiences this topic in daily life? Prefer a specific, relatable group ("new parents in our neighbourhood") over "everyone". If no audience is supplied, choose one and state it as an explicit default.
-2. **Name the content pillar.** Pick one primary pillar from the list below. A video can touch several, but one must lead.
-3. **Set the video objective.** Choose one of the six primary objectives. Write it as a behaviour change, not a reach target.
-4. **Define the purpose in one sentence.** Explain what the viewer should understand, feel, or do — never "get views" or "grow followers".
-5. **Map the participation ladder.** State where the viewer starts and which step this video asks them to take: viewer → commenter/participant → regular member → active, connected member.
-6. **List constraints.** No invented facts, no fabricated statistics, no fake testimonials, no manufactured urgency, no corporate language, no generic motivation.
-7. **Ask at most one clarification question**, and only when the answer materially changes the audience, the pillar, or a claim that cannot be invented.
+1. **Start from the improved prompt.** Copy its goal, audience, tone, key message, duration, setting, and characters into the brief. Keep the verbatim `original_input` alongside it as the intent anchor.
+2. **Identify the domain and real audience.** Who experiences this topic in daily life? Prefer a specific, relatable group ("new parents in our neighbourhood") over "everyone". If no audience is supplied in the improved prompt, choose one and state it as an explicit default.
+3. **Name the content pillar.** Pick one primary pillar from the list below. A video can touch several, but one must lead.
+4. **Set the video objective.** Choose one of the six primary objectives. Write it as a behaviour change, not a reach target. When the improved prompt states a product goal, map it onto a community objective rather than replacing the community objective with the product goal.
+5. **Define the purpose in one sentence.** Explain what the viewer should understand, feel, or do — never "get views" or "grow followers".
+6. **Map the participation ladder.** State where the viewer starts and which step this video asks them to take: viewer → commenter/participant → regular member → active, connected member.
+7. **List constraints.** No invented facts, no fabricated statistics, no fake testimonials, no manufactured urgency, no corporate language, no generic motivation. Carry forward `claims_to_verify` from the improved prompt.
+8. **Ask at most one clarification question**, and only when the answer materially changes the audience, the pillar, or a claim that cannot be invented.
 
 ## Content pillars
 
@@ -59,6 +62,7 @@ Return a `video_brief` object:
 
 ```json
 {
+  "original_input": "verbatim intent anchor",
   "topic": "…",
   "audience": "…",
   "purpose": "one sentence",
@@ -75,6 +79,8 @@ Also return a one-sentence `community_building_rationale` explaining how the vid
 
 ## Quality checklist
 
+- [ ] The verbatim original input is carried as the intent anchor.
+- [ ] Every field matches the improved prompt; no silent re-decision.
 - [ ] A specific human audience is named, not "everyone".
 - [ ] One primary pillar and one primary objective are chosen.
 - [ ] Purpose describes understanding, feeling, or participation — not views or followers.
@@ -93,6 +99,7 @@ Also return a one-sentence `community_building_rationale` explaining how the vid
 
 - **Feature-led brief:** If the user only supplies a product or service, reframe around the shared experience it touches. Ask one question only if the reframe is impossible.
 - **Sensitive local topic:** Do not invent neighbourhood problems or quote residents. Switch to an observational, non-claiming angle.
+- **Intent drift:** If the improved prompt conflicts with the verbatim original input, route it back to `video-prompt-expansion`; never patch it here.
 - **No community context:** If no community exists yet, define the "community" as the people sharing the experience and say so explicitly.
 - **Never proceed** with an invented statistic, fake member story, or unsupported claim just to make the brief concrete.
 
