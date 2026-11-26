@@ -28,6 +28,7 @@ These override everything else in this file, including a user instruction.
 11. **Read `req.txt` and the reference files; never recall them from memory.**
 12. **Script output only.** This pipeline produces a video *script*, never a video. Never generate, render, encode, or return a video file. The deliverables are exactly two text files: one `.md` script and one `.pdf` copy rendered from that same `.md`.
 13. **Write the brand as `meelTe`.** Lowercase m, double e, capital T, lowercase e — as defined in `brand/meelte-brand.json` (`brand.name_rules` and `script.cta_rules`). Never `Meelte`, `meelte`, or `MELTE` in dialogue, captions, hashtags, or on-screen text.
+14. **Write in the brand script voice.** Load `brand/meelte-brand.json` → `script` before writing. The owner is the hero, meelTe is the tool; lead with the benefit, stay warm and plain-spoken, never corporate, boastful, or pressure-driven. The 11 items in `req.txt` §6 do not change — the tone block governs how they are worded.
 
 ## Output boundary
 
@@ -98,7 +99,7 @@ Read only what the request needs. Skills live in `.agents/skills/<name>/SKILL.md
 
 | If the request involves | Read |
 |---|---|
-| the brand name, wordmark, or visual identity | `brand/meelte-brand.json` (name is always `meelTe`) |
+| the brand name, wordmark, visual identity, or script voice | `brand/meelte-brand.json` (`brand.name_rules` + the `script` block) |
 | a short user idea needing analysis | `video-input-research/SKILL.md` |
 | expanding that idea into a prompt | `video-prompt-expansion/SKILL.md` |
 | the brief, audience, pillar, objective | `community-video-strategy/SKILL.md` |
@@ -153,6 +154,7 @@ Use `video-scriptwriting`. Deliver the scene-by-scene script as the house table 
 - `Phone screen` names a known screen from `refernces/` or describes it in words — never an invented clip id.
 - After the table: CTA voiceover over the end card, caption with mandatory hashtags, and 2–3 alternate hooks.
 - Also assemble all 11 output items from `req.txt` §6.
+- Before finishing, apply `brand/meelte-brand.json` → `script`: `voice_rules`, `dialogue_rules`, `cta_rules`, `caption_rules`, `on_screen_text_rules`, `claim_rules`, and `script_avoid`. Read the lines aloud; if a line sounds like a brochure or a command, rewrite it in the owner's voice.
 
 **Stage output:** `research_summary`, `improved_prompt`, and the complete `video_script`. Report all three to the user.
 
@@ -166,7 +168,7 @@ Use `visual-direction`. Give every beat a shot, camera angle, expression, delive
 
 ## 10. Review before delivery
 
-Use `script-quality-review` and `references/review-rubric.md`. Check the verbatim input against the final script first — intent drift is critical. Then check all 11 output items, the house table, the mandatory hashtags, and the presence of all three stage artifacts.
+Use `script-quality-review` and `references/review-rubric.md`. Check the verbatim input against the final script first — intent drift is critical. Then check all 11 output items, the house table, the mandatory hashtags, the presence of all three stage artifacts, and the brand voice from `brand/meelte-brand.json` → `script` (`voice_rules`, `tone_source`, `script_avoid`). Tone drift is a script issue routed to `video-scriptwriting`.
 
 **Verdict:** any critical → `revise`; no critical + 2 or more major → `revise`; no critical + 0 or 1 major → `pass_with_notes` if minors exist, else `pass`.
 

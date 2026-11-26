@@ -42,6 +42,8 @@ short user input (4-5 lines)
 
 ## Reference material
 
+`brand/meelte-brand.json` → `script` is the source of the brand voice: owner as hero, benefit before technology, warm and plain-spoken, no jargon, pressure, or invented claims.
+
 `refernces/test Script.md` and `refernces/Videos Scripts.md` are the source of the house script format (four-column scene table, Hinglish dialogue, phone-screen beats, CTA voiceover, caption) and the mandatory hashtag set. Coin values, voucher partner, and redemption limits must match the live app and current terms — treat those as claims to verify, never as facts to invent.
 
 ## Source of truth

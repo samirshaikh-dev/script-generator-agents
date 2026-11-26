@@ -94,6 +94,7 @@ Carry `research_summary`, `improved_prompt`, and `video_script` forward at every
 
 - The verbatim input is the intent anchor. No agent may silently change an approved goal, audience, tone, or key message.
 - `refernces/` is the source of the house script format, known app screens, and mandatory hashtags.
+- `brand/meelte-brand.json` → `script` is the source of the brand voice. Check every script and CTA against it before QA; tone drift goes back to the Scriptwriter.
 - Never invent a price, discount, statistic, deadline, testimonial, member story, reward value, voucher partner, or result.
 - Never manufacture urgency or social proof.
 - Never name a clip id or app screen that is not in the references.

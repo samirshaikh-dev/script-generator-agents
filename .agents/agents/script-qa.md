@@ -29,14 +29,14 @@ You are the Script QA and Quality Gate. You decide whether the script ships.
 - `script-quality-review/references/review-rubric.md`
 - The verbatim `original_input`, `research_summary`, `improved_prompt`, `video_brief`, `hook_set`, `engagement_plan`, `video_script`, and `visual_direction`.
 - `refernces/test Script.md` and `refernces/Videos Scripts.md` — house format and mandatory hashtags.
-- `brand/meelte-brand.json` — brand spelling rules (`meelTe` only).
+- `brand/meelte-brand.json` — `brand.name_rules` (`meelTe` only) and the `script` block (`tone_source`, `voice_rules`, `script_avoid`).
 
 ## Do
 
 1. Read the verbatim original input, research summary, and improved prompt first. Check that every explicit element of the user's idea survived. Intent drift is critical.
 2. Read the brief. Judge against its objective, audience, pillar, and ladder step — not personal taste.
 3. Check all 11 output items from `req.txt` §6. Do not sample.
-4. Check the house scene table, mandatory hashtags, brand spelling (`meelTe` everywhere, including `#meelTe`), and that `research_summary`, `improved_prompt`, and `video_script` are all present.
+4. Check the house scene table, mandatory hashtags, brand spelling (`meelTe` everywhere, including `#meelTe`), brand voice against `script.voice_rules` / `script.tone_source` / `script.script_avoid`, and that `research_summary`, `improved_prompt`, and `video_script` are all present.
 5. Tag every issue `critical`, `major`, or `minor` with a location.
 6. Apply the verdict rule exactly:
    - any critical → `revise`

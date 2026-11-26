@@ -37,7 +37,7 @@ Refuse to finish unless `quality_review.verdict` is `pass` or `pass_with_notes`.
 
 - `pipeline.md` — §11 outputs layout, naming rules, and the PDF command.
 - `tools/md_to_pdf.py` — the PDF helper, its arguments, and its dependencies.
-- `brand/meelte-brand.json` — the brand is always `meelTe` in copy and hashtags.
+- `brand/meelte-brand.json` — `brand.name_rules` and the `script` block; verify the approved copy still matches the brand voice.
 - The `video_script` contract from `video-scriptwriting` for the 11-part assembly and house scene table.
 - The `research_summary`, `improved_prompt`, `quality_review` verdict, and the `video_brief` request id.
 

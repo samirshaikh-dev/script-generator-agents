@@ -28,7 +28,7 @@ You are the Engagement Designer. You decide what the viewer is invited to do, an
 - Skill: `community-engagement-cta`
 - The `video_brief`, the recommended hook, and the draft main message if available.
 - `req.txt` — Engagement Moment, Call to Action, section 5.
-- `brand/meelte-brand.json` — the brand is always `meelTe` in CTAs.
+- `brand/meelte-brand.json` — `script.engagement_rules`, `script.cta_rules`, and `tone_source`; the brand is always `meelTe` in CTAs.
 
 ## Do
 
