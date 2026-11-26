@@ -1,0 +1,35 @@
+{
+  "request_id": "VID-2026-0004",
+  "review_date": "2026-11-26",
+  "reviewer": "script-qa",
+  "verdict": "pass",
+  "revision_round": 1,
+  "scores": {
+    "intent_preservation": "pass",
+    "factual_accuracy": "pass",
+    "brand_voice_alignment": "pass",
+    "brand_name_spelling": "pass",
+    "timing_and_pacing": "pass",
+    "visual_direction_clarity": "pass",
+    "community_building_alignment": "pass",
+    "output_completeness": "pass"
+  },
+  "checklist_checks": {
+    "verbatim_intent_anchor_preserved": true,
+    "no_invented_prices_or_claims": true,
+    "brand_spelled_meelTe": true,
+    "mandatory_hashtags_present": true,
+    "house_scene_table_used": true,
+    "phone_screens_from_references_or_input": true,
+    "all_11_output_items_accounted_for": true,
+    "stage_artifacts_recorded": true,
+    "script_only_no_video_generated": true
+  },
+  "notes": [
+    "Verbatim input fully preserved: 'Customer Chat Se Counter Tak' (30 sec); Hook: 'Bhaiya, ye stock mein hai?'; Owner replies in chat, sends shelf photo, taps + and shares location; customer walks in within 10 minutes; both smile; Clip I (+ menu with Document, Photo, Location); CTA.",
+    "Brand name casing corrected from user's 'Meelte' to official 'meelTe' per Brand Rule 13.",
+    "House table 4-column structure verified: Time, What we see, Dialogue, Phone screen.",
+    "Contiguous timing totaling 30 seconds exactly (0-3s, 3-9s, 9-15s, 15-21s, 21-26s, 26-30s).",
+    "Quality score: 100%. Approved for final deliverable compilation."
+  ]
+}
