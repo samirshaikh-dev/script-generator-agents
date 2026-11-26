@@ -19,7 +19,7 @@ Ten agents implementing the workflow in [`pipeline.md`](pipeline.md). Agent defi
 | `scriptwriter` | subagent | `video-scriptwriting` | `outputs/**` | timed script, on-screen text, caption, 11-part assembly |
 | `visual-director` | subagent | `visual-direction` | nothing | shots, expressions, transitions, b-roll, music, pacing |
 | `script-qa` | subagent | `script-quality-review` | nothing | verdict, severity, routing, revision instructions |
-| `finalizer` | subagent | — (uses the delivery contract below) | `outputs/**` | the single final `.md` script file; no video output |
+| `finalizer` | subagent | — (uses the delivery contract below) | `outputs/**` | the final `.md` script plus its matching `.pdf`; no video output |
 
 Read-only agents have no `edit` and no `shell` permission. `scriptwriter` and `finalizer` may write under `outputs/**` and ask before running shell commands. `orchestrator` has no shell at all.
 
@@ -79,8 +79,11 @@ Each agent returns the object defined in its skill's Output contract, mirroring 
 ```json
 {
   "request_id": "VID-2026-0001",
-  "deliverable_path": "outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.md",
-  "deliverable_type": "script_md",
+  "deliverable_paths": [
+    "outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.md",
+    "outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.pdf"
+  ],
+  "deliverable_types": ["script_md", "script_pdf"],
   "video_generated": false,
   "verdict": "pass | pass_with_notes",
   "revision_round": 1,
@@ -88,7 +91,7 @@ Each agent returns the object defined in its skill's Output contract, mirroring 
 }
 ```
 
-**There is exactly one deliverable: the final `.md` script file.** No video is generated, rendered, or returned. The research summary and improved prompt are reported at their stages and embedded in an appendix of that same file; they are not separate deliverables.
+**There are exactly two deliverables: the final `.md` script file and a `.pdf` print copy generated from that same file.** No video is generated, rendered, or returned. The research summary and improved prompt are reported at their stages and embedded in an appendix of the `.md` (and therefore in the PDF); they are not separate deliverables.
 
 ## Stage outputs
 
@@ -99,7 +102,7 @@ The pipeline returns three headline artifacts, each introduced at its own stage:
 | research | `research_summary`, `research_summary_text` |
 | expansion | `research_summary`, `improved_prompt`, `improved_prompt_text` |
 | scripting and QA | `research_summary`, `improved_prompt`, final `video_script` (house scene table, CTA voiceover, caption) |
-| delivery | all three embedded in the single final `.md` script file plus `FinalDeliverable` |
+| delivery | all three embedded in the final `.md` script file and its PDF copy, plus `FinalDeliverable` |
 
 The orchestrator reports these at each stage to the user, not only at the end. It never invents a later artifact early.
 

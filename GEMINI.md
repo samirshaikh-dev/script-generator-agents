@@ -32,7 +32,8 @@ refernces/
   script-quality-review/
     references/review-rubric.md
 .agents/agents/           10 agents: orchestrator + 9 specialists
-outputs/<request_id>/     input, drafts, reviews, and ONE final .md script file
+outputs/<request_id>/     input, drafts, reviews, final .md script + matching .pdf copy
+tools/md_to_pdf.py        renders the final .md into its .pdf copy
 ```
 
 ## Non-negotiables
@@ -45,7 +46,7 @@ outputs/<request_id>/     input, drafts, reviews, and ONE final .md script file
 - Include the mandatory hashtag set in every video.
 - Never sound like an advertisement; no corporate language or generic motivation.
 - Save every artifact under `outputs/<request_id>/`.
-- **Text output only:** produce a video *script*, never a video. Never generate, render, encode, or return a video file. The sole deliverable is one `.md` script file.
+- **Script output only:** produce a video *script*, never a video. Never generate, render, encode, or return a video file. The deliverables are one `.md` script file and one `.pdf` copy rendered from it.
 
 Full list: `pipeline.md` §0.
 
@@ -143,8 +144,8 @@ Ask only when the answer changes a truth claim that cannot be invented: price, d
 
 ## Deliverable boundary
 
-The user receives exactly one file: `outputs/<request_id>/final/VID-YYYY-NNNN_script_vN_final.md`. It contains the hook, scene-by-scene narration, visuals, transitions, CTA, ending, caption, alternate hooks, and appendices with the research summary and improved prompt. Working drafts and reviews stay under `drafts/` and `reviews/` as the evidence trail. No `.mp4`, `.mov`, or other video file is produced.
+The user receives exactly two files: `outputs/<request_id>/final/VID-YYYY-NNNN_script_vN_final.md` and `VID-YYYY-NNNN_script_vN_final.pdf`. The `.md` contains the hook, scene-by-scene narration, visuals, transitions, CTA, ending, caption, alternate hooks, and appendices with the research summary and improved prompt. The `.pdf` is that same `.md` rendered by `tools/md_to_pdf.py` — never a separately edited script version. Working drafts and reviews stay under `drafts/` and `reviews/` as the evidence trail. No `.mp4`, `.mov`, or other video file is produced. Verify both files are non-zero before reporting their paths; if PDF generation fails, keep the `.md`, record the failure in `known_limitations`, and say so plainly.
 
 ## Status
 
-`pipeline.md`, the nine skills, the reference format, and the ten agents are in place. There is no video generator, render step, provider, or API key to configure — the pipeline is text-only and the script is recorded by a human. The `outputs/` layout is defined in `pipeline.md`.
+`pipeline.md`, the nine skills, the reference format, and the ten agents are in place. There is no video generator, render step, provider, or API key to configure — the script is recorded by a human. The only rendering step is `tools/md_to_pdf.py`, which prints the final `.md` to a `.pdf` using Python-Markdown and headless Chrome/Edge. The `outputs/` layout is defined in `pipeline.md`.

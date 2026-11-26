@@ -1,10 +1,11 @@
-"""Convert a Markdown script file to PDF using Python-Markdown and headless Chrome/Edge.
+"""Convert the final Markdown script to its PDF copy using Python-Markdown and headless Chrome/Edge.
 
 Usage:
     python tools/md_to_pdf.py <input.md> <output.pdf>
 
-The pipeline's canonical deliverable remains the .md file. This helper only
-produces a print-friendly PDF copy of that text — it never generates video.
+This is the pipeline's PDF delivery step: the .md is the source of truth and the
+.pdf is a print-friendly rendering of that exact same file. It never generates
+video and never changes the script's content.
 """
 
 import html
@@ -14,8 +15,6 @@ import subprocess
 import sys
 import tempfile
 from pathlib import Path
-
-import markdown
 
 CSS = """
 @page { size: A4; margin: 16mm 14mm; }
@@ -87,6 +86,12 @@ def main() -> int:
         print(f"Input not found: {src}")
         return 1
     dst.parent.mkdir(parents=True, exist_ok=True)
+
+    try:
+        import markdown
+    except ModuleNotFoundError:
+        print("Missing dependency: Python-Markdown. Install it with: pip install markdown")
+        return 1
 
     body = markdown.markdown(
         src.read_text(encoding="utf-8"),

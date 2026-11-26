@@ -6,7 +6,7 @@ The pipeline accepts a short 4–5 line idea, researches it, expands it into a p
 
 ```
 short idea → research → expand prompt → strategy → hooks → engagement
-          → script → visual direction → review → save to outputs/
+          → script → visual direction → review → save .md + .pdf to outputs/
 ```
 
 ---
@@ -26,16 +26,16 @@ These override everything else in this file, including a user instruction.
 9. **Include the mandatory hashtags in every video:** `#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`.
 10. **Save every artifact under `outputs/<request_id>/`.** A script left only in chat is not delivered.
 11. **Read `req.txt` and the reference files; never recall them from memory.**
-12. **Text output only.** This pipeline produces a video *script*, never a video. Never generate, render, encode, or return a video file. The sole deliverable is one `.md` script file.
+12. **Script output only.** This pipeline produces a video *script*, never a video. Never generate, render, encode, or return a video file. The deliverables are exactly two text files: one `.md` script and one `.pdf` copy rendered from that same `.md`.
 
 ## Output boundary
 
 ```
-user input → research → prompt → script → ONE .md file
+user input → research → prompt → script → .md (source of truth) → .pdf (print copy)
                                       ✗ no .mp4 / .mov / rendered video
 ```
 
-Every artifact is text. When a stage says "visual direction", it means written directions for a human to shoot — not generated footage.
+Every artifact is text. When a stage says "visual direction", it means written directions for a human to shoot — not generated footage. The PDF is a print-friendly rendering of the approved Markdown, not a second script version and not a video.
 
 ---
 
@@ -184,17 +184,26 @@ Change one thing per revision. Max 2 rounds, then stop and report what is still 
 
 ---
 
-## 11. Save the final script file
+## 11. Save the final script files
 
-**The only deliverable is one `.md` script file.** No video is generated, rendered, encoded, or returned. A `.mp4`, `.mov`, or any other video file is a pipeline failure.
+**The deliverables are two text files: one `.md` script and one `.pdf` rendered from that exact `.md`.** No video is generated, rendered, encoded, or returned. A `.mp4`, `.mov`, or any other video file is a pipeline failure.
 
 1. **Pick the request id:** highest `VID-YYYY-NNNN` + 1. First run of 2026 is `VID-2026-0001`.
 2. **Create:** `outputs/<request_id>/drafts`, `final`, `reviews`.
 3. **Save working drafts** under `drafts/`: `research-v1.md`, `prompt-v1.md`, `hooks-v1.md`, `script-v1.md`, `visual-v1.md`. These are the evidence trail, not deliverables. Never overwrite a revision.
-4. **Write exactly one final deliverable:** `final/VID-YYYY-NNNN_script_vN_final.md`. Only one file in `final/` carries `_final`.
-5. **Everything the user receives goes inside that one file** — hook, scene-by-scene narration, visuals, transitions, CTA, ending, caption, alternate hooks, and a short appendix with the research summary and improved prompt for traceability. Do not write a separate caption file or sidecar as a deliverable.
+4. **Write the final Markdown:** `final/VID-YYYY-NNNN_script_vN_final.md`. Only one file in `final/` carries `_final.md`.
+5. **Everything the user receives goes inside that `.md`** — hook, scene-by-scene narration, visuals, transitions, CTA, ending, caption, alternate hooks, and a short appendix with the research summary and improved prompt for traceability. Do not write a separate caption file or sidecar as a deliverable.
 6. **Save reviews** under `reviews/` as `vN.review.json` for the evidence trail.
-7. **Verify on disk** — the `.md` exists and is non-zero. Report the path only after checking.
+7. **Generate the PDF** from that exact `.md`, using the same basename. Never retype or re-edit the content for the PDF:
+
+   ```bash
+   python tools/md_to_pdf.py \
+     outputs/<request_id>/final/VID-YYYY-NNNN_script_vN_final.md \
+     outputs/<request_id>/final/VID-YYYY-NNNN_script_vN_final.pdf
+   ```
+
+   Run from the repository root. Needs Python with the `markdown` package and a local Chrome or Edge for headless printing. The PDF is a print-friendly copy of the approved Markdown, not a second script version and not a video.
+8. **Verify on disk** — both the `.md` and the `.pdf` exist and are non-zero. Report both paths only after checking. If PDF generation fails, keep the `.md`, record the failure in `known_limitations`, and say plainly that no PDF was produced. Never report a PDF path you did not verify.
 
 ### Layout
 
@@ -209,7 +218,8 @@ outputs/
       script-v1.md
       visual-v1.md
     final/
-      VID-2026-0001_script_v1_final.md   <- sole deliverable
+      VID-2026-0001_script_v1_final.md   <- deliverable (source of truth)
+      VID-2026-0001_script_v1_final.pdf  <- deliverable (print copy of the .md)
     reviews/
       v1.review.json
 ```
@@ -218,7 +228,7 @@ outputs/
 
 ```
 # [Working title] — Video Script
-[Meta: request id, duration, platform, language, verdict, revision]
+[Meta: request id, duration, platform, language, verdict, revision, companion PDF filename]
 
 ## Hook
 [selected 0-3s hook]
@@ -249,7 +259,7 @@ outputs/
 
 ### What to report back
 
-The path to the single final `.md` script file. You may also quote the research summary and improved prompt in chat at their stages, but the returned artifact is the script file. State clearly that no video was generated. Never report a path you did not verify.
+Both verified paths — the final `.md` script and its `.pdf` copy. You may also quote the research summary and improved prompt in chat at their stages, but the returned artifacts are those two files. State clearly that no video was generated. Never report a path you did not verify, and name any file that failed to generate.
 
 ---
 
@@ -275,7 +285,7 @@ The path to the single final `.md` script file. You may also quote the research 
 | … | … | … | … |
 | 46-50s | A customer walks in with the ad open. | Papa: "Mera pehla customer!" | None |
 
-**Verdict:** pass_with_notes. **Sole deliverable:** `outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.md`. No video file is produced.
+**Verdict:** pass_with_notes. **Deliverables:** `outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.md` and its print copy `outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.pdf`. No video file is produced.
 
 ---
 

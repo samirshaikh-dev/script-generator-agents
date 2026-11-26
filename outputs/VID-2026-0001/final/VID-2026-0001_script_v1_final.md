@@ -6,7 +6,7 @@
 | Duration | 25 seconds |
 | Platform | Short-form vertical |
 | Language | Hinglish dialogue, English CTA |
-| Deliverable type | `script_md` — one `.md` file |
+| Deliverable type | `script_md` + `script_pdf` — this `.md` and its print copy |
 | Video generated | No |
 | Verdict | `pass_with_notes` |
 | Revision round | 1 |
@@ -260,4 +260,4 @@ A shopkeeper in a "Festival Sale" shirt turns a vague sale into a timed one: he 
 
 ---
 
-*No video was generated, rendered, or returned. This `.md` file is the sole deliverable.*
+*No video was generated, rendered, or returned. This `.md` file and its print copy `VID-2026-0001_script_v1_final.pdf` are the two deliverables.*

@@ -38,7 +38,7 @@ short user input (4-5 lines)
 
 `script-quality-review` routes a `revise` verdict to the owning skill, never to a generic rewrite. Two revision rounds per script; deterministic copy fixes do not consume the budget. Intent drift routes to `video-prompt-expansion`.
 
-**Text-only deliverable.** This system produces a script file, not a video. The single deliverable is `outputs/<request_id>/final/VID-YYYY-NNNN_script_vN_final.md`; it contains the script, caption, and appendices with the research summary and improved prompt. Never generate, render, or return a video file.
+**Text-only deliverables.** This system produces a script, not a video. The deliverables are `outputs/<request_id>/final/VID-YYYY-NNNN_script_vN_final.md` — containing the script, caption, and appendices with the research summary and improved prompt — and `VID-YYYY-NNNN_script_vN_final.pdf`, the print copy rendered from that exact `.md` by `tools/md_to_pdf.py`. Never generate, render, or return a video file.
 
 ## Reference material
 
