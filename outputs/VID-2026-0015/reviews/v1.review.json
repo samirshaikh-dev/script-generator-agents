@@ -1,0 +1,21 @@
+{
+  "request_id": "VID-2026-0015",
+  "verdict": "pass",
+  "score": "10/10",
+  "review_summary": "All 10 checks passed. Verbatim input anchor captured and preserved. Hook (crushed package, 'Delivered. Broken.') preserved word for word. VO 'Some things you want to see before paying' preserved. Action (finds shop on meelTe, walks in, picks up item, smiles) perfectly realized. Phone screen Clip B (tap shop ad: photo, price, shop name, address line) integrated seamlessly. Verbatim CTA 'See it. Touch it. Buy it. meelTe.' strictly adheres to brand spelling meelTe. Duration strictly 20 seconds. Mandatory hashtags present. Zero invented claims.",
+  "checks": {
+    "intent_anchor_preserved": true,
+    "brand_spelling_meelTe": true,
+    "house_scene_table_format": true,
+    "phone_screen_clip_b_accurate": true,
+    "duration_20s_accurate": true,
+    "cta_verbatim_accurate": true,
+    "mandatory_hashtags_included": true,
+    "no_invented_claims": true,
+    "tone_and_voice_aligned": true,
+    "two_deliverables_contract": true
+  },
+  "revision_round": 1,
+  "revision_required": false,
+  "targeted_feedback": []
+}
