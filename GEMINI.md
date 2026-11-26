@@ -1,83 +1,73 @@
-# Meelte Image Generation — Project Guide
+# Community Video Script Generator — Project Guide
 
 This file is the project context for Gemini CLI. Read it before acting.
 
 ## What this project is
 
-A reusable, multi-agent system that turns a Meelte marketing request into a planned, on-brand, quality-checked image. It is not a prompt-template dump: each specialist step produces a structured object that the next step consumes.
+A reusable, multi-agent system that turns a topic into a planned, hook-rich, quality-checked community-building video script. Each specialist step produces a structured object that the next step consumes. The goal is participation, not reach: viewers → participants → regular members → an active, connected community.
 
-Full requirements: `req.txt`. Agent roster and handoffs: `AGENTS.md`.
+Full requirements: `req.txt`. Canonical workflow: `pipeline.md`. Agent roster: `AGENTS.md`.
 
 ## Repository layout
 
 ```
 pipeline.md               canonical, host-agnostic workflow — read this first
 AGENTS.md                 agent roster, handoff map, revision policy
-opencode.jsonc            OpenCode config (default agent = orchestrator)
 req.txt                   full project requirements
-brand/
-  meelte-brand.json       single source of truth: palette, type, logo, formats, copy limits
-.agents/skills/           9 skills (8 Meelte + find-skills)
-  meelte-brand-system/
-  flat-vector-illustration/
-  marketing-creative-strategy/
-  advertising-layout-composition/
-  image-prompt-engineering/
-  image-quality-review/
-  image-asset-finishing/
-  campaign-series-consistency/
-.opencode/agents/         8 agents: orchestrator + 7 specialists
-outputs/<request_id>/     every generated image, prompt, review, and metadata
+.agents/skills/           7 skills (6 video + find-skills)
+  community-video-strategy/
+  hook-library/
+    references/hook-categories.md
+  community-engagement-cta/
+  video-scriptwriting/
+  visual-direction/
+  script-quality-review/
+    references/review-rubric.md
+.agents/agents/           8 agents: orchestrator + 7 specialists
+outputs/<request_id>/     every brief, hook set, script, review, and metadata
 ```
 
-## Brand rules you must apply
+## Non-negotiables
 
-Source of truth is `brand/meelte-brand.json`. Never restate brand values from memory — read the file.
+- Never invent a price, statistic, deadline, testimonial, member story, or result.
+- Never manufacture urgency or social proof.
+- Never sound like an advertisement; no corporate language or generic motivation.
+- Never write a hook the script cannot deliver.
+- Never paraphrase `req.txt` from memory — read it.
+- Every deliverable is saved under `outputs/<request_id>/`.
 
-| Token | Hex | Role |
-|---|---|---|
-| orange | `#FEA711` | primary accent, CTAs, focal highlights |
-| purple | `#743BAA` | primary anchor, headlines, large shapes |
-| lavender | `#F4EFFD` | background, breathing room |
-| charcoal | `#171923` | typography, outlines |
-| white | `#FFFFFF` | clarity, negative space |
-
-- Orange and purple must read as the dominant pair in any creative.
-- Typography: Poppins / Manrope / Plus Jakarta Sans, bold geometric sans only. Headline ≤ 6 words, supporting ≤ 14, CTA ≤ 4.
-- Illustration: polished 2D flat vector, subtle gradients, minimal outlines, soft shadows, rounded friendly characters. Strictly 2D flat vector only — never photorealism, realistic photography, 3D, or stock photography under any circumstances, even if requested in a prompt. Matches canonical style reference `brand/references/canonical-style-example.jpg`.
-- Logo: use the supplied asset only. Never fabricate, trace, or generate it. If no asset, reserve the zone and mark `logo pending`.
-- Formats: 1:1 (1080×1080), 4:5 (1080×1350), 16:9 (1920×1080), 9:16 (1080×1920).
+Full list: `pipeline.md` §0.
 
 ## Workflow
 
-**Follow [`pipeline.md`](pipeline.md).** It is the canonical workflow for every host — this section only maps its steps onto the OpenCode agents.
+**Follow [`pipeline.md`](pipeline.md).** It is the canonical workflow for every host — this section only maps its steps onto the agents.
 
 ```
-pipeline.md step        OpenCode agent
-─────────────────────────────────────────
-1. normalize        →   orchestrator
-2. load brand       →   brand-guardian
-3. route to skills  →   orchestrator
-4. rewrite prompt   →   art-director + prompt-engineer
-5. self-check       →   orchestrator
-6. generate         →   image-generator
-7. review           →   visual-qa
-8. save             →   finalizer
+pipeline.md step        Agent                     Skill / output
+──────────────────────────────────────────────────────────────────────
+1. normalize        →   orchestrator              VideoBrief
+2. strategy         →   community-strategist      video_brief
+3. hooks            →   hook-writer               hook_set (30+)
+4. engagement       →   engagement-designer       engagement_plan
+5. script           →   scriptwriter              video_script + caption
+6. visual direction →   visual-director           visual_direction
+7. review           →   script-qa                 quality_review
+8. save             →   finalizer                 FinalDeliverable
 ```
 
-For a single image the orchestrator may run steps 1–5 itself instead of delegating. `pipeline.md` §0 and §5 are gates, not guidance.
+For a partial request (hooks only, caption only, a CTA rewrite) the orchestrator may run the relevant step itself. `pipeline.md` §0 and §8 are gates, not guidance.
 
-Failures route back to the owner of the fix, not automatically to generation:
+Failures route back to the owner of the fix, not to a generic rewrite:
 
 | Problem | Owner |
 |---|---|
-| Misspelled text, wrong price, layout of copy | `finalizer` (deterministic overlay) |
-| Composition, focal point, safe areas | `art-director` |
-| Illustration style, anatomy, clutter | `prompt-engineer` |
-| Message, headline, claims | `campaign-strategist` |
-| Palette, logo, tone | `brand-guardian` |
+| Objective, audience, pillar, invented fact | `community-strategist` |
+| Hook quality, repetition, top-5 choice | `hook-writer` |
+| Engagement question, CTA, "follow us for more" | `engagement-designer` |
+| Script tone, structure, timestamps, caption | `scriptwriter` |
+| Shots, overlays, b-roll, music, pacing | `visual-direction` |
 
-Default retry budget: 2 image regenerations. Deterministic fixes do not consume it. On exhaustion, stop and report the failing asset with the issue list.
+Default retry budget: 2 revision rounds. Deterministic copy fixes do not consume it. On exhaustion, stop and report the script with the issue list.
 
 ## Skills
 
@@ -85,14 +75,13 @@ Each skill is `.agents/skills/<name>/SKILL.md` with YAML frontmatter. Load the s
 
 | Skill | Use for |
 |---|---|
-| `meelte-brand-system` | any palette, type, logo, or tone decision |
-| `flat-vector-illustration` | character, environment, rendering, style lock |
-| `marketing-creative-strategy` | message, copy, claims |
-| `advertising-layout-composition` | bands, focal point, safe areas, logo box |
-| `image-prompt-engineering` | prompt structure, negatives, model adapters |
-| `image-quality-review` | verdicts, severity, revision instructions |
-| `image-asset-finishing` | overlays, export, naming, metadata |
-| `campaign-series-consistency` | multi-asset campaigns, drift control |
+| `community-video-strategy` | objective, audience, purpose, pillar, participation ladder |
+| `hook-library` | 30+ hooks, categories A–Z, top 5, psychological angles |
+| `community-engagement-cta` | engagement question, CTA styles, participation path |
+| `video-scriptwriting` | timed script, scene directions, caption, 11-part assembly |
+| `visual-direction` | shots, expressions, transitions, b-roll, music, pacing |
+| `script-quality-review` | verdict, severity, routing, bounded revisions |
+| `find-skills` | general discovery helper; not part of the video workflow |
 
 ## Agent roles
 
@@ -100,25 +89,26 @@ If you are acting as the orchestrator, you own the brief, the sequence, the retr
 
 If you are acting as a single specialist, produce only your contract and stop.
 
-## Hard rules
+## Output requirements
 
-- Never invent prices, offers, statistics, timeframes, guarantees, testimonials, or product capabilities.
-- Never claim an image was generated when the provider call failed.
-- Never mark an asset brand-approved without a QA pass.
-- Brand name and headline may be rendered in-image (the project default) only when the user supplied the exact string and QA checks the spelling character by character. Prices, dates, and legal lines are overlaid or left out — never guessed.
-- Never paraphrase the style-lock block; drift starts there.
-- Never rewrite approved copy without flagging it.
-- Keep every prompt version and revision. Never overwrite a raw generation.
-- Secrets come from environment variables. Never hardcode or log a key.
+Every full video delivers the 11 items from `req.txt` §6:
+
+1. video objective
+2. target audience
+3. 30+ hooks divided into categories
+4. top 5 recommended hooks
+5. reason behind each recommended hook
+6. complete ready-to-record script
+7. visual direction
+8. on-screen text
+9. CTA variations
+10. social media caption
+11. community-building objective
 
 ## Clarification policy
 
-Ask only when the answer materially changes the output: platform/ratio when it changes composition, missing headline when copy is not supplied, a missing asset, or a brand conflict that needs a decision. Otherwise pick a sensible default, record it in the brief, and continue.
+Ask only when the answer materially changes the audience, the pillar, or a claim that cannot be invented. Otherwise pick a sensible default, record it in the brief, and continue.
 
 ## Status
 
-`pipeline.md`, the nine skills, the brand file, and the eight agents are in place.
-
-Inside OpenCode, `image-generator` still has no provider adapter — it will correctly return `status: "failed"` with `"no image provider configured"`. Do not fake a result. The provider adapter (`providers/`) and the §7 JSON schemas remain unbuilt.
-
-Outside OpenCode, `pipeline.md` needs no provider: if the host has an image tool (Antigravity, Gemini app, Ideogram, Midjourney), it generates; if not, it returns the finished prompt and stops.
+`pipeline.md`, the seven skills, and the eight agents are in place. There is no external provider or API key to configure — this pipeline produces text scripts that are recorded by a human. The §7 JSON contracts are defined in the skills; the `outputs/` layout is defined in `pipeline.md` §9.

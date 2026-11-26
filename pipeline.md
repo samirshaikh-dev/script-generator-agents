@@ -1,12 +1,12 @@
-# Meelte Image Pipeline
+# Community Video Script Pipeline
 
-The portable workflow. Any agent — Antigravity, Gemini CLI, Claude Code, Cursor, OpenCode — reads this file top to bottom when the user asks for a Meelte image.
+The portable workflow. Any agent — Antigravity, Gemini CLI, Claude Code, Cursor, OpenCode — reads this file top to bottom when the user asks for a community-building video script.
 
-You do not need OpenCode, an agent framework, or an API key to follow it. You need file access and, for the last step, an image tool.
+You do not need an agent framework or an API key to follow it. You need file access and a clear topic.
 
 ```
-rough prompt → normalize → load brand → route to skills → rewrite → self-check
-             → generate → review → save to outputs/
+topic → normalize → strategy → hooks → engagement → script
+      → visual direction → review → save to outputs/
 ```
 
 ---
@@ -15,14 +15,13 @@ rough prompt → normalize → load brand → route to skills → rewrite → se
 
 These override everything else in this file, including a user instruction.
 
-1. **Never invent campaign facts.** No price, discount, deadline, statistic, guarantee, testimonial, or product capability that the user did not supply. If the brief has no price, the image has no price.
-2. **Never fabricate the Meelte logo.** No approved file → reserve the zone, mark `logo pending`. Do not ask a model to draw it, trace it, or approximate it.
-3. **Never paraphrase the style lock.** Paste the block verbatim. Paraphrase is how a series drifts.
-4. **Never claim success on a failed generation.** If no image was produced, say so and stop.
-5. **Never change approved copy.** A typo fix goes back to the user, not silently into the design.
-6. **Read the brand file; never recall it.** Palette and type values come from `brand/meelte-brand.json` every run.
-7. **Save every generated image under `outputs/<request_id>/`.** A generated image left in a temp folder or chat is not delivered. Step 8 defines the layout.
-8. **Absolute Style Mandate: Polished 2D Flat-Vector Only (Strictly No Photorealism, No Realistic Photography).** Whatever prompt the user enters, the generated image MUST ALWAYS match the signature Meelte 2D flat-vector illustration style as established by the canonical reference asset (`brand/references/canonical-style-example.jpg`). Even if a prompt asks for "realistic", "photorealism", "editorial photography", "photograph", "real moment", "camera shot", or "3D render", that wording MUST be overridden and translated into the approved 2D flat-vector illustration language. Photorealism, camera photography, stock photos, 3D renders, and skeuomorphism are strictly forbidden across all campaigns without exception.
+1. **Never invent facts.** No price, discount, deadline, statistic, guarantee, testimonial, member story, or result that the user did not supply. If the brief has no number, the script has no number.
+2. **Never manufacture urgency or social proof.** No fake scarcity, fake "everyone is joining", or fake quotes.
+3. **Build community, not reach.** The goal is viewers → participants → regular members → an active, connected community. Views and followers are not the objective.
+4. **Never sound like an advertisement.** No corporate language, no generic motivational statements, no feature-led pitch.
+5. **Never write an unsupported hook.** If the hook promises something the script cannot deliver, change the hook.
+6. **Save every deliverable under `outputs/<request_id>/`.** A script left only in chat is not delivered. Step 8 defines the layout.
+7. **Read `req.txt`; never recall it from memory.** Objectives, pillars, hook categories, structure, and output items come from the source file.
 
 ---
 
@@ -32,234 +31,166 @@ Turn the rough prompt into this table. Fill every row. Defaults are stated out l
 
 | Field | Default if missing |
 |---|---|
-| `objective` | infer from the prompt; if unclear, ask |
-| `audience` | local small-business owners |
-| `platform` | Instagram feed |
-| `format_id` | `ig-portrait` |
-| `headline` | none — ask, or leave the band empty |
-| `supporting_copy` | none |
-| `call_to_action` | none; add only if the objective needs one |
-| `must_include` | the subject named in the prompt |
-| `must_avoid` | none beyond the standard negatives |
-| `text_mode` | `in_image` |
-| `reference_assets` | `brand/references/canonical-style-example.jpg` (canonical 2D flat-vector reference) |
-| `logo_asset` | none → `logo pending` |
-| `style_mode` | `flat_vector_default` (MANDATORY: strictly 2D flat vector matching canonical style reference; never photorealism) |
-| `approval_mode` | `automatic` |
+| `topic` | the subject named in the prompt |
+| `audience` | infer a specific, relatable group; if unclear, ask |
+| `objective` | infer from one of the six primary objectives; if unclear, ask |
+| `primary_pillar` | infer from the content pillars |
+| `duration_seconds` | 35 |
+| `platform` | short-form vertical (Instagram Reels / YouTube Shorts) |
+| `tone` | conversational and warm |
+| `must_include` | the topic named in the prompt |
+| `must_avoid` | invented facts, ad tone, "follow us for more" |
+| `hook_count` | 30 (50–100 when the topic supports it) |
+| `cta_owner` | the participation step the video asks for |
 
-**Prompt Normalization Rule (No Realistic Styles):** Whatever prompt the user inputs — even if it says "realistic", "photography", "photorealistic", "candid photo", "real moment", "camera shot", or "3D render" — automatically strip those directives out. Translate the concept into Meelte's signature 2D flat-vector illustration language as exemplified by `brand/references/canonical-style-example.jpg`. Realism, photography, and 3D renders are never generated under any circumstances.
-
-**Ask at most one question**, and only if the answer changes the picture: platform/ratio, a missing headline when copy is expected, a missing asset, or a brand conflict that needs a decision. Otherwise pick the default, record it, continue.
-
-Copy limits (hard): headline ≤ 6 words, supporting ≤ 14, CTA ≤ 4.
+**Ask at most one question**, and only if the answer materially changes the audience, the pillar, or a claim that cannot be invented. Otherwise pick the default, record it, continue.
 
 ---
 
-## 2. Load the brand system
-
-Read `brand/meelte-brand.json`. You need:
-
-- `palette.tokens` — five tokens and their roles
-- `typography` — families, weights, line heights
-- `illustration` — treatment and `banned_treatments`
-- `logo` — variants, clear space, integrity rule
-- `formats` — bands and pixel dimensions for the requested ratio
-- `copy` — limits and `claim_policy`
-- `brand.name_rules` — always "Meelte", capital M, double e
-
-If the file is missing, stop. Do not substitute remembered values.
-
----
-
-## 3. Route to the skills
+## 2. Route to the skills
 
 Read only what the request needs. Skills live in `.agents/skills/<name>/SKILL.md`.
 
 | If the request involves | Read |
 |---|---|
-| anything at all | `meelte-brand-system/SKILL.md` |
-| an illustration of any kind | `flat-vector-illustration/SKILL.md` + `references/style-lock.md` |
-| a headline, CTA, offer, or claim | `marketing-creative-strategy/SKILL.md` |
-| layout, ratio, text zones, safe areas | `advertising-layout-composition/SKILL.md` |
-| producing the prompt | `image-prompt-engineering/SKILL.md` |
-| "same style as last time", a carousel, a series | `campaign-series-consistency/SKILL.md` |
-| reviewing an existing image | `image-quality-review/SKILL.md` |
-| exporting, resizing, naming, overlays | `image-asset-finishing/SKILL.md` |
+| a new video topic, audience, or objective | `community-video-strategy/SKILL.md` |
+| hooks, openings, or "3 hooks" | `hook-library/SKILL.md` + `references/hook-categories.md` |
+| the engagement question or CTA | `community-engagement-cta/SKILL.md` |
+| the script, timestamps, scene directions, or caption | `video-scriptwriting/SKILL.md` |
+| camera, overlays, b-roll, music, or pacing | `visual-direction/SKILL.md` |
+| reviewing or revising a script | `script-quality-review/SKILL.md` + `references/review-rubric.md` |
 
-Two to four skills is normal. Reading all eight is a sign you did not read the request.
+Two to four skills is normal for a partial request. A full video uses all six in order.
 
 ---
 
-## 4. Rewrite the prompt
+## 3. Set the strategy
 
-Six blocks, in this order. No block may be skipped.
+Produce the `video_brief` from `community-video-strategy`. Name:
 
-### Block 1 — Subject
+- one specific audience,
+- one content pillar,
+- one primary objective,
+- the participation ladder step this video asks for,
+- every default assumption,
+- the community-building rationale.
 
-One paragraph, 25–45 words. Who, doing what, where, with what. Concrete nouns. One action only. No adjective that does not change the picture.
-
-### Block 2 — Style lock
-
-Paste `.agents/skills/flat-vector-illustration/references/style-lock.md` → "Canonical block" **verbatim**.
-
-The block ends with `No text, no lettering, no signage copy.` This is the **only** line you may replace, and only when `text_mode` is `in_image`. Replace it with the text instruction from Block 5. Everything above it stays word-for-word.
-
-### Block 3 — Composition
-
-Band allocation for the requested ratio, focal point position in percentages, foreground/midground/background, and what must stay out of the text bands. Recompose per ratio — never scale a 1:1 layout onto 4:5.
-
-### Block 4 — Palette
-
-Name the tokens in words: *warm orange, deep purple, soft lavender, dark charcoal, white*. Never hex codes in the prompt — models weight them unpredictably. Assign each token a job. Orange and purple must read as the dominant pair.
-
-### Block 5 — Text instruction
-
-**`in_image`** (default) — quote every string exactly and require exact spelling:
-
-> Text: render exactly "Diwali Dhamaka" in the top band, bold geometric sans, dark charcoal, two lines maximum, spelled exactly. Render exactly "Celebrate with your neighbourhood" in the bottom band, bold, dark charcoal. No other text, no signage copy, no lettering anywhere in the illustration.
-
-**`overlay_after_generation`** — invert it:
-
-> No text, no lettering, no signage copy. Leave the top 30% and bottom 18% as clean flat lavender panels.
-
-Never put a price, date, or legal line into the image under either mode without the user supplying the exact string.
-
-### Block 6 — Negatives
-
-8–15 items, ordered by likelihood for this brief. Start from `flat-vector-illustration/references/negative-constraints.md`.
-**Mandatory opening cluster for every prompt:** Always lead with `photorealism, realistic photograph, 3D render, stock photo look, skeuomorphism`. Realism is strictly barred. For `in_image`, always include the text-failure cluster: `extra text, misspelled letters, garbled lettering, watermark, logo`.
+Stop here if the audience or objective cannot be determined without inventing something — ask the single allowed question.
 
 ---
 
-## 5. Self-check before generating
+## 4. Generate hooks
 
-Do not generate until every box is true. This is the gate, not a formality.
+Using `hook-library`:
 
-- [ ] Style lock pasted verbatim; only the final text line substituted
-- [ ] Strictly 2D flat-vector illustration matching canonical style reference (`brand/references/canonical-style-example.jpg`); zero photorealism, camera, or photographic terms in the prompt
-- [ ] Negatives mandatory opening cluster included (`photorealism, realistic photograph, 3D render`)
-- [ ] One action, one focal point
-- [ ] Orange and purple are the dominant pair
-- [ ] Palette named in words, no hex in the prompt
-- [ ] Ratio and bands match the requested `format_id`
-- [ ] Text instruction matches `text_mode`
-- [ ] Every quoted string came from the user, spelled their way
-- [ ] No price, offer, date, or statistic that was not supplied
-- [ ] No instruction to draw the Meelte logo
-- [ ] Negatives are specific to this brief, 8–15 of them
-- [ ] Headline ≤ 6 words, supporting ≤ 14, CTA ≤ 4
-- [ ] Prompt names no colour outside the five tokens
+1. Write at least 30 hooks (aim for 50–100 on a rich topic).
+2. Spread them across the 26 categories A–Z in `references/hook-categories.md`.
+3. No near-duplicates — every hook needs a distinct angle or technique.
+4. Apply all eight hook quality rules.
+5. Select the top 5, give each a psychological angle and an opening variation.
+6. Recommend one hook for the script.
+
+A hook that needs a fabricated statistic, testimonial, or deadline is discarded, not softened.
 
 ---
 
-## 6. Generate
+## 5. Design engagement
 
-### Model
+Using `community-engagement-cta`:
 
-| Situation | Model |
+1. Place one answerable question inside the main content.
+2. Write 3–5 CTA variations in different styles from the seven approved styles.
+3. The ask is one small action. No stacked requests.
+4. Delete any "follow us for more" default.
+5. State the participation path — what happens after they respond.
+
+---
+
+## 6. Write the script
+
+Using `video-scriptwriting`:
+
+| Time | Block | What happens |
+|---|---|---|
+| 0–3 s | Hook | The recommended hook, spoken exactly. |
+| 3–8 s | Context | A situation the named audience recognises. |
+| 8–25 s | Main message | Story or observation with one clear idea. |
+| 25–35 s | Community connection | What "we" do or understand here. |
+| Final seconds | CTA | The engagement question and recommended CTA. |
+
+Rules: conversational, relatable, useful, no ad tone, no corporate language, no generic motivation, no invented facts. Every block carries a timestamp, a scene direction, and suggested on-screen text. Write the caption with an engaging opening, short context, CTA, and relevant hashtags.
+
+---
+
+## 7. Add visual direction
+
+Using `visual-direction`, give every block a shot: camera angle, facial expression, delivery style, transition, on-screen text, b-roll, and a music/pacing note. Keep it filmable with a phone and one location. On-screen text stays short. Never illustrate a claim the script does not make.
+
+---
+
+## 8. Review before delivery
+
+Using `script-quality-review` and its `references/review-rubric.md`, check **all 11 output items** from `req.txt` §6:
+
+1. video objective
+2. target audience
+3. 30+ hooks by category
+4. top 5 recommended hooks
+5. reason behind each recommended hook
+6. complete ready-to-record script
+7. visual direction
+8. on-screen text
+9. CTA variations
+10. social media caption
+11. community-building objective
+
+**Verdict:** any critical → `revise`; no critical + 2 or more major → `revise`; no critical + 1 major → `pass_with_notes` if minors exist, else `pass`.
+
+Route a `revise` to the owning skill:
+
+| Problem | Owner |
 |---|---|
-| Text baked into the image (default) | **Nano Banana Pro** — `gemini-3-pro-image` |
-| Illustration only, no text | **Nano Banana 2.1** — `gemini-nano-banana-2.1` |
-| Series / carousel, many frames | `gemini-nano-banana-2.1`, fixed seed |
-| Not a Gemini host | See `image-prompt-engineering/references/model-adapters.md` |
+| Objective, audience, pillar, invented fact | `community-video-strategy` |
+| Hook quality, repetition, top-5 choice | `hook-library` |
+| Engagement question, CTA, "follow us for more" | `community-engagement-cta` |
+| Script tone, structure, caption, missing output item | `video-scriptwriting` |
+| Shots, overlays, b-roll, music, pacing | `visual-direction` |
 
-Rationale: garbled brand text is a critical failure, so the text-capable model is the default. Illustration-only work does not benefit from the extra cost.
-
-### Ratio and bands
-
-Read from `brand/meelte-brand.json` → `formats`.
-
-| `format_id` | Ratio | Pixels | Header | Illustration | Footer | Safe margin |
-|---|---|---|---|---|---|---|
-| `ig-square` | 1:1 | 1080×1080 | 32% | 50% | 18% | 6% |
-| `ig-portrait` | 4:5 | 1080×1350 | 30% | 52% | 18% | 6% |
-| `banner-landscape` | 16:9 | 1920×1080 | 30% | 55% | 15% | 4% |
-| `story-vertical` | 9:16 | 1080×1920 | 24% | 56% | 20% | 8% |
-
-Generate at the native ratio. Do not generate square and crop — cropping a subject to force a ratio is a defect, not a shortcut.
-
-### Two branches
-
-**If your host has an image tool** (Antigravity, Gemini app, Ideogram, Midjourney, a local model): generate with the model and ratio above, then go to Step 7.
-
-**If your host has no image tool** (Gemini CLI, Cursor, Claude Code, plain chat): output the prompt in a fenced block labelled with the target model and ratio, state the model and dimensions, and **stop**. Do not describe what the image would look like as if it existed. Do not claim it was generated.
-
-### Where the file goes
-
-Every generated image is written to `outputs/<request_id>/raw/` — see Step 8. Not a temp folder, not the host's default artifact directory, not a chat attachment only.
-
-If your host saves images somewhere of its own choosing (Antigravity artifacts, a browser download, an `images/` cache), move or copy the file into `outputs/<request_id>/raw/` before going to Step 7. Report both paths if you leave the original in place.
+Change one thing per revision. Max 2 rounds, then stop and report what is still wrong.
 
 ---
 
-## 7. Review the output
+## 9. Save to `outputs/`
 
-Look at the thumbnail first — the creative is read in under three seconds.
+Every deliverable lands in `outputs/`. This is not optional.
 
-- [ ] Objective and audience are recognisable without explanation
-- [ ] Meelte personality reads as playful, warm, modern — not corporate
-- [ ] Orange and purple dominate; no third hue crept in
-- [ ] Flat vector treatment is strictly consistent with `brand/references/canonical-style-example.jpg`; zero photorealism, photography, 3D render, or stock look (any realistic element is an immediate critical failure)
-- [ ] Main subject is immediately understandable
-- [ ] Headline is legible and spelled exactly
-- [ ] Supporting copy is short and accurate
-- [ ] CTA present only if the objective needs one
-- [ ] Logo correct and undistorted, or the zone is empty and marked pending
-- [ ] Composition fits the ratio; nothing important clipped or hugging an edge
-- [ ] No clutter, no filler props, no second focal point
-- [ ] Text sits on a flat or scrim panel, never on busy illustration
-- [ ] Dimensions and format are exact
-
-**Severity:** any critical failure (photorealism/photography/3D look, misspelled brand name, wrong price, unsupported claim, garbled text) → fix before delivering. Two or more major issues → fix. Minors → deliver and list them.
-
-**Revision rule:** change one clause per attempt, not the whole prompt. Move the matching negative to the front. Text problems are fixed by re-rendering the text block or by overlaying deterministically — never by regenerating the illustration. Maximum 2 regenerations, then stop and report what is still wrong.
-
----
-
-## 8. Save to `outputs/`
-
-**Every generated image lands in `outputs/`. This is not optional.** A run that produced an image but left it in a temp directory, a host artifact store, or a chat attachment is not finished.
-
-### Steps
-
-1. **Pick the request id.** Scan `outputs/` for the highest `MEE-YYYY-NNNN` and increment it. The first run of the year is `MEE-2026-0001`.
-2. **Create the folders** if they do not exist: `outputs/<request_id>/raw`, `final`, `reviews`.
-3. **Move the generated file** into `raw/` as `<format_id>-v<version>.png`.
-4. **Copy the approved revision** into `final/` under the full filename, with the `.json` sidecar next to it.
-5. **Verify on disk** — file exists, dimensions exact, size non-zero. Report the path only after checking it.
+1. **Pick the request id.** Scan `outputs/` for the highest `VID-YYYY-NNNN` and increment it. First run of 2026 is `VID-2026-0001`.
+2. **Create the folders:** `outputs/<request_id>/drafts`, `final`, `reviews`.
+3. **Save drafts** as `brief.json`, `hooks-v1.md`, `script-v1.md`, `visual-v1.md`. Never overwrite a revision.
+4. **Save approved files** in `final/` with a `.json` sidecar. Only one set per request carries `_final`.
+5. **Save each review** in `reviews/` as `v1.review.json`, `v2.review.json`.
+6. **Verify on disk** — files exist, non-zero, sidecar present. Report paths only after checking.
 
 ### Layout
 
 ```
 outputs/
-  MEE-2026-0001/
+  VID-2026-0001/
     brief.json
-    prompt-v1.md
-    raw/
-      ig-portrait-v1.png
-      ig-portrait-v2.png
+    hooks-v1.md
+    script-v1.md
+    visual-v1.md
     final/
-      MEE-2026-0001_ig-portrait_1080x1350_v2_final.png
-      MEE-2026-0001_ig-portrait_1080x1350_v2_final.json
+      VID-2026-0001_script_v1_final.md
+      VID-2026-0001_caption_v1_final.md
+      VID-2026-0001_v1_final.json
     reviews/
       v1.review.json
-      v2.review.json
 ```
-
-### Rules
-
-- `request_id` is `MEE-YYYY-NNNN`, uppercase, sequential.
-- `format_id` comes from `brand/meelte-brand.json`: `ig-square`, `ig-portrait`, `banner-landscape`, `story-vertical`.
-- Dimensions always explicit in the filename. Lowercase extension. No spaces, no dates.
-- Only one file per request carries `_final`.
-- Never overwrite a raw generation. Never delete a rejected revision — that is the evidence trail.
-- Reference assets live in `brand/`, never in `outputs/`.
 
 ### What to report back
 
-The path to the final PNG, its dimensions, the prompt version, and the model used. If something was not saved, name the file and the reason — never report a path you did not verify.
-
-If the host genuinely cannot write files, return the prompt and the metadata block in chat and state plainly that the assets were not saved.
+The script path, caption path, duration, hook count, verdict, revision round, and `known_limitations`. If a file was not saved, name it and the reason — never report a path you did not verify.
 
 ---
 
@@ -267,69 +198,61 @@ If the host genuinely cannot write files, return the prompt and the metadata blo
 
 **You type:**
 
-> diwali post for a kirana store, shopkeeper giving sweets to a customer, orange and purple, instagram 4:5, headline "Diwali Dhamaka"
+> 40-second community video about our neighbourhood library, aimed at people who think it's only for books.
 
 **Pipeline produces:**
 
-```
-A friendly Indian shopkeeper in his thirties leans over a wooden counter,
-handing a box of sweets to a smiling customer in her twenties; behind them,
-simplified shelves of flat-colour stock blocks. A phone rests on the counter.
+- **Brief:** audience = locals who have never used the library beyond borrowing; pillar = Community awareness; objective = Drive participation; ladder step = viewer → participant; default = 40s vertical short.
+- **Hooks:** 34 hooks across 18 categories. Top hook (D Relatable): "Have you ever walked past a place every day and realised you've never actually been inside?"
+- **Engagement:** "What's the one thing you'd actually use this place for?" CTA: "Drop your idea in the comments — we'll build the next video from them."
+- **Script:** 0–3s hook at the library door; 3–8s "You walk in for a book and leave having talked to three people"; 8–25s the football-recommendation story; 25–35s "a community needs a place to bump into each other"; final CTA.
+- **Visual:** close-up on the door, handheld walk inside, two-shot at the desk, wide shot of the reading area, natural light, warm low music that drops under the hook and CTA.
+- **Caption:** "Turns out the library was never really about books. What would you use yours for? #CommunityLibrary #NeighbourhoodStories"
+- **Verdict:** pass_with_notes — one minor hashtag note.
 
-Polished 2D commercial vector illustration for a modern retail brand.
-Flat vector shapes with subtle gradients for depth.
-Smooth clean edges, minimal outlines in a darker shade of each shape's fill.
-Friendly characters with expressive simplified faces and rounded,
-slightly exaggerated proportions (head-to-body 1:5.5).
-Simplified recognisable objects and environments, three depth planes only.
-Soft single-direction shadows at low opacity, restrained highlights.
-Limited intentional palette: warm orange, deep purple, soft lavender,
-dark charcoal, white.
-Clear single focal point, uncluttered background, generous negative space.
-Bold editorial advertising composition, playful and approachable.
+**Saved to:** `outputs/VID-2026-0001/final/VID-2026-0001_script_v1_final.md`
 
-Composition: subject centred at 50% width and 54% height, filling the middle
-52% of the frame. Keep the top 30% and bottom 18% as flat lavender panels
-with no illustration intruding. Single focal point on the box passing between
-their hands. Nothing cropped at the edges.
-
-Palette: warm orange on the sweets box and the highlight shapes, deep purple
-on the shelves and counter front, soft lavender on the background panels,
-dark charcoal for outlines and type, white for the paper wrap.
-
-Text: render exactly "Diwali Dhamaka" in the top band, bold geometric sans,
-dark charcoal, two lines maximum, spelled exactly. No other text, no signage
-copy, no lettering anywhere in the illustration.
-
-Negative: photorealism, 3D render, clay render, stock photography, texture,
-grain, brush strokes, cluttered background, second focal point, extra text,
-misspelled letters, garbled lettering, watermark, logo, teal, red
-```
-
-**Parameters:** `ig-portrait` · 4:5 · 1080×1350 · `gemini-3-pro-image` · 2K
-
-**Saved to:** `outputs/MEE-2026-0001/final/MEE-2026-0001_ig-portrait_1080x1350_v1_final.png`
-
-Note what the pipeline added — style lock, band allocation, palette roles, negative set, model, ratio — and what it did **not** add: no price, no discount, no date. If you want "20% off" in that footer, you have to type it.
+Note what the pipeline added — audience, pillar, hook library, timed script, visual plan, caption, QA — and what it did **not** add: no membership numbers, no fake quotes, no deadlines.
 
 ---
 
 ## Copy-paste template
 
 ```
-[subject paragraph — one action, 25-45 words]
+[Video objective]
+[Target audience]
+[Primary pillar + ladder step]
 
-[style lock block, verbatim, final text line replaced only if text_mode = in_image]
+HOOKS (30+, grouped by category A-Z):
+…
 
-Composition: [bands for this ratio]. Focal point at [x]% / [y]%. Keep [zones]
-clean. Nothing cropped at the edges.
+TOP 5:
+1. [hook] — [psychological angle] — [opening variation]
+…
 
-Palette: warm orange on [job], deep purple on [job], soft lavender on [job],
-dark charcoal on [job], white on [job].
+SCRIPT:
+0-3s   [spoken] | [scene direction] | [on-screen text]
+3-8s   …
+8-25s  …
+25-35s …
+final  …
 
-Text: [exact strings, or "no text, no lettering, leave clean flat panels at ..."]
+VISUAL DIRECTION:
+[shots, expressions, transitions, b-roll, music, pacing]
 
-Negative: [8-15 items, brief-specific, ordered by likelihood]
+ON-SCREEN TEXT:
+[short exact strings per block]
 
-Parameters: [format_id] · [ratio] · [width]x[height] · [model]
+CTA VARIATIONS:
+1. [style] — [text]
+…
+
+CAPTION:
+[engaging line]
+[2-4 short lines]
+[CTA]
+[relevant hashtags]
+
+COMMUNITY-BUILDING OBJECTIVE:
+[one sentence: viewers -> participants -> members]
 ```
