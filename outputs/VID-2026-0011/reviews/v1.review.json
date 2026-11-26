@@ -1,0 +1,36 @@
+{
+  "request_id": "VID-2026-0011",
+  "review_date": "2026-11-26",
+  "reviewer": "script-qa",
+  "verdict": "pass",
+  "revision_round": 1,
+  "scores": {
+    "intent_preservation": "pass",
+    "factual_accuracy": "pass",
+    "brand_voice_alignment": "pass",
+    "brand_name_spelling": "pass",
+    "timing_and_pacing": "pass",
+    "visual_direction_clarity": "pass",
+    "community_building_alignment": "pass",
+    "output_completeness": "pass"
+  },
+  "checklist_checks": {
+    "verbatim_intent_anchor_preserved": true,
+    "no_invented_prices_or_claims": true,
+    "brand_spelled_meelTe": true,
+    "mandatory_hashtags_present": true,
+    "house_scene_table_used": true,
+    "phone_screens_from_references_or_input": true,
+    "all_11_output_items_accounted_for": true,
+    "stage_artifacts_recorded": true,
+    "script_only_no_video_generated": true
+  },
+  "notes": [
+    "Verbatim input fully preserved: 'Sharma Ji Ki Dukaan' (40 sec); Hook: Friendly AI shopkeeper in old kirana shop looks at camera: 'Beta, 30 saal se yahi dukaan hai.'; nobody under 25 knows shop; grandson shows meelTe on phone; young customers walk in with app open; Sharma ji beams; Clip K; CTA.",
+    "Brand name casing corrected from user's 'Meelte' to official 'meelTe' per Brand Rule 13.",
+    "House table 4-column structure verified: Time, What we see, Dialogue, Phone screen.",
+    "Contiguous timing totaling 40 seconds exactly (0-3s, 3-10s, 10-18s, 18-28s, 28-35s, 35-40s).",
+    "Intergenerational community connection deeply fulfilled.",
+    "Quality score: 100%. Approved for final deliverable compilation."
+  ]
+}
