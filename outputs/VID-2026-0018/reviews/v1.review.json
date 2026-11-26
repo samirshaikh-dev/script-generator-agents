@@ -1,0 +1,37 @@
+{
+  "request_id": "VID-2026-0018",
+  "review_round": 1,
+  "verdict": "pass",
+  "checklist": {
+    "intent_preservation": {
+      "passed": true,
+      "notes": "User's verbatim hook (Mother: 'Beta, ek cheez leke aana, bahut zaroori hai.' / Son: 'Yahan milega kahan?'), search action (typing in 'Search ads' bar, finding shops with distance), phone screen Clip B, 10-minute return, mother's 'Wah!', and verbatim CTA ('Maa ka order, 10 minute mein. meelTe.') are preserved exactly."
+    },
+    "brand_compliance": {
+      "passed": true,
+      "notes": "Canonical 'meelTe' spelling strictly used across dialogue, CTA, title, and hashtags. Brand palette (purple/orange) and voice standards respected."
+    },
+    "house_script_format": {
+      "passed": true,
+      "notes": "4-column house scene table (Time, What we see, Dialogue, Phone screen) with contiguous timestamps covering exactly 30 seconds."
+    },
+    "mandatory_hashtags": {
+      "passed": true,
+      "notes": "Exact mandatory hashtag set '#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness' included in caption."
+    },
+    "screen_references": {
+      "passed": true,
+      "notes": "Clip B explicitly specified from user input; no synthetic or unverified clip IDs."
+    },
+    "hook_library": {
+      "passed": true,
+      "notes": "36 hooks across categories A-Z, top 5 selected with psychological angles and opening variations."
+    },
+    "deliverable_boundary": {
+      "passed": true,
+      "notes": "Only .md script and rendered .pdf print copy will be generated. No video generation."
+    }
+  },
+  "issues": [],
+  "recommendation": "Proceed to final script assembly and PDF compilation."
+}
