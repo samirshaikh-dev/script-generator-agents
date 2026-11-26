@@ -4,13 +4,13 @@
 
 22. "Sale Ka Timer" (25 sec)
 •	Hook (0-3s): A shopkeeper in a shirt that says "Festival Sale" looks at the clock. "Subah 10 se raat 9 tak, bas."
-•	Script: He sets the start date and time and the end date and time on his Meelte ad, so the offer has a clear window. A countdown clock ticks on screen. Customers rush in just before it ends.
+•	Script: He sets the start date and time and the end date and time on his meelTe ad, so the offer has a clear window. A countdown clock ticks on screen. Customers rush in just before it ends.
 •	Phone screen (clip K): The Schedule section: start date, start time, end date, end time.
-•	CTA: "Set the timing. Create urgency. Meelte."
+•	CTA: "Set the timing. Create urgency. meelTe."
 
 ## Concept
 
-A shopkeeper in a "Festival Sale" shirt turns a vague sale into a timed one: he sets 10 AM to 9 PM on his Meelte ad, a countdown ticks, and neighbours arrive just before the window closes.
+A shopkeeper in a "Festival Sale" shirt turns a vague sale into a timed one: he sets 10 AM to 9 PM on his meelTe ad, a countdown ticks, and neighbours arrive just before the window closes.
 
 ## Fixed fields
 
@@ -30,7 +30,7 @@ A shopkeeper in a "Festival Sale" shirt turns a vague sale into a timed one: he 
 | 7-12s | He taps the opening slot with a deliberate finger tap. | Shopkeeper: "Start — aaj, subah 10 baje." | Clip K — Schedule section: Start Date, Start Time (10:00 AM). |
 | 12-17s | He scrolls to the closing slot and sets it; a thin countdown overlay appears. | Shopkeeper: "Aur end — raat 9. Bas itna hi." | Clip K — Schedule section: End Date, End Time (9:00 PM). |
 | 17-21s | Countdown ticks through the final minutes; customers hurry in. | Shopkeeper: "Dekho, ab sab ko pata hai — kab aana hai." | None (countdown overlay on screen) |
-| 21-25s | End card over the shopfront, clock just before 9. | VO: "Set the timing. Create urgency. Meelte." | None |
+| 21-25s | End card over the shopfront, clock just before 9. | VO: "Set the timing. Create urgency. meelTe." | None |
 
 ## Transitions
 
@@ -47,18 +47,18 @@ Low, warm, lightly playful; drop the beat under the 0–3s hook, lift slightly t
 - 7-12s: "Start: 10:00 AM"
 - 12-17s: "End: 9:00 PM"
 - 17-21s: "Aapki sale kab se kab tak?" (engagement question) + countdown
-- 21-25s: "Set the timing. Meelte."
+- 21-25s: "Set the timing. meelTe."
 
 ## CTA and caption
 
-- **CTA voiceover (verbatim):** "Set the timing. Create urgency. Meelte."
-- **Caption:** "Sale chal rahi hai? Toh timing bhi bataiye. Starts 10, ends 9 — apni dukaan ka window Meelte pe set karo."
-- **Hashtags:** `#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
+- **CTA voiceover (verbatim):** "Set the timing. Create urgency. meelTe."
+- **Caption:** "Sale chal rahi hai? Toh timing bhi bataiye. Starts 10, ends 9 — apni dukaan ka window meelTe pe set karo."
+- **Hashtags:** `#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
 
 ## Preserved elements
 
 - verbatim hook line and 0-3s placement; "Festival Sale" shirt; clock glance
-- start date/time and end date/time set on the Meelte ad
+- start date/time and end date/time set on the meelTe ad
 - countdown clock ticks on screen
 - customers rush in just before it ends
 - clip K — Schedule section with start/end date and time

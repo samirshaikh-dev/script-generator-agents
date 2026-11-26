@@ -23,10 +23,11 @@ These override everything else in this file, including a user instruction.
 6. **Never sound like an advertisement.** No corporate language, no generic motivational statements, no feature-led pitch.
 7. **Never write a hook the script cannot deliver.**
 8. **Use only known app screens.** Phone screens come from `refernces/` or the user's input. Never invent a clip id.
-9. **Include the mandatory hashtags in every video:** `#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`.
+9. **Include the mandatory hashtags in every video:** `#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`.
 10. **Save every artifact under `outputs/<request_id>/`.** A script left only in chat is not delivered.
 11. **Read `req.txt` and the reference files; never recall them from memory.**
 12. **Script output only.** This pipeline produces a video *script*, never a video. Never generate, render, encode, or return a video file. The deliverables are exactly two text files: one `.md` script and one `.pdf` copy rendered from that same `.md`.
+13. **Write the brand as `meelTe`.** Lowercase m, double e, capital T, lowercase e — as defined in `brand/meelte-brand.json`. Never `Meelte`, `meelte`, or `MELTE` in dialogue, captions, hashtags, or on-screen text.
 
 ## Output boundary
 
@@ -97,6 +98,7 @@ Read only what the request needs. Skills live in `.agents/skills/<name>/SKILL.md
 
 | If the request involves | Read |
 |---|---|
+| the brand name, wordmark, or visual identity | `brand/meelte-brand.json` (name is always `meelTe`) |
 | a short user idea needing analysis | `video-input-research/SKILL.md` |
 | expanding that idea into a prompt | `video-prompt-expansion/SKILL.md` |
 | the brief, audience, pillar, objective | `community-video-strategy/SKILL.md` |

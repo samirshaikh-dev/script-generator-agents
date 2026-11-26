@@ -38,7 +38,7 @@ Turns the research summary into the production-ready prompt that drives every la
 7. **Add transitions, music, and on-screen text** per beat. Keep transitions simple and on-screen text short.
 8. **Write the CTA voiceover line** and the end card. Add the caption with the mandatory hashtag set from `refernces/` — the union of the mandatory set in `Videos Scripts.md` and the caption in `test Script.md`:
 
-   `#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
+   `#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
 
 9. **List `preserved_elements[]`** — explicit ideas from the user's input carried into the prompt.
 10. **List `added_specifications[]`** — everything you added, each with a reason.
@@ -71,7 +71,7 @@ Return an `improved_prompt` object:
   "on_screen_text": ["…"],
   "cta_voiceover": "…",
   "caption": "…",
-  "hashtags": ["#Meelte", "…"],
+  "hashtags": ["#meelTe", "…"],
   "preserved_elements": ["…"],
   "added_specifications": [{ "detail": "…", "reason": "…" }],
   "claims_to_verify": ["…"]

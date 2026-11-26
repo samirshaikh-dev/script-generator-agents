@@ -32,7 +32,7 @@ After the table, include:
 
 - **CTA (voiceover over the end card, <duration>s):** one short line.
 - **Caption:** one engaging line plus context.
-- **Mandatory hashtags:** `#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
+- **Mandatory hashtags:** `#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
 - **Other hook lines to test:** 2–3 alternate spoken hooks.
 
 ## House voice

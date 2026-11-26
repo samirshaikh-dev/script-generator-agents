@@ -9,7 +9,7 @@
 | 7-12s | Over-shoulder on the phone, close on the Start field | Deliberate, unhurried | Push in on the tap | Clip K — Start Date, Start Time (10:00 AM) | "Start: 10:00 AM" | Thumb tap |
 | 12-17s | Tight insert on the End field, then a quick pull back | Decisive | Overlay wipe as countdown appears | Clip K — End Date, End Time (9:00 PM) | "End: 9:00 PM" | Screen glow on his face |
 | 17-21s | Handheld medium, customers entering past the camera | Warm, pleased | Handheld rush into the shop | None (countdown overlay) | "Aapki sale kab se kab tak?" | Clock nearing 9, footsteps |
-| 21-25s | Wide hold on shopfront with end card | VO only, clean | Clean hold on end card | None | "Set the timing. Meelte." | Shopfront sign |
+| 21-25s | Wide hold on shopfront with end card | VO only, clean | Clean hold on end card | None | "Set the timing. meelTe." | Shopfront sign |
 
 ## Music
 

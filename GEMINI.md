@@ -43,7 +43,7 @@ tools/md_to_pdf.py        renders the final .md into its .pdf copy
 - Never invent a price, discount, deadline, statistic, testimonial, member story, reward value, voucher partner, or result.
 - `refernces/Videos Scripts.md` warns that coin values, voucher partner, and redemption limits must match the live app and current terms — treat them as claims to verify.
 - Never name a clip id or app screen that is not in `refernces/` or the user's input.
-- Include the mandatory hashtag set in every video.
+- Include the mandatory hashtag set in every video, with the brand spelled `meelTe` — never `Meelte`, `meelte`, or `MELTE`. `brand/meelte-brand.json` is the source of truth.
 - Never sound like an advertisement; no corporate language or generic motivation.
 - Save every artifact under `outputs/<request_id>/`.
 - **Script output only:** produce a video *script*, never a video. Never generate, render, encode, or return a video file. The deliverables are one `.md` script file and one `.pdf` copy rendered from it.
@@ -126,7 +126,7 @@ After the table: CTA voiceover over the end card, caption with mandatory hashtag
 
 Mandatory hashtags in every video:
 
-`#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
+`#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
 
 ## Agent roles
 

@@ -43,7 +43,7 @@ A shopkeeper in a shirt that says "Festival Sale" looks at the clock.
 | 7-12s | He taps the opening slot with a deliberate finger tap. | Shopkeeper: "Start — aaj, subah 10 baje." | Clip K — Schedule section: Start Date, Start Time (10:00 AM). |
 | 12-17s | He scrolls to the closing slot and sets it; a thin countdown overlay appears. | Shopkeeper: "Aur end — raat 9. Bas itna hi." | Clip K — Schedule section: End Date, End Time (9:00 PM). |
 | 17-21s | Countdown ticks through the final minutes; customers hurry in. | Shopkeeper: "Dekho, ab sab ko pata hai — kab aana hai." | None (countdown overlay on screen) |
-| 21-25s | End card over the shopfront, the clock just before 9. | VO: "Set the timing. Create urgency. Meelte." | None |
+| 21-25s | End card over the shopfront, the clock just before 9. | VO: "Set the timing. Create urgency. meelTe." | None |
 
 ---
 
@@ -56,7 +56,7 @@ A shopkeeper in a shirt that says "Festival Sale" looks at the clock.
 | 7-12s | Over-shoulder on the phone, close on the Start field | Deliberate, unhurried | Push in on the tap | "Start: 10:00 AM" |
 | 12-17s | Tight insert on the End field, then a quick pull back | Decisive | Overlay wipe as countdown appears | "End: 9:00 PM" |
 | 17-21s | Handheld medium, customers entering past the camera | Warm, pleased | Handheld rush into the shop | "Aapki sale kab se kab tak?" + countdown |
-| 21-25s | Wide hold on shopfront with end card | VO only, clean | Clean hold on end card | "Set the timing. Meelte." |
+| 21-25s | Wide hold on shopfront with end card | VO only, clean | Clean hold on end card | "Set the timing. meelTe." |
 
 **B-roll:** clock second hand, fingers on the counter, thumb tap, screen glow on his face, clock nearing 9, footsteps.
 
@@ -72,7 +72,7 @@ A shopkeeper in a shirt that says "Festival Sale" looks at the clock.
 
 **CTA voiceover over the end card (25s, verbatim from the brief):**
 
-> "Set the timing. Create urgency. Meelte."
+> "Set the timing. Create urgency. meelTe."
 
 **Ending:** clean hold on the shopfront with the clock just before 9; the CTA lands alone with no music under it.
 
@@ -82,9 +82,9 @@ A shopkeeper in a shirt that says "Festival Sale" looks at the clock.
 
 ## 7. Caption and hashtags
 
-**Caption:** "Sale chal rahi hai? Toh timing bhi bataiye. Starts 10, ends 9 — apni dukaan ka window Meelte pe set karo."
+**Caption:** "Sale chal rahi hai? Toh timing bhi bataiye. Starts 10, ends 9 — apni dukaan ka window meelTe pe set karo."
 
-**Hashtags:** `#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
+**Hashtags:** `#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
 
 *(This is the union of the mandatory set in `refernces/Videos Scripts.md` and the caption in `refernces/test Script.md`.)*
 
@@ -228,11 +228,11 @@ Camera angles, expressions, transitions, phone screens, on-screen text and b-rol
 
 ## 12. CTA variations
 
-1. **"Set the timing. Create urgency. Meelte."** — approved, used in the script.
-2. "Apni sale ka window bataiye — Meelte pe set karo."
-3. "Start batao, end batao. Meelte."
+1. **"Set the timing. Create urgency. meelTe."** — approved, used in the script.
+2. "Apni sale ka window bataiye — meelTe pe set karo."
+3. "Start batao, end batao. meelTe."
 4. "Aapki sale kab se kab tak? Comment mein likhiye."
-5. "Local sale ka clear timing — Meelte."
+5. "Local sale ka clear timing — meelTe."
 
 ---
 
@@ -245,7 +245,7 @@ Viewers → participants → regular members: a shopkeeper who sets a clear wind
 ## Appendix A: Research summary
 
 - **Original input (verbatim):** captured in `outputs/VID-2026-0001/input-verbatim.md` and carried unchanged through every stage.
-- **Observed facts:** 25 seconds; verbatim hook with "Festival Sale" shirt and clock glance; start and end date/time set on a Meelte ad; countdown ticks; customers rush in just before the window ends; phone screen clip K (Schedule); verbatim CTA.
+- **Observed facts:** 25 seconds; verbatim hook with "Festival Sale" shirt and clock glance; start and end date/time set on a meelTe ad; countdown ticks; customers rush in just before the window ends; phone screen clip K (Schedule); verbatim CTA.
 - **Goal:** Drive Participation — help shop owners give neighbours a clear arrival window.
 - **Audience:** local shop owners running festival/seasonal offers, and the neighbours who want to know when to come.
 - **Tone:** warm, practical, lightly playful; Hinglish dialogue, English CTA; real urgency from a self-set window only.
@@ -256,7 +256,7 @@ Viewers → participants → regular members: a shopkeeper who sets a clear wind
 
 ## Appendix B: Improved prompt
 
-A shopkeeper in a "Festival Sale" shirt turns a vague sale into a timed one: he sets 10 AM to 9 PM on his Meelte ad (clip K — Schedule: Start Date, Start Time, End Date, End Time), a countdown ticks, and neighbours arrive just before the window closes. 25-second vertical short, Hinglish dialogue with English CTA, one shop-counter location, shopkeeper plus 2–3 customers. Beat sheet: `0-3s` verbatim hook, `3-7s` context, `7-12s` start fields, `12-17s` end fields plus countdown overlay, `17-21s` rush with engagement question, `21-25s` CTA end card. Transitions: hard cut, match cut clock→phone, push in on tap, overlay wipe, handheld rush, clean hold. Music low and warm, lifting through the rush, clearing for the CTA. CTA voiceover: "Set the timing. Create urgency. Meelte." Caption with mandatory hashtags. Preserved elements: hook line, shirt, clock, both schedule fields, countdown, rush, clip K, CTA, duration. Added specifications: platform, language, customer count, engagement question, city tags — each with a reason. Claims to verify: none.
+A shopkeeper in a "Festival Sale" shirt turns a vague sale into a timed one: he sets 10 AM to 9 PM on his meelTe ad (clip K — Schedule: Start Date, Start Time, End Date, End Time), a countdown ticks, and neighbours arrive just before the window closes. 25-second vertical short, Hinglish dialogue with English CTA, one shop-counter location, shopkeeper plus 2–3 customers. Beat sheet: `0-3s` verbatim hook, `3-7s` context, `7-12s` start fields, `12-17s` end fields plus countdown overlay, `17-21s` rush with engagement question, `21-25s` CTA end card. Transitions: hard cut, match cut clock→phone, push in on tap, overlay wipe, handheld rush, clean hold. Music low and warm, lifting through the rush, clearing for the CTA. CTA voiceover: "Set the timing. Create urgency. meelTe." Caption with mandatory hashtags. Preserved elements: hook line, shirt, clock, both schedule fields, countdown, rush, clip K, CTA, duration. Added specifications: platform, language, customer count, engagement question, city tags — each with a reason. Claims to verify: none.
 
 ---
 

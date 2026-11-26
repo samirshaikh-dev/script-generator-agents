@@ -4,7 +4,7 @@ Ten agents implementing the workflow in [`pipeline.md`](pipeline.md). Agent defi
 
 > **Canonical workflow: [`pipeline.md`](pipeline.md).** It is host-agnostic — Antigravity, Gemini CLI, Claude Code, Cursor, and OpenCode all read it. This file describes the implementation; when the two disagree, `pipeline.md` wins.
 
-> Full requirements: [`req.txt`](req.txt). Skills: [`.agents/skills/`](.agents/skills/).
+> Full requirements: [`req.txt`](req.txt). Skills: [`.agents/skills/`](.agents/skills/). Brand source of truth: [`brand/meelte-brand.json`](brand/meelte-brand.json) — always write `meelTe`.
 
 ## Roster
 

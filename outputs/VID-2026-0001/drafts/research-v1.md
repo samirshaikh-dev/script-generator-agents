@@ -4,23 +4,23 @@
 
 22. "Sale Ka Timer" (25 sec)
 •	Hook (0-3s): A shopkeeper in a shirt that says "Festival Sale" looks at the clock. "Subah 10 se raat 9 tak, bas."
-•	Script: He sets the start date and time and the end date and time on his Meelte ad, so the offer has a clear window. A countdown clock ticks on screen. Customers rush in just before it ends.
+•	Script: He sets the start date and time and the end date and time on his meelTe ad, so the offer has a clear window. A countdown clock ticks on screen. Customers rush in just before it ends.
 •	Phone screen (clip K): The Schedule section: start date, start time, end date, end time.
-•	CTA: "Set the timing. Create urgency. Meelte."
+•	CTA: "Set the timing. Create urgency. meelTe."
 
 ## Observed facts
 
 - Duration is given: 25 seconds.
 - The hook is given verbatim, including the "Festival Sale" shirt, the clock glance, and the line "Subah 10 se raat 9 tak, bas."
-- The shopkeeper sets **start date and time** and **end date and time** on his Meelte ad.
+- The shopkeeper sets **start date and time** and **end date and time** on his meelTe ad.
 - A countdown clock ticks on screen; customers rush in just before the window ends.
 - The phone screen is named: **clip K — the Schedule section** (start date, start time, end date, end time).
-- The CTA is given verbatim: "Set the timing. Create urgency. Meelte."
+- The CTA is given verbatim: "Set the timing. Create urgency. meelTe."
 
 ## Goal
 
 - **Community objective:** Drive Participation — give local shop owners a simple, repeatable way to tell neighbours exactly when an offer is live.
-- **Product goal in plain words:** Show that a Meelte ad can carry a clear schedule, which turns a vague "sale is on" into a real arrival window.
+- **Product goal in plain words:** Show that a meelTe ad can carry a clear schedule, which turns a vague "sale is on" into a real arrival window.
 
 ## Audience
 
@@ -40,7 +40,7 @@ A clear start-and-end window makes an offer real: customers know exactly when to
 |---|---|---|---|
 | duration | given | 25s | stated in the brief |
 | hook line | given | "Subah 10 se raat 9 tak, bas." | verbatim from brief |
-| CTA | given | "Set the timing. Create urgency. Meelte." | verbatim from brief |
+| CTA | given | "Set the timing. Create urgency. meelTe." | verbatim from brief |
 | phone screen | given | clip K — Schedule (start/end date + time) | verbatim from brief |
 | platform | assumed | short-form vertical | house default for all reference scripts |
 | language | assumed | Hinglish dialogue, English CTA | matches `refernces/test Script.md` and the supplied lines |

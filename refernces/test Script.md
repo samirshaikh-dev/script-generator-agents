@@ -15,7 +15,7 @@
 CTA (voiceover over the end card, 50s): "2 minute mein dukaan ka ad. Download meelTe."
 
 Caption: "Pehla ad, 2 minute mein! 🛒 Apni dukaan meelTe pe daaliye."
-#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness
+#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness
 
 Other hook lines to test:
 

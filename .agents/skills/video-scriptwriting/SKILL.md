@@ -50,7 +50,7 @@ Deliver the scene-by-scene script as a four-column table, exactly as in `refernc
 
 Mandatory hashtags in every video — the union of the mandatory set in `refernces/Videos Scripts.md` and the caption in `refernces/test Script.md`:
 
-`#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
+`#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
 
 ## Writing rules
 
@@ -94,7 +94,7 @@ Return a `video_script` object:
       "on_screen_text": "…"
     }
   ],
-  "caption": "…\n\n#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness",
+  "caption": "…\n\n#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness",
   "scene_table": "| Time | What we see | Dialogue | Phone screen |…",
   "cta_voiceover": "…",
   "alternate_hooks": ["…", "…"],

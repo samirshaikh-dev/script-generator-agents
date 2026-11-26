@@ -1,4 +1,4 @@
-**Mandatory Hashtag  in all Videos : #Meelte #LocalDiscovery #ShopLocal #SupportLocal #LocalBusiness**
+**Mandatory Hashtag  in all Videos : #meelTe #LocalDiscovery #ShopLocal #SupportLocal #LocalBusiness**
 
 ## Part 1: Shop and discover nearby
 
@@ -10,4 +10,4 @@
 
 - **Phone screen (clip K):** Upload Advertisement Image, then the Take Photo and Choose from Gallery options.
 
-- **CTA:** "Your first post takes minutes. Meelte."
+- **CTA:** "Your first post takes minutes. meelTe."
