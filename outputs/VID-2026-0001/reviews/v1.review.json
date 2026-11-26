@@ -1,0 +1,39 @@
+{
+  "verdict": "pass_with_notes",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "assumed detail",
+      "location": "caption hashtags",
+      "description": "City tags Bengaluru/Ranchi/Gaya are taken from the house caption convention, not from the brief.",
+      "route_to": "community-strategist",
+      "instruction": "Keep tags; noted as an assumption in the meta block."
+    },
+    {
+      "severity": "minor",
+      "category": "claim discipline",
+      "location": "7-17s phone screens",
+      "description": "No numeric discount or price appears, because none was supplied.",
+      "route_to": "scriptwriter",
+      "instruction": "Keep the window-only offer; do not add a discount value."
+    }
+  ],
+  "checked_items": [
+    "video objective",
+    "target audience",
+    "30+ hooks by category",
+    "top 5 hooks",
+    "reason per top hook",
+    "ready-to-record script",
+    "visual direction",
+    "on-screen text",
+    "CTA variations",
+    "social media caption",
+    "community-building objective"
+  ],
+  "intent_preserved": true,
+  "stage_outputs_present": ["research_summary", "improved_prompt", "video_script"],
+  "revision_round": 1,
+  "max_revision_rounds": 2,
+  "summary": "Verbatim hook, scheduling beats, clip K screen, countdown, rush, and CTA all preserved; house table and mandatory hashtags present; no video generated."
+}

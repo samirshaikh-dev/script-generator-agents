@@ -48,7 +48,7 @@ Deliver the scene-by-scene script as a four-column table, exactly as in `refernc
 - The `Phone screen` column names a screen from `refernces/` or describes it in words. Never invent a clip id.
 - After the table, add the CTA voiceover over the end card, the caption with mandatory hashtags, and 2–3 alternate hook lines.
 
-Mandatory hashtags in every video, from `refernces/Videos Scripts.md`:
+Mandatory hashtags in every video — the union of the mandatory set in `refernces/Videos Scripts.md` and the caption in `refernces/test Script.md`:
 
 `#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
 

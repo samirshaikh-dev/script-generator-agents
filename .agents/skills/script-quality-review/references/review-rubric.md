@@ -32,7 +32,7 @@ Any of these is critical regardless of which item it appears in:
 - `research_summary`, `improved_prompt`, or `video_script` is missing at the final stage.
 - The deliverable is a video file, or the prompt requests video generation/rendering instead of a written script.
 - Invented price, statistic, testimonial, deadline, guarantee, reward value, voucher partner, or result.
-- Mandatory hashtag set from `refernces/Videos Scripts.md` is missing or reordered.
+- Mandatory hashtag set from `refernces/` is missing or reordered.
 
 ## Major failures specific to the house format
 

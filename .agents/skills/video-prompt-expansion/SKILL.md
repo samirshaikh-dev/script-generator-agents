@@ -36,7 +36,7 @@ Turns the research summary into the production-ready prompt that drives every la
 5. **Set the dialogue language and speaker style.** Match the reference house voice (Hinglish for local-shop and neighbourhood scenarios). Name speakers, not generic "voiceover", unless the reference uses voiceover.
 6. **Specify phone screens** using only screens named in `refernces/` or the user's input. If a clip id from the reference library applies, name it; otherwise describe the screen in words. **Never invent a clip id.**
 7. **Add transitions, music, and on-screen text** per beat. Keep transitions simple and on-screen text short.
-8. **Write the CTA voiceover line** and the end card. Add the caption with the mandatory hashtag set from `refernces/Videos Scripts.md`:
+8. **Write the CTA voiceover line** and the end card. Add the caption with the mandatory hashtag set from `refernces/` — the union of the mandatory set in `Videos Scripts.md` and the caption in `test Script.md`:
 
    `#Meelte #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
 
