@@ -96,6 +96,16 @@ Return a `hook_set` object:
 
 Return at least 30 `hooks` entries. Return exactly 5 `top_hooks`.
 
+> **Note on hook counts:** The stated count in the heading/summary must match the actual list of hooks exactly (e.g., if heading says 36 hooks, the list must have exactly 36 hooks).
+
+## meelTe App Promotion Rule Override
+
+When writing hooks for a **meelTe app promotion video**:
+- **Selection restriction:** Recommend only loud, problem-led hooks that meet the meelTe promo requirement (8 words or fewer in everyday Hinglish; no greeting, logo intro, or slow setup).
+- **Approved directions:** e.g., *"Arre! Saamaan pada-pada kharab ho raha hai!"*, *"Dukaan bhari hai, customer gayab!"*, *"Offer diya, par kisi ko pata hi nahi!"*.
+- **Visual pairing:** Pair with a strong visual reaction and short on-screen text. Show unsold but good stock, never spoiled goods.
+- **Top 5 & Recommendation:** Top recommendations must reflect these loud, relatable shopkeeper problems. Stated hook count must match the list.
+
 ## Quality checklist
 
 - [ ] 30+ hooks generated, 50–100 where the topic allows it.

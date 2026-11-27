@@ -37,7 +37,75 @@ user input → research → prompt → script → .md (source of truth) → .pdf
                                       ✗ no .mp4 / .mov / rendered video
 ```
 
-Every artifact is text. When a stage says "visual direction", it means written directions for a human to shoot — not generated footage. The PDF is a print-friendly rendering of the approved Markdown, not a second script version and not a video.
+Every artifact is text. When a stage says "visual direction", it means written directions for a human to shoot or AI video prompts for generated shots — not rendered video files. The PDF is a print-friendly rendering of the approved Markdown, not a second script version and not a video.
+
+---
+
+## Special Override: meelTe App Promotion Videos
+
+When a script is specifically for a **meelTe app promotion** (introducing meelTe, showing offers, encouraging app downloads), apply these pipeline overrides. Leave other video types unchanged.
+
+### 1. Requirements for meelTe App Promotion Videos
+- **Core Purpose & Viewer Understanding:** Within the video, a viewer must clearly understand:
+  1. meelTe is our app.
+  2. It helps nearby people see local offers.
+  3. They can download it from the Play Store and App Store.
+- **Hook (0–3s):**
+  - Open directly on the spoken hook. No greeting, logo intro, or slow setup.
+  - Use a loud, relatable shopkeeper problem in everyday Hinglish, 8 words or fewer (e.g., *"Arre! Saamaan pada-pada kharab ho raha hai!"*, *"Dukaan bhari hai, customer gayab!"*, *"Offer diya, par kisi ko pata hi nahi!"*).
+  - Pair with a strong visual reaction and short on-screen text.
+  - Show unsold but good stock, never spoiled goods.
+- **Brand Mentions:**
+  - Say "meelTe" aloud **3 to 4 times**, including the closing voiceover.
+  - First mention must occur by **7 seconds**. Spread the rest across the middle and the end.
+  - Each mention must fit the conversation naturally.
+  - On screen write "meelTe". Pronounce it "milday" (in voice tool input, type "Milday" if needed).
+- **Story Structure (Exactly 25 seconds, vertical, Hinglish):**
+  - `0–3s`: Hook: the shopkeeper's problem.
+  - `3–7s`: Friend suggests meelTe; shopkeeper asks what it is.
+  - `7–11s`: One plain line explaining the app: nearby people see local offers.
+  - `11–16s`: Real app recording: set price, start date, end date.
+  - `16–20s`: A customer arrives and says they saw the offer on meelTe.
+  - `20–25s`: End card and download voiceover.
+  - Keep spoken dialogue to about **55 words total** so it fits 25 seconds comfortably.
+- **Ending (20–25s):**
+  - Voiceover, exact: *"Download the meelTe app. Now available on Play Store and App Store."*
+  - On screen: meelTe logo, "Download meelTe", official Play Store and App Store badges.
+  - Hold the end card cleanly, with no music under the voiceover.
+  - Download is the only spoken call to action.
+- **Product Facts (Source: meelte.com, checked 27 Nov 2026):**
+  - Offers run by date: 12:00 AM on the start date to 11:59 PM on the end date. **Do not show start/end times or a countdown clock.**
+  - meelTe does not process payments according to "How it works". Make no payment or extra-discount claims.
+  - Merchants get no reach or footfall analytics. Promise no sales or footfall numbers.
+  - Shops are onboarded in person by the meelTe field team. Do not describe self-serve shop signup.
+  - Mention a city only after the team confirms meelTe serves it.
+  - Acted customers are presented as a story, not as real testimonials.
+  - If the live app differs from these facts, flag it for a human; do not guess.
+- **Agent Rule Overrides:**
+  - `community-video-strategy`: The video is openly a meelTe app promotion told through a relatable shop story (replaces the "never sound like an ad" prohibition for these promos).
+  - `hook-library`: Recommend only loud, problem-led hooks that meet Requirement 1 (8 words or fewer). Hook library stated count must match the list exactly.
+  - `community-engagement-cta`: Closing CTA is the exact download line; any comment/engagement question goes in the caption only.
+  - `visual-direction`: Plans footage and also outputs an **AI video prompt for each generated shot** (with a shared base block: 9:16, photorealistic, setting, fixed character descriptions; no AI-generated text/logos/screens; label AI content where platform requires).
+  - **Brief handling:** These requirements replace any old hook and CTA; record the change in the notes/assumptions.
+- **Required Output Structure for meelTe Promos:**
+  1. Scene table: time, visual, speaker and dialogue, on-screen text, phone screen.
+  2. AI video prompts:
+     - Shared base block: 9:16, photorealistic, setting, fixed character descriptions.
+     - One prompt per generated shot.
+     - No AI-generated text, logos, or app screens (add in edit; record real app).
+  3. Voice and music notes.
+  4. Caption with the download line + mandatory hashtags.
+  5. Up to 3 alternate hooks.
+  6. Notes: assumptions and claims to verify.
+- **Quality Gate (All must pass):**
+  - [ ] Does the first spoken line meet the hook rules (loud, relatable problem, everyday Hinglish, <= 8 words)?
+  - [ ] Is "meelTe" spoken 3 to 4 times, first by 7s?
+  - [ ] Can a new viewer say what meelTe does (nearby people see local offers)?
+  - [ ] Does it end with the exact download line and both store badges?
+  - [ ] Is the total exactly 25 seconds, with about 55 spoken words or fewer?
+  - [ ] Are there no times, countdowns, payment claims, or invented results?
+  - [ ] Are acted customers presented as a story, not as real testimonials?
+  - [ ] Is AI-generated content labelled where the platform requires it?
 
 ---
 

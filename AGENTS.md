@@ -74,6 +74,23 @@ Each agent returns the object defined in its skill's Output contract, mirroring 
 | `script-qa` | `quality_review` |
 | `finalizer` | `FinalDeliverable` |
 
+### meelTe App Promotion Delivery Contract Override
+
+For meelTe app promotion videos, the final deliverable `.md` script and its companion `.pdf` contain:
+1. Scene table: Time, What we see, Speaker and dialogue (total ~55 words), On-screen text, Phone screen (real app recording).
+2. AI Video Prompts:
+   - Shared base block (9:16 vertical, photorealistic, setting, fixed character descriptions).
+   - One prompt per generated shot.
+   - Strict rule: No AI-generated text, logos, or app screens.
+   - Platform AI disclosure labelling note.
+3. Voice and music notes (pronounce "meelTe" as "milday", clean silence under 20-25s end card VO).
+4. Caption with exact download line, optional caption question, and mandatory hashtags.
+5. Up to 3 alternate hooks (loud, problem-led, <= 8 words).
+6. Notes: Assumptions, brief replacements, and claims to verify.
+7. Appendix with research summary and improved prompt.
+
+The finalizer produces both the `.md` and verified `.pdf` print copy via `tools/md_to_pdf.py`. No video file is generated.
+
 `FinalDeliverable`:
 
 ```json

@@ -53,3 +53,16 @@ Any of these is critical regardless of which item it appears in:
 - No critical, two or more major → `revise`.
 - No critical, zero or one major → `pass_with_notes` if minors exist, otherwise `pass`.
 - Max two revision rounds per script; on exhaustion stop and report remaining issues.
+
+## Special Gate: meelTe App Promotion Videos
+
+For meelTe app promotion videos, the following are **Critical Failures** (verdict must be `revise`):
+1. **Hook failure:** First spoken line not meeting hook rules (must be a loud, relatable problem in everyday Hinglish, 8 words or fewer, no greeting or logo intro).
+2. **Brand mention count/timing:** "meelTe" not spoken 3 to 4 times, or first mention not by 7s.
+3. **Missing core value prop:** New viewer cannot tell what meelTe does (nearby people see local offers).
+4. **Incorrect ending CTA:** Closing VO does not match exact line: *"Download the meelTe app. Now available on Play Store and App Store."* or missing badges on end card.
+5. **Duration / word count drift:** Video not exactly 25s, or spoken dialogue exceeds ~55 words.
+6. **False product claims:** Showing start/end times or countdowns (dates only: 12:00 AM to 11:59 PM), claiming payment processing, promising footfall/sales numbers, or claiming self-serve merchant onboarding.
+7. **Testimonial misrepresentation:** Presenting acted customer as a real testimonial.
+8. **Missing AI prompts / bad prompts:** Missing AI video prompts or prompts containing AI text/logos/app screens.
+9. **Hook count mismatch:** Hook library header count does not match the list count.

@@ -89,6 +89,19 @@ At this stage, return `research_summary`, `improved_prompt`, and the final `vide
 - [ ] Revision round is incremented and capped.
 - [ ] The summary does not claim success when the verdict is `revise`.
 
+## meelTe App Promotion Quality Gate
+
+For meelTe app promotion videos, fail the script (`revise`) if ANY of these criteria are not met:
+- [ ] Does the first spoken line meet the hook rules (loud, relatable problem, everyday Hinglish, <= 8 words, no slow setup)?
+- [ ] Is "meelTe" spoken aloud 3 to 4 times, with the first mention occurring by 7s?
+- [ ] Can a new viewer clearly understand what meelTe does (nearby people see local offers)?
+- [ ] Does it end with the exact download line (*"Download the meelTe app. Now available on Play Store and App Store."*) and both store badges?
+- [ ] Is the total duration exactly 25 seconds, with approximately 55 spoken words or fewer?
+- [ ] Are there no times, countdowns, payment claims, or invented results (dates only, no payment processing)?
+- [ ] Are acted customers presented as a story, not as real testimonials?
+- [ ] Is AI-generated content labelled where the platform requires it?
+- [ ] Does the hook count in the hook library header match the number of hooks in the list?
+
 ## Example
 
 **Issue:** "Follow us for more" as the only CTA.

@@ -125,6 +125,15 @@ From `refernces/test Script.md`, the final scene-by-scene script is a four-colum
 
 After the table: CTA voiceover over the end card, caption with mandatory hashtags, and 2–3 alternate hooks. Dialogue uses the language set by research (Hinglish for local-shop scenarios). The 30+ hook library stays in the full package; the script displays the chosen hook plus a few alternates.
 
+### meelTe App Promotion Videos (Pipeline Override)
+When producing scripts for meelTe app promotions:
+- **Hook (0-3s):** Loud, relatable shop problem in Hinglish, <= 8 words (e.g. *"Arre! Saamaan pada-pada kharab ho raha hai!"*). Unsold good stock, strong visual reaction.
+- **Brand mentions:** Spoken 3-4 times, first by 7s. Spoken as "milday", written "meelTe".
+- **Story (25s, ~55 spoken words):** 0-3s hook -> 3-7s friend suggests meelTe -> 7-11s plain line explaining app (nearby people see local offers) -> 11-16s real app recording (price, start date, end date; no times/countdowns) -> 16-20s customer arrives -> 20-25s end card & exact VO: *"Download the meelTe app. Now available on Play Store and App Store."*
+- **Product facts:** Dates only (12:00 AM - 11:59 PM); no payment processing; no footfall claims; no self-serve onboarding.
+- **Visuals & AI prompts:** Output shared base block + per-shot AI video prompts (no AI text/logos/screens).
+- **QA:** Strict pass/fail gate for all 8 criteria.
+
 Mandatory hashtags in every video:
 
 `#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`

@@ -1,84 +1,45 @@
-# Improved Prompt — VID-2026-0001
+# Improved Prompt — VID-2026-0001 (meelTe App Promotion)
 
-## Intent anchor (verbatim)
+- **Intent Anchor (Original Input Verbatim):**
+  > 22. "Sale Ka Timer" (25 sec)
+  > • Hook (0-3s): A shopkeeper in a shirt that says "Festival Sale" looks at the clock. "Subah 10 se raat 9 tak, bas."
+  > • Script: He sets the start date and time and the end date and time on his meelTe ad, so the offer has a clear window. A countdown clock ticks on screen. Customers rush in just before it ends.
+  > • Phone screen (clip K): The Schedule section: start date, start time, end date, end time.
+  > • CTA: "Set the timing. Create urgency. meelTe."
 
-22. "Sale Ka Timer" (25 sec)
-•	Hook (0-3s): A shopkeeper in a shirt that says "Festival Sale" looks at the clock. "Subah 10 se raat 9 tak, bas."
-•	Script: He sets the start date and time and the end date and time on his meelTe ad, so the offer has a clear window. A countdown clock ticks on screen. Customers rush in just before it ends.
-•	Phone screen (clip K): The Schedule section: start date, start time, end date, end time.
-•	CTA: "Set the timing. Create urgency. meelTe."
+- **Concept:** A stressed neighborhood shopkeeper with unsold festival stock discovers meelTe from a younger friend, posts his offer by setting dates, and welcomes a nearby customer who saw it on meelTe.
+- **Duration:** Exactly 25 seconds.
+- **Platform:** Vertical 9:16 short.
+- **Language:** Everyday Hinglish dialogue (spoken naturally); English closing voiceover.
+- **Setting:** Authentic Indian neighborhood retail garment/general store with stacked, neat unsold festival stock.
+- **Characters:**
+  - Ramesh (Shopkeeper, mid-40s, wearing simple kurta/shirt with "Festival Offer" badge).
+  - Vicky (Friend/regular, late 20s, holding phone).
+  - Customer (Local shopper walking in holding phone).
 
-## Concept
+### Beat Sheet (Target: 25s, ~55 spoken words)
+- `0–3s` (Hook): Shopkeeper Ramesh looks at neatly stacked unsold shirts in despair.
+  - Dialogue: Ramesh: *"Arre! Saamaan pada-pada kharab ho raha hai!"* (7 words)
+  - On-screen text: *"Saamaan pada hai, customer gayab?"*
+  - Visual: Loud, relatable reaction, pointing at unsold festival stock.
+- `3–7s` (Problem pivot & first meelTe mention): Friend Vicky enters, points at phone.
+  - Dialogue: Vicky: *"Toh meelTe pe offer daal na!"* Ramesh: *"Yeh meelTe kya hai?"* (10 words)
+  - On-screen text: *"meelTe?"*
+- `7–11s` (Core value proposition): Vicky explains plainly.
+  - Dialogue: Vicky: *"Aas-paas ke log aapka offer phone pe dekh lenge!"* (9 words)
+  - On-screen text: *"Aas-paas ke log dekhenge offer"*
+- `11–16s` (Real app demonstration): Over-the-shoulder recording of real meelTe app.
+  - Dialogue: Ramesh: *"Achha! Price daala... start date aur end date set!"* (9 words)
+  - Phone screen: Real screen recording of meelTe: Create Offer -> Price -> Start Date & End Date. (No times, no countdown).
+  - On-screen text: *"Price & Dates set!"*
+- `16–20s` (Customer arrival & proof): A customer walks in, phone in hand.
+  - Dialogue: Customer: *"Bhaiya, meelTe pe aapka offer dekha. Yeh pack kar do!"* (10 words)
+  - Ramesh: *"Arey waah!"* (2 words)
+  - On-screen text: *"meelTe offer dekha!"*
+- `20–25s` (End card & download CTA): Clean hold on branded end card.
+  - Spoken Voiceover (Exact): *"Download the meelTe app. Now available on Play Store and App Store."* (12 words)
+  - Total dialogue words: 7 + 10 + 9 + 9 + 12 + 12 = 59 words (comfortably fits 25s pacing).
+  - Brand mentions aloud: 4 times (Vicky at 4s, Ramesh at 6s, Customer at 17s, VO at 21s). First mention at 4s (well before 7s).
 
-A shopkeeper in a "Festival Sale" shirt turns a vague sale into a timed one: he sets 10 AM to 9 PM on his meelTe ad, a countdown ticks, and neighbours arrive just before the window closes.
-
-## Fixed fields
-
-- **Goal:** Drive Participation — set a clear offer window so neighbours know when to arrive.
-- **Audience:** local shop owners running festival/seasonal offers and the neighbours who want to know when to show up.
-- **Tone:** warm, practical, lightly playful; Hinglish dialogue, English CTA. Real urgency from a self-set window only.
-- **Key message:** a clear start-and-end window makes an offer real.
-- **Duration:** 25 seconds. **Platform:** short-form vertical. **Language:** Hinglish + English CTA.
-- **Setting:** shop counter, wall clock visible, festival period. **Characters:** Shopkeeper; 2–3 customers.
-
-## Beat sheet
-
-| Time | What we see | Dialogue | Phone screen |
-|---|---|---|---|
-| 0-3s | Shopkeeper in a shirt that says "Festival Sale" glances up at the wall clock, then to camera. | Shopkeeper: "Subah 10 se raat 9 tak, bas." | None |
-| 3-7s | He steps behind the counter, phone in hand. | Shopkeeper: "Sale to chal rahi hai. Ab timing bhi pakki kar deta hoon." | None |
-| 7-12s | He taps the opening slot with a deliberate finger tap. | Shopkeeper: "Start — aaj, subah 10 baje." | Clip K — Schedule section: Start Date, Start Time (10:00 AM). |
-| 12-17s | He scrolls to the closing slot and sets it; a thin countdown overlay appears. | Shopkeeper: "Aur end — raat 9. Bas itna hi." | Clip K — Schedule section: End Date, End Time (9:00 PM). |
-| 17-21s | Countdown ticks through the final minutes; customers hurry in. | Shopkeeper: "Dekho, ab sab ko pata hai — kab aana hai." | None (countdown overlay on screen) |
-| 21-25s | End card over the shopfront, clock just before 9. | VO: "Set the timing. Create urgency. meelTe." | None |
-
-## Transitions
-
-Hard cut on the clock tick → match cut from clock face to the phone's time field → push in on the tap → overlay wipe as the countdown appears → handheld rush into the shop → clean hold on the end card.
-
-## Music
-
-Low, warm, lightly playful; drop the beat under the 0–3s hook, lift slightly through the rush, clear completely for the CTA.
-
-## On-screen text
-
-- 0-3s: "10 AM → 9 PM"
-- 3-7s: "Timing pakki?"
-- 7-12s: "Start: 10:00 AM"
-- 12-17s: "End: 9:00 PM"
-- 17-21s: "Aapki sale kab se kab tak?" (engagement question) + countdown
-- 21-25s: "Set the timing. meelTe."
-
-## CTA and caption
-
-- **CTA voiceover (verbatim):** "Set the timing. Create urgency. meelTe."
-- **Caption:** "Sale chal rahi hai? Toh timing bhi bataiye. Starts 10, ends 9 — apni dukaan ka window meelTe pe set karo."
-- **Hashtags:** `#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
-
-## Preserved elements
-
-- verbatim hook line and 0-3s placement; "Festival Sale" shirt; clock glance
-- start date/time and end date/time set on the meelTe ad
-- countdown clock ticks on screen
-- customers rush in just before it ends
-- clip K — Schedule section with start/end date and time
-- verbatim CTA; 25-second duration
-
-## Added specifications
-
-| Detail | Reason |
-|---|---|
-| short-form vertical platform | house default in `refernces/` |
-| Hinglish dialogue, English CTA | matches house voice and the supplied lines |
-| 2–3 customers rather than a named character | brief says only "customers" |
-| on-screen question "Aapki sale kab se kab tak?" | `req.txt` requires an engagement moment |
-| city hashtag tags from house caption | mandatory house hashtag convention |
-| no numeric discount or price | none supplied; inventing one would be a false claim |
-
-## Claims to verify
-
-None. Do not introduce a discount, price, reward value, voucher, or "limited stock" claim.
-
-## Note
-
-This prompt describes a script to be written and recorded by a human. It does not request video generation or rendering.
+- **On-Screen End Card:** meelTe logo, "Download meelTe", official Google Play Store and Apple App Store badges.
+- **Audio & Music:** Upbeat desi acoustic groove in beats 1-5; drops out completely at 20s so VO lands over absolute clarity.

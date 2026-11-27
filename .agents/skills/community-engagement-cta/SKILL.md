@@ -77,6 +77,16 @@ Return an `engagement_plan` object:
 - [ ] The participation path gives a reason to return.
 - [ ] No fake urgency, giveaway, or invented result.
 
+## meelTe App Promotion Rule Override
+
+When designing CTAs for a **meelTe app promotion video**:
+- **Spoken CTA:** The closing spoken CTA (20–25s) is strictly and exactly:
+  > *"Download the meelTe app. Now available on Play Store and App Store."*
+- **Exclusivity:** Download is the ONLY spoken call to action. No spoken comment/tag/share request at the end.
+- **End Card Visual:** meelTe logo, "Download meelTe", official Play Store and App Store badges. Hold cleanly with no music under the voiceover.
+- **Engagement Question:** Any engagement or comment question goes in the **social media caption only**, never spoken as the closing CTA.
+- **Brief Override:** This requirement replaces any user-supplied CTA from earlier drafts; note the replacement in assumptions.
+
 ## Constraints and failure cases
 
 - **Sensitive topic:** Replace "tag someone" or public-sharing prompts with a private-reflection question when the topic involves grief, health, money, or identity.

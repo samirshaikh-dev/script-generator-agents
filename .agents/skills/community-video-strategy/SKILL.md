@@ -87,7 +87,15 @@ Also return a one-sentence `community_building_rationale` explaining how the vid
 - [ ] The ladder step names a concrete next action.
 - [ ] Every default is stated out loud.
 - [ ] No price, statistic, testimonial, deadline, or result was invented.
-- [ ] The concept would not read as a product advertisement.
+- [ ] The concept would not read as a product advertisement (Exception: For meelTe app promotion videos, the video is openly a meelTe app promotion told through a relatable shop story).
+
+## meelTe App Promotion Rule Override
+
+When creating a **meelTe app promotion video**:
+- **Advertising tone override:** The video is openly a meelTe app promotion, told through a relatable shop story. It does NOT get rejected for being promotional or introducing the app.
+- **Audience & Goal:** Viewer must understand: 1. meelTe is our app; 2. It helps nearby people see local offers; 3. They can download it from Play Store and App Store.
+- **Structure:** Exactly 25 seconds, vertical, Hinglish. 0–3s hook (shopkeeper's problem), 3–7s friend suggests meelTe (first mention by 7s), 7–11s plain line explaining app (nearby people see offers), 11–16s real app recording (price, start date, end date), 16–20s customer arrives via meelTe, 20–25s end card & download VO.
+- **Product facts constraint:** No start/end times or countdowns (dates only: 12:00 AM to 11:59 PM). No payment claims, no footfall/sales guarantees, no self-serve shop onboarding, no city mentions unless confirmed. Acted customers are a story, not real testimonials. Replace any old hook/CTA with these requirements and record in notes.
 
 ## Example
 

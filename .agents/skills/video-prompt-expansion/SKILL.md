@@ -96,6 +96,23 @@ At this stage, return: `research_summary`, `improved_prompt`, and `improved_prom
 - [ ] `claims_to_verify` carried forward unchanged.
 - [ ] The prompt is specific enough to record from, without further questions.
 
+## meelTe App Promotion Rule Override
+
+When expanding a prompt for a **meelTe app promotion video**:
+- **Duration & Platform:** Exactly 25 seconds, 9:16 vertical short.
+- **Fixed Beat Sheet Structure:**
+  - `0–3s`: Hook (loud, relatable problem in Hinglish, <= 8 words, unsold good stock).
+  - `3–7s`: Friend suggests meelTe; shopkeeper asks what it is ("meelTe" spoken first by 7s).
+  - `7–11s`: One plain line explaining the app: nearby people see local offers.
+  - `11–16s`: Real app recording: set price, start date, end date. (No start/end times or countdown clock).
+  - `16–20s`: A customer arrives and says they saw the offer on meelTe.
+  - `20–25s`: End card and download voiceover.
+- **Brand Mentions:** Ensure "meelTe" is spoken 3 to 4 times across dialogue and CTA VO.
+- **Closing CTA:** Must be exact: *"Download the meelTe app. Now available on Play Store and App Store."*
+- **Word Budget:** Dialogue across beats must stay around ~55 words or fewer.
+- **Brief Override:** These requirements replace user-supplied hooks or CTAs that violate promo rules; record changes in `added_specifications`.
+- **Product Constraints:** Never include countdowns, start/end times, payment processing, or footfall promises. Carry dates only (12:00 AM to 11:59 PM).
+
 ## Constraints and failure cases
 
 - **Intent drift:** If a later stage changes the goal, audience, or key message, route it back here — do not patch it downstream.

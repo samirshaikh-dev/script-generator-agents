@@ -76,6 +76,19 @@ Return a `visual_direction` object:
 - [ ] The plan is filmable with a phone and one location.
 - [ ] No claim is illustrated that the script does not make.
 
+## meelTe App Promotion Rule Override
+
+When directing visuals for a **meelTe app promotion video**:
+- **AI Video Prompts Output:** In addition to human camera/shot direction, provide **AI video prompts**:
+  1. **Shared base block:** 9:16 vertical, photorealistic, cinematic natural lighting, authentic Indian retail setting, fixed character descriptions (consistent wardrobe, age, appearance).
+  2. **Per-shot AI prompts:** One distinct prompt for each generated shot (`0–3s`, `3–7s`, `7–11s`, `16–20s`).
+  3. **Strict AI prompt constraints:** NO AI-generated text, NO AI-generated logos, NO AI-generated app screens. Add all text and logos in post-production editing. Screen-record the real app for the UI beat (`11–16s`).
+  4. **AI Labelling:** Label AI-generated content where the target platform requires it.
+- **Visual accuracy:**
+  - Show unsold but good stock, never spoiled goods.
+  - End card (`20–25s`): Clean hold with meelTe logo, "Download meelTe", and official Play Store and App Store badges.
+  - No countdown clocks or start/end time graphics on screen (offers run by dates only).
+
 ## Example
 
 **Hook:** "Maybe the library isn't really about books at all."

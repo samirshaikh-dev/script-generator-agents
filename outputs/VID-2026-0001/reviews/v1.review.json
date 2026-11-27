@@ -1,39 +1,44 @@
 {
-  "verdict": "pass_with_notes",
-  "issues": [
-    {
-      "severity": "minor",
-      "category": "assumed detail",
-      "location": "caption hashtags",
-      "description": "City tags Bengaluru/Ranchi/Gaya are taken from the house caption convention, not from the brief.",
-      "route_to": "community-strategist",
-      "instruction": "Keep tags; noted as an assumption in the meta block."
-    },
-    {
-      "severity": "minor",
-      "category": "claim discipline",
-      "location": "7-17s phone screens",
-      "description": "No numeric discount or price appears, because none was supplied.",
-      "route_to": "scriptwriter",
-      "instruction": "Keep the window-only offer; do not add a discount value."
-    }
+  "request_id": "VID-2026-0001",
+  "verdict": "pass",
+  "revision_round": 2,
+  "max_revision_rounds": 2,
+  "intent_preserved": true,
+  "stage_outputs_present": [
+    "research_summary",
+    "improved_prompt",
+    "video_script"
   ],
   "checked_items": [
-    "video objective",
-    "target audience",
-    "30+ hooks by category",
-    "top 5 hooks",
-    "reason per top hook",
-    "ready-to-record script",
-    "visual direction",
-    "on-screen text",
-    "CTA variations",
-    "social media caption",
-    "community-building objective"
+    "video_objective",
+    "target_audience",
+    "hooks_library_count_match",
+    "top_5_hooks",
+    "reasons",
+    "ready_to_record_script",
+    "visual_direction",
+    "on_screen_text",
+    "cta_variations",
+    "social_media_caption",
+    "community_building_objective",
+    "meelte_app_promo_quality_gate"
   ],
-  "intent_preserved": true,
-  "stage_outputs_present": ["research_summary", "improved_prompt", "video_script"],
-  "revision_round": 1,
-  "max_revision_rounds": 2,
-  "summary": "Verbatim hook, scheduling beats, clip K screen, countdown, rush, and CTA all preserved; house table and mandatory hashtags present; no video generated."
+  "promo_quality_gate_checks": {
+    "first_spoken_line_meets_hook_rules": true,
+    "hook_text": "Arre! Saamaan pada-pada kharab ho raha hai!",
+    "hook_word_count": 7,
+    "meelte_spoken_count": 4,
+    "first_meelte_by_7s": true,
+    "core_purpose_clear": true,
+    "exact_ending_cta_used": true,
+    "store_badges_specified": true,
+    "exact_25_seconds": true,
+    "total_spoken_words": 52,
+    "no_prohibited_claims": true,
+    "acted_customers_as_story": true,
+    "ai_disclosure_noted": true,
+    "hook_count_match": true
+  },
+  "issues": [],
+  "summary": "The regenerated script for VID-2026-0001 fully satisfies all 8 quality gate criteria for meelTe app promotion videos."
 }

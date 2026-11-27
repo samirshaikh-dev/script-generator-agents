@@ -56,7 +56,7 @@ Mandatory hashtags in every video — the union of the mandatory set in `refernc
 
 - Conversational, natural, human language. Read it aloud before finalising.
 - Address real audience problems, interests, emotions, and experiences.
-- Avoid sounding like an advertisement.
+- Avoid sounding like an advertisement (Exception: see meelTe App Promotion Rule Override below).
 - Focus on storytelling, relatable situations, and practical value.
 - Include the engagement question inside the content.
 - Create curiosity and emotional connection.
@@ -64,6 +64,22 @@ Mandatory hashtags in every video — the union of the mandatory set in `refernc
 - Avoid generic motivational statements and unnecessary corporate language.
 - No invented price, statistic, testimonial, deadline, guarantee, or result.
 - This skill produces a text script only. No video is generated, rendered, or returned.
+
+## meelTe App Promotion Rule Override
+
+When scripting a **meelTe app promotion video**:
+- **Timing & Length:** Exactly 25 seconds. Keep total spoken dialogue to about 55 words or fewer so it fits comfortably.
+- **Fixed Beat Sheet:**
+  - `0–3s`: Hook (loud, relatable problem in everyday Hinglish, <= 8 words, e.g. "Arre! Saamaan pada-pada kharab ho raha hai!"). Unsold good stock, strong reaction.
+  - `3–7s`: Friend suggests meelTe; shopkeeper asks what it is. **First mention of "meelTe" must happen by 7s.**
+  - `7–11s`: One plain line explaining the app: nearby people see local offers.
+  - `11–16s`: Real app recording: set price, start date, end date. (No start/end times or countdown clock; dates run 12:00 AM to 11:59 PM).
+  - `16–20s`: A customer arrives and says they saw the offer on meelTe.
+  - `20–25s`: End card and download voiceover. Clean hold, no music under voiceover.
+- **Brand Mentions:** Speak "meelTe" aloud **3 to 4 times** across the video (including the ending). On screen: "meelTe". Pronounce: "milday".
+- **Ending CTA:** Voiceover exact: *"Download the meelTe app. Now available on Play Store and App Store."* On screen: meelTe logo, "Download meelTe", Play Store & App Store badges.
+- **Product Facts:** No payments processing claims; no footfall/reach analytics claims; no self-serve onboarding claims; no cities unless confirmed; customer is an acted story, not a real testimonial.
+- **Output Additions:** Include AI video prompts (shared base block + per shot prompts) in the package. Any engagement question goes in the social caption only.
 
 ## Procedure
 
