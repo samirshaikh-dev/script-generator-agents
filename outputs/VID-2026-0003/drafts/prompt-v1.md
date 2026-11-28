@@ -1,57 +1,44 @@
-# Improved Production-Ready Prompt — VID-2026-0003
+# Improved Prompt — VID-2026-0003 (meelTe App Promotion)
 
-- **Request ID:** VID-2026-0003
-- **Intent Anchor (Verbatim):**
-> •	Hook (0-3s): An empty shop at noon, the owner on his phone. Sad music.
-> •	Script: He sees hearts and comments appearing on his ad. A customer comments: "Kitne ka hai?" He replies, and the music turns upbeat. Next scene: the same customer is at the counter.
-> •	Phone screen (clip B): The heart and comment counters on an ad card, tapped from the feed.
-> •	CTA: "Likes today, customers tomorrow. Meelte."
+- **Intent Anchor (Original Input Verbatim):**
+  > •	Hook (0-3s): An empty shop at noon, the owner on his phone. Sad music.
+  > •	Script: He sees hearts and comments appearing on his ad. A customer comments: "Kitne ka hai?" He replies, and the music turns upbeat. Next scene: the same customer is at the counter.
+  > •	Phone screen (clip B): The heart and comment counters on an ad card, tapped from the feed.
+  > •	CTA: "Likes today, customers tomorrow. Meelte."
 
-- **Concept:** "Likes to Footfall" — Highlighting the direct bridge between local online engagement on meelTe and real customers walking through the door. A slow afternoon turns lively when digital interest turns into in-store footfall.
-- **Goal:** Build Connection (Objective 1), Build Trust (Objective 2), and Drive Participation (Objective 5).
-- **Audience:** Independent local business owners who feel discouraged during quiet afternoon hours, wondering if local online posting actually converts to real store visits.
-- **Tone:** Starts with quiet, relatable midday vulnerability, transitions into warm optimism, energetic connection, and owner pride; Hinglish dialogue, brand script voice.
-- **Key Message:** Engagement on meelTe isn't empty scrolling — nearby neighbours who tap like and comment today walk in as customers tomorrow.
-- **Production Parameters:**
-  - Duration: 22 seconds.
-  - Format: 9:16 vertical short.
-  - Language: Hinglish dialogue, English CTA.
-  - Setting: Authentic neighbourhood retail shop (footwear/apparel or lifestyle store) counter and entrance.
-  - Characters: Shop Owner (Anil, 38, relatable and hardworking) and Local Customer (Pooja, 22, cheerful neighbourhood resident).
+- **Concept:** A neighborhood shopkeeper sitting in an empty store at noon is frustrated that nobody is coming in. A tech-savvy friend suggests meelTe, explains that nearby people discover local offers on their phones, guides him to set an offer price and calendar dates, and a local customer walks in having seen the offer on meelTe.
+- **Duration:** Exactly 25 seconds.
+- **Platform:** Vertical 9:16 short.
+- **Language:** Everyday Hinglish dialogue; English closing voiceover.
+- **Setting:** Authentic Indian neighborhood retail store (footwear/crockery/general retail) with shelves full of good, unsold stock.
+- **Characters:**
+  - Manoj (Shopkeeper, mid-40s, sitting behind counter, expressive).
+  - Sunny (Friend/younger neighbor, 25, cheerful, holding phone).
+  - Pooja (Customer, late 20s, local shopper holding phone).
 
-- **Beat Sheet:**
-  - Beat 1 (0-3s): Hook. Wide shot of an empty shop at noon. Ceiling fan turns slowly. Anil sits behind the counter gazing quietly at his phone. Slow, minor-key acoustic music plays. Dialogue: Anil (soft sigh / mutter): "Dopahar ke do baje... dukaan bilkul shant." Phone screen: None.
-  - Beat 2 (3-8s): The Turn / Engagement. Push in on Anil's phone screen. Hearts start popping on his posted meelTe ad card; the heart counter increments (e.g. 14 → 28). The comment bubble counter lights up. Anil perks up, eyes widening. Phone screen: Clip B — Heart and comment counters incrementing on the meelTe ad card tapped from the feed.
-  - Beat 3 (8-13s): Direct Conversation / Upbeat Shift. A new comment notification slides in: Pooja: "Bhaiya, ye blue wala kitne ka hai?" Anil grins, immediately taps reply: "₹650 madam, shop pe ready hai!" The music instantly transitions to an upbeat, lively acoustic groove. Phone screen: Clip B — Comment thread expanding, Anil's fast reply typing.
-  - Beat 4 (13-18s): The Real-World Payoff. Door chime rings ("ding-dong"). Anil looks up from the counter. Pooja walks into the shop, phone in hand showing that exact meelTe ad. Dialogue: Pooja: "Bhaiya! Maine hi meelTe pe comment kiya tha — blue wala pack kardo!" Anil beams with pride, handing it over: "Aapke liye hi nikaal ke rakha tha!" Phone screen: None (physical customer holding phone).
-  - Beat 5 (18-22s): Clean Call to Action & End Card. Clean meelTe purple/orange end card with app download button. Upbeat music drops to silence so the CTA lands clean and crisp. CTA Voiceover: "Likes today, customers tomorrow. meelTe." Phone screen: None (meelTe official end card).
+### Beat Sheet (Target: 25s, ~55 spoken words)
+- `0–3s` (Hook): Shopkeeper Manoj looks around his quiet shop in loud frustration.
+  - Dialogue: Manoj: *"Dukaan bhari hai, customer gayab!"* (5 words)
+  - On-screen text: *"Dukaan bhari hai, customer gayab?"*
+  - Visual: Loud, relatable reaction, throwing hands up looking at full shelves of good inventory.
+- `3–7s` (Friend suggests meelTe): Sunny enters from the doorway holding up his phone.
+  - Dialogue: Sunny: *"Bhaiya, meelTe pe offer daalo na!"* Manoj: *"Yeh meelTe kya hai?"* (10 words)
+  - On-screen text: *"meelTe?"*
+- `7–11s` (Core value proposition): Sunny explains clearly.
+  - Dialogue: Sunny: *"Aas-paas ke log aapka offer phone pe dekh lenge!"* (9 words)
+  - On-screen text: *"Aas-paas ke log dekhenge offer"*
+- `11–16s` (Real app demonstration): Over-the-shoulder recording of real meelTe app.
+  - Dialogue: Manoj: *"Achha! Offer price daali... start aur end date set!"* (9 words)
+  - Phone screen: Real screen recording of meelTe: Enter Offer Price $\to$ Select Start & End Date (No times, no countdown).
+  - On-screen text: *"Price & Dates set!"*
+- `16–20s` (Customer arrival via meelTe): Pooja enters the shop holding her phone.
+  - Dialogue: Pooja: *"Bhaiya, meelTe pe aapka offer dekha. Yeh pack kar do!"* (10 words)
+  - Manoj: *"Arey waah!"* (2 words)
+  - On-screen text: *"meelTe offer dekha!"*
+- `20–25s` (End card & download CTA): Clean hold on branded end card.
+  - Spoken Voiceover (Exact): *"Download the meelTe app. Now available on Play Store and App Store."* (12 words)
+  - Total dialogue words: 5 + 10 + 9 + 9 + 12 + 12 = 57 words (comfortably fits 25s pacing).
+  - Spoken "meelTe" mentions: 4 times (Sunny at 4s, Manoj at 6s, Pooja at 17s, VO at 21s). First mention at 4s (well before 7s).
 
-- **Transitions:** Slow atmospheric tilt into phone (0-3s), match cut into phone screen close-up (3s), snap pop animation with musical tempo change (8s), lively cut to entrance door chime (13s), clean wipe to official end card (18s).
-- **Music & Sound:**
-  - 0-8s: Somber, slow acoustic guitar / piano notes emphasizing the quiet afternoon lull.
-  - 8s mark: Musical shift — lively drum beat and cheerful guitar riff kick in as comment arrives.
-  - 13s: Real shop chime sound effect ("ding-dong").
-  - 18s: Audio drops out completely for clear CTA voiceover.
-- **On-Screen Text:**
-  - 0-3s: "Dopahar 2 baje... dukaan khali?"
-  - 3-8s: "❤️ Hearts & Comments Rising!"
-  - 8-13s: "Comment: 'Kitne ka hai?'"
-  - 13-18s: "Online Like → Dukaan Pe Footfall!"
-  - 18-22s: "Likes today, customers tomorrow. meelTe."
-- **CTA Voiceover:** "Likes today, customers tomorrow. meelTe."
-- **Caption:** "Dopahar ki shanti se mat ghabraiye! 📱 meelTe pe ad daliye — aaj jo neighbours like aur comment kar rahe hain, kal wahi dukaan pe aayenge. Apni dukaan ka ad aaj hi post karo!"
-- **Mandatory Hashtags:** `#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
-- **Preserved Elements:**
-  - Empty shop at noon hook with owner on phone and sad music.
-  - Hearts and comments appearing on ad card.
-  - Verbatim comment: "Kitne ka hai?" and owner's reply.
-  - Music turning upbeat upon reply.
-  - Next scene: same customer physically at the counter.
-  - Phone screen: Clip B (heart and comment counters on an ad card, tapped from feed).
-  - Verbatim CTA: "Likes today, customers tomorrow. meelTe." (Casing corrected per Brand Rule 13).
-- **Added Specifications:**
-  - 22-second duration allocation for complete narrative pacing.
-  - Character names and natural Hinglish spoken dialogue lines.
-  - Explicit audio transition timestamp and sound cues.
-  - Community engagement question for comments.
-- **Claims to Verify:** None. No ungrounded figures or discount claims introduced.
+- **On-Screen End Card:** meelTe logo, "Download meelTe", official Google Play Store and Apple App Store badges.
+- **Audio & Music:** Starts with brief quiet acoustic strum, builds into cheerful groove in beats 2–5, cuts out completely at 20.0s for clear end card VO.

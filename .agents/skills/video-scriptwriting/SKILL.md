@@ -76,6 +76,10 @@ When scripting a **meelTe app promotion video**:
   - `11–16s`: Real app recording: set price, start date, end date. (No start/end times or countdown clock; dates run 12:00 AM to 11:59 PM).
   - `16–20s`: A customer arrives and says they saw the offer on meelTe.
   - `20–25s`: End card and download voiceover. Clean hold, no music under voiceover.
+- **Anti-Repetition & Colloquial Phrasing:**
+  - **No boilerplate cloning:** Never reuse identical dialogue lines or staging across scripts (e.g. do not repeat *"Bhaiya, meelTe pe offer daalo na!"* or *"Aas-paas ke log aapka offer phone pe dekh lenge!"*).
+  - Every script must ground the secondary character's entrance, dialogue, and interaction in the specific merchant context (e.g. buying a drink, dropping off a delivery, a regular neighbor chatting, looking at a specific item).
+  - Express the core value proposition (nearby people discovering offers) using fresh, everyday Hindi/Hinglish idioms and colloquial phrasing tailored to the shop type.
 - **Brand Mentions:** Speak "meelTe" aloud **3 to 4 times** across the video (including the ending). On screen: "meelTe". Pronounce: "milday".
 - **Ending CTA:** Voiceover exact: *"Download the meelTe app. Now available on Play Store and App Store."* On screen: meelTe logo, "Download meelTe", Play Store & App Store badges.
 - **Product Facts:** No payments processing claims; no footfall/reach analytics claims; no self-serve onboarding claims; no cities unless confirmed; customer is an acted story, not a real testimonial.

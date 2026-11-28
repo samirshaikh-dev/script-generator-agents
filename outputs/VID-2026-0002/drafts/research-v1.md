@@ -1,34 +1,34 @@
-# Research Summary — VID-2026-0002
+# Research Summary — VID-2026-0002 (meelTe App Promotion Override)
 
-- **Request ID:** VID-2026-0002
 - **Original Input (Verbatim):**
-> Discount Badge Magic" (20 sec)
-> •	Hook (0-3s): A kurta on a hanger with a price tag of ₹999. Voiceover: "Discount dena hai, par dikhana kaise?"
-> •	Script: He types the original price ₹999 and the discounted price ₹749 in the ad. A green "25% OFF" badge pops up on the card by itself. A customer scrolling the feed stops right there.
-> •	Phone screen (clips K and B): The Pricing fields, then the finished card with the struck-through price and the OFF badge.
-> •	CTA: "Enter two prices. Meelte shows the discount."
+  > Discount Badge Magic" (20 sec)
+  > • Hook (0-3s): A kurta on a hanger with a price tag of ₹999. Voiceover: "Discount dena hai, par dikhana kaise?"
+  > • Script: He types the original price ₹999 and the discounted price ₹749 in the ad. A green "25% OFF" badge pops up on the card by itself. A customer scrolling the feed stops right there.
+  > • Phone screen (clips K and B): The Pricing fields, then the finished card with the struck-through price and the OFF badge.
+  > • CTA: "Enter two prices. Meelte shows the discount."
 
-- **Observed Facts:**
-  - Duration: 20 seconds.
-  - Working concept: "Discount Badge Magic".
-  - Opening hook (0-3s): Kurta on a hanger with ₹999 price tag. Voiceover: "Discount dena hai, par dikhana kaise?"
-  - Core action: Shopkeeper types original price ₹999 and discounted price ₹749 in the ad creation screen.
-  - Automation highlight: A green "25% OFF" badge pops up on the card automatically (calculated from (999-749)/999 ≈ 25%).
-  - Customer payoff: A customer scrolling the feed stops immediately on the badge.
-  - Phone screens specified: Clip K (Pricing fields) and Clip B (Finished card with struck-through ₹999, discounted ₹749, and green "25% OFF" badge).
-  - CTA: "Enter two prices. meelTe shows the discount." (Note: Verbatim input used "Meelte", corrected to "meelTe" per Brand Rule 13).
+- **Video Type:** meelTe App Promotion Video (Subject to meelTe app promotion pipeline overrides).
 
-- **Goal:** Drive Participation & Create Awareness — Show local shop owners that showcasing discounts does not require graphic design, poster printing, or percentage math. Just entering two prices creates an eye-catching, feed-stopping discount badge.
-- **Audience:** Local apparel, boutique, and retail store owners who run sales or seasonal discounts, and nearby neighbourhood shoppers looking for genuine bargains.
-- **Tone:** Warm, relatable, practical, empowering, Hinglish dialogue with clear benefit-led English CTA; respectful and celebratory of the local business owner.
-- **Key Message:** Enter two prices; meelTe automatically calculates the discount and displays an eye-catching green badge that stops scrolling customers.
-- **Missing Details (Assumptions):**
-  - Setting: Bright, authentic local garment/kurta shop with apparel racks. (Assumed for visual authenticity).
-  - Characters: 1 shopkeeper (approachable, friendly, 30s-40s) + 1 young neighbour/customer browsing phone. (Assumed for story clarity).
-  - Platform: Short-form vertical video (9:16 - Instagram Reels / YouTube Shorts). (Assumed per project house standard).
-  - Language: Hinglish dialogue + English CTA voiceover. (Assumed from hook and CTA format).
-  - Audio/Music: Playful acoustic rhythm with a soft magical 'chime' pop when the badge appears, clearing completely for the CTA. (Assumed for timing/engagement).
+- **Observed Facts & Adjustments:**
+  - Topic: Local boutique/apparel shop owner wanting to show a discount (Original price ₹999, Offer price ₹749) to nearby customers without designing banners or calculating percentages.
+  - Previous draft was 20 seconds, opened with a generic voiceover ("Discount dena hai, par dikhana kaise?"), had only 2 spoken mentions of meelTe (neither before 7s), and used a legacy CTA ("Enter two prices. meelTe shows the discount.").
+  - In accordance with the meelTe app promotion overrides:
+    1. Duration must be **exactly 25 seconds** with ~55 spoken words.
+    2. Hook (0–3s) must be a loud, relatable shopkeeper problem in everyday Hinglish ($\le 8$ words) paired with a strong visual reaction on unsold good stock (kurta).
+    3. Say "meelTe" aloud **3 to 4 times**, with the first mention occurring by 7s.
+    4. Follow the 6-beat story structure (Hook $\to$ Friend suggests meelTe $\to$ Value prop: nearby people see offers $\to$ Real app screen recording: price & dates $\to$ Customer arrives via meelTe $\to$ End card with exact download VO and both store badges).
+    5. Clean end card hold from 20–25s with total silence under the VO.
+    6. Include AI video prompts (shared base block + per-shot prompts with no AI text/logos/screens).
+    7. No countdown clocks or start/end times (dates only). No payment processing claims.
+
+- **Goal:** Drive downloads of meelTe app by demonstrating how easily a local shopkeeper can post a discount and get nearby shoppers to discover it.
+- **Audience:** Local boutique/clothing shop owners and neighborhood shoppers looking for deals nearby.
+- **Tone:** Loud, relatable, warm, problem-solving everyday Hinglish.
+- **Key Message:** meelTe lets nearby people discover your shop's discounts easily.
+- **Missing Details & Assumptions:**
+  - Setting: Bright, neat local boutique/kurta shop with hung kurtas.
+  - Characters: Shopkeeper Anil (40s, boutique owner), Friend/Associate Rahul (20s, tech-savvy local helper), Customer Neha (late 20s, local shopper).
+  - Duration: Exactly 25s; spoken word budget: $\sim 50\text{--}55$ words.
 - **Claims to Verify:**
-  - No reward coins, vouchers, or external partner claims.
-  - Numeric figures ₹999 and ₹749 are explicitly provided by user. Math check: (999 - 749) / 999 = 250 / 999 = 25.025% -> rounded to "25% OFF". Verified.
-- **Intent Preserved:** True. All elements from user input are preserved verbatim.
+  - Prices ₹999 and ₹749 were supplied in original input.
+  - No payment processing claims; no footfall guarantees.

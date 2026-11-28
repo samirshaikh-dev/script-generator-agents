@@ -77,7 +77,7 @@ Each agent returns the object defined in its skill's Output contract, mirroring 
 ### meelTe App Promotion Delivery Contract Override
 
 For meelTe app promotion videos, the final deliverable `.md` script and its companion `.pdf` contain:
-1. Scene table: Time, What we see, Speaker and dialogue (total ~55 words), On-screen text, Phone screen (real app recording).
+1. Scene table: Time, What we see, Speaker and dialogue (total ~55 words; unique, natural dialogue avoiding boilerplate repetition across scripts), On-screen text, Phone screen (real app recording).
 2. AI Video Prompts:
    - Shared base block (9:16 vertical, photorealistic, setting, fixed character descriptions).
    - One prompt per generated shot.

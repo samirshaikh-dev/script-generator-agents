@@ -1,54 +1,45 @@
-# Improved Production-Ready Prompt — VID-2026-0002
+# Improved Prompt — VID-2026-0002 (meelTe App Promotion)
 
-- **Request ID:** VID-2026-0002
-- **Intent Anchor (Verbatim):**
-> Discount Badge Magic" (20 sec)
-> •	Hook (0-3s): A kurta on a hanger with a price tag of ₹999. Voiceover: "Discount dena hai, par dikhana kaise?"
-> •	Script: He types the original price ₹999 and the discounted price ₹749 in the ad. A green "25% OFF" badge pops up on the card by itself. A customer scrolling the feed stops right there.
-> •	Phone screen (clips K and B): The Pricing fields, then the finished card with the struck-through price and the OFF badge.
-> •	CTA: "Enter two prices. Meelte shows the discount."
+- **Intent Anchor (Original Input Verbatim):**
+  > Discount Badge Magic" (20 sec)
+  > • Hook (0-3s): A kurta on a hanger with a price tag of ₹999. Voiceover: "Discount dena hai, par dikhana kaise?"
+  > • Script: He types the original price ₹999 and the discounted price ₹749 in the ad. A green "25% OFF" badge pops up on the card by itself. A customer scrolling the feed stops right there.
+  > • Phone screen (clips K and B): The Pricing fields, then the finished card with the struck-through price and the OFF badge.
+  > • CTA: "Enter two prices. Meelte shows the discount."
 
-- **Concept:** "Discount Badge Magic" — Demonstrating how effortless it is for a local clothing store owner to create an eye-catching discount ad. Entering two numbers instantly calculates and displays a green 25% OFF badge on the meelTe feed.
-- **Goal:** Drive Participation (Objective 5) & Create Awareness (Objective 4).
-- **Audience:** Local apparel, boutique, and retail shop owners who want more footfall for their offers, plus neighbourhood shoppers.
-- **Tone:** Warm, relatable, authentic, lightly playful, Hinglish dialogue, brand script voice.
-- **Key Message:** Enter two prices; meelTe calculates the discount and displays an eye-catching badge that stops scrolling customers.
-- **Production Parameters:**
-  - Duration: 20 seconds.
-  - Format: 9:16 vertical video.
-  - Language: Hinglish dialogue, English CTA.
-  - Setting: Authentic local clothing shop / boutique with kurtas on display.
-  - Characters: Shopkeeper (Ramesh, 35, warm and practical) and Customer (Neha, 24, scrolling phone at home/cafe nearby).
+- **Concept:** A local boutique owner frustrated that customers aren't seeing his kurta discount discovers meelTe from a younger friend, enters the original ₹999 and discount ₹749 price with offer dates, and welcomes a nearby customer who saw the 25% OFF deal on meelTe.
+- **Duration:** Exactly 25 seconds.
+- **Platform:** Vertical 9:16 short.
+- **Language:** Everyday Hinglish dialogue; English closing voiceover.
+- **Setting:** Authentic Indian neighborhood boutique/garment shop with attractive kurtas on display.
+- **Characters:**
+  - Anil (Shopkeeper, early 40s, boutique owner).
+  - Rahul (Friend/associate, mid-20s, modern look with smartphone).
+  - Neha (Customer, late 20s, local neighborhood resident).
 
-- **Beat Sheet:**
-  - Beat 1 (0-3s): Hook. A stylish kurta on a hanger with a clear paper price tag of ₹999. Voiceover / Shopkeeper: "Discount dena hai, par dikhana kaise?" Phone screen: None.
-  - Beat 2 (3-7s): Action / Input. Behind the counter, Ramesh types the figures into the meelTe app. He enters ₹999 in Original Price, then ₹749 in Discounted Price. Dialogue (Ramesh): "Original 999... aur offer price 749." Phone screen: Clip K — Pricing fields (Original Price: ₹999, Discounted Price: ₹749).
-  - Beat 3 (7-12s): Magic moment / Auto badge. The card preview updates instantly: ₹999 is struck through, ₹749 highlights in bold, and a bright green "25% OFF" badge pops up on the card by itself. Ramesh's face lights up with a pleased grin. Dialogue (Ramesh): "Arre waah! 25% OFF ka badge khud hi lag gaya!" Phone screen: Clip B — Finished card preview with struck-through ₹999, bold ₹749, and green "25% OFF" badge.
-  - Beat 4 (12-16s): Feed payoff / Customer stop. Cut to Neha scrolling quickly through her meelTe nearby feed. Her thumb abruptly freezes right on the green 25% OFF kurta card. She taps it with interest. Dialogue (Neha): "Arre, 25% OFF? Aur dukaan toh bas do gali door hai!" Phone screen: Clip B — Finished card on the nearby feed.
-  - Beat 5 (16-20s): Call to Action & End Card. Clean end card with the meelTe logo lockup and app download pill. Clean VO lands without background music. CTA Voiceover: "Enter two prices. meelTe shows the discount." Phone screen: None (meelTe official end card).
+### Beat Sheet (Target: 25s, ~55 spoken words)
+- `0–3s` (Hook): Shopkeeper Anil holds up a ₹999 kurta on a hanger, visibly frustrated.
+  - Dialogue: Anil: *"Offer diya, par kisi ko pata hi nahi!"* (8 words)
+  - On-screen text: *"Offer diya, par pata nahi?"*
+  - Visual: Loud, relatable reaction pointing to the ₹999 price tag on an attractive unsold kurta.
+- `3–7s` (Friend suggests meelTe): Rahul steps in, points at his phone.
+  - Dialogue: Rahul: *"meelTe pe daal do na bhaiya!"* Anil: *"meelTe kya hai?"* (9 words)
+  - On-screen text: *"meelTe?"*
+- `7–11s` (Core value proposition): Rahul explains clearly.
+  - Dialogue: Rahul: *"Aas-paas ke log aapka discount phone pe dekh lenge!"* (9 words)
+  - On-screen text: *"Aas-paas ke log dekhenge offer"*
+- `11–16s` (Real app demonstration): Over-the-shoulder recording of real meelTe app.
+  - Dialogue: Anil: *"Achha! 999 aur 749 likha... 25% OFF khud ban gaya!"* (10 words)
+  - Phone screen: Real app screen recording of meelTe: Price entry (Original ₹999, Offer ₹749), dates set, green 25% OFF badge pops up. (No times, no countdown).
+  - On-screen text: *"₹999 → ₹749 (25% OFF!)"*
+- `16–20s` (Customer arrival via meelTe): Neha walks into the boutique with phone.
+  - Dialogue: Neha: *"Bhaiya, meelTe pe kurta offer dekha, ye wala dikhana!"* (9 words)
+  - Anil: *"Bilkul madam!"* (2 words)
+  - On-screen text: *"meelTe offer dekha!"*
+- `20–25s` (End card & download CTA): Clean hold on branded end card.
+  - Spoken Voiceover (Exact): *"Download the meelTe app. Now available on Play Store and App Store."* (12 words)
+  - Total dialogue words: 8 + 9 + 9 + 10 + 11 + 12 = 59 words (comfortably fits 25s pacing).
+  - Spoken "meelTe" mentions: 4 times (Rahul at 4s, Anil at 6s, Neha at 17s, VO at 21s). First mention at 4s (well before 7s).
 
-- **Transitions:** Quick snap zoom into tag (0-3s), match cut from hanger tag to phone screen (3s), smooth push-in with pop effect on badge appearance (7s), dynamic swipe cut to scrolling thumb (12s), clean wipe to end card (16s).
-- **Music & Sound:** Warm, modern acoustic-electronic groove. Soft 'ding/pop' sound effect when the green badge appears. Audio clears completely at 16s for the voiceover.
-- **On-Screen Text:**
-  - 0-3s: "Discount kaise dikhayein?"
-  - 3-7s: "Original: ₹999 | Offer: ₹749"
-  - 7-12s: "Auto 25% OFF Badge! ✨"
-  - 12-16s: "Near You — 25% OFF"
-  - 16-20s: "Enter two prices. meelTe shows the discount."
-- **CTA Voiceover:** "Enter two prices. meelTe shows the discount."
-- **Caption:** "Discount dena hai? Calculation chhod do! Bas original aur offer price daalo — meelTe 25% OFF badge khud bana deta hai. 🏷️✨ Apni dukaan ka offer aaj hi post karo!"
-- **Mandatory Hashtags:** `#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
-- **Preserved Elements:**
-  - 20-second duration.
-  - Hook line: "Discount dena hai, par dikhana kaise?" over kurta on hanger with ₹999 tag.
-  - Typing ₹999 and ₹749.
-  - Green "25% OFF" badge popping up automatically.
-  - Customer scrolling feed and stopping.
-  - Clip K (Pricing fields) and Clip B (Finished card with struck-through price and OFF badge).
-  - Verbatim CTA: "Enter two prices. meelTe shows the discount." (Corrected casing per Brand Rule 13).
-- **Added Specifications:**
-  - Character names (Ramesh and Neha) for natural direction.
-  - Specific dialogue lines that sound authentic in Hinglish.
-  - Exact sound design cue for the badge pop.
-  - Engagement moment integrated into caption and on-screen cues.
-- **Claims to Verify:** None. All prices and discounts derived directly from verbatim input.
+- **On-Screen End Card:** meelTe logo, "Download meelTe", official Google Play Store and Apple App Store badges.
+- **Audio & Music:** Warm acoustic track in beats 1-5; completely cuts out at 20.0s for clear end card VO.

@@ -62,12 +62,21 @@ When a script is specifically for a **meelTe app promotion** (introducing meelTe
   - On screen write "meelTe". Pronounce it "milday" (in voice tool input, type "Milday" if needed).
 - **Story Structure (Exactly 25 seconds, vertical, Hinglish):**
   - `0–3s`: Hook: the shopkeeper's problem.
-  - `3–7s`: Friend suggests meelTe; shopkeeper asks what it is.
+  - `3–7s`: Friend/customer/neighbor suggests meelTe; shopkeeper asks what it is.
   - `7–11s`: One plain line explaining the app: nearby people see local offers.
   - `11–16s`: Real app recording: set price, start date, end date.
   - `16–20s`: A customer arrives and says they saw the offer on meelTe.
   - `20–25s`: End card and download voiceover.
   - Keep spoken dialogue to about **55 words total** so it fits 25 seconds comfortably.
+
+- **Anti-Repetition & Organic Dialogue Rules (Strict):**
+  - **No copy-pasting middle beats across scripts:** Beats `3–7s`, `7–11s`, `11–16s`, and `16–20s` must NEVER repeat boilerplate phrases verbatim across different scripts (e.g. do NOT endlessly repeat *"Bhaiya, meelTe pe offer daalo na!"* or *"Aas-paas ke log aapka offer phone pe dekh lenge!"*).
+  - **Contextual Motivations:** Ground the friend/visitor's entrance in the specific shop type and scenario (e.g., stopping by for a cold drink, buying chai, returning an item, admiring the window display, delivering parcels, or a neighboring merchant chatting).
+  - **Varied Natural Hinglish Phrasing:** Express the core concepts in diverse, colloquial ways:
+    - *Introducing the app (3–7s):* e.g., *"Arre Manoj bhaiya, meelTe try kiya?"* / *"Dukaan ka ad meelTe pe kyun nahi daal dete?"* / *"Padosi dukaan wale ne meelTe pe offer lagaya tha, kaafi log aaye!"* / *"Chacha, meelTe app use karo na!"*
+    - *Explaining the value prop (7–11s):* e.g., *"Apne mohalle ke log ghar baithe aapka stock dekh lenge!"* / *"Gali-mohalle ke sabhi phones pe aapki dukaan ka discount dikhega!"* / *"Jo log daily yahan se nikalte hain, unhe phone pe offer dikh jata hai!"* / *"Pados ke grahak ko pata chal jayega ki aapke paas yeh offer hai!"*
+    - *Customer arrival (16–20s):* Give customers distinct motivations, items, and natural reactions tailored to the shop's product.
+  - **Visual & Action Variety:** Vary how the phone is introduced (e.g., peeking at owner's screen, pulling out their own phone, pointing at a neighboring shop, sitting at counter, showing a deal card). Do not repeat identical staging.
 - **Ending (20–25s):**
   - Voiceover, exact: *"Download the meelTe app. Now available on Play Store and App Store."*
   - On screen: meelTe logo, "Download meelTe", official Play Store and App Store badges.
@@ -106,6 +115,7 @@ When a script is specifically for a **meelTe app promotion** (introducing meelTe
   - [ ] Are there no times, countdowns, payment claims, or invented results?
   - [ ] Are acted customers presented as a story, not as real testimonials?
   - [ ] Is AI-generated content labelled where the platform requires it?
+  - [ ] Is dialogue and staging unique to this shop/scenario (no copy-pasted boilerplate phrases from previous scripts)?
 
 ---
 

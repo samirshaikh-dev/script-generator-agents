@@ -66,3 +66,4 @@ For meelTe app promotion videos, the following are **Critical Failures** (verdic
 7. **Testimonial misrepresentation:** Presenting acted customer as a real testimonial.
 8. **Missing AI prompts / bad prompts:** Missing AI video prompts or prompts containing AI text/logos/app screens.
 9. **Hook count mismatch:** Hook library header count does not match the list count.
+10. **Repetitive boilerplate cloning:** Dialogue or scene directions in beats 3–7s or 7–11s copied verbatim from previous scripts rather than crafted for the specific shop scenario.

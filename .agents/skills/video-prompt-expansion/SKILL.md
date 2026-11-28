@@ -110,6 +110,7 @@ When expanding a prompt for a **meelTe app promotion video**:
 - **Brand Mentions:** Ensure "meelTe" is spoken 3 to 4 times across dialogue and CTA VO.
 - **Closing CTA:** Must be exact: *"Download the meelTe app. Now available on Play Store and App Store."*
 - **Word Budget:** Dialogue across beats must stay around ~55 words or fewer.
+- **Organic Dialogue & Specificity:** Do not reuse cookie-cutter lines for middle beats across scripts. Tailor the character's reason for entering, the phrasing of how they introduce meelTe, and how they explain the value proposition to the specific retail category.
 - **Brief Override:** These requirements replace user-supplied hooks or CTAs that violate promo rules; record changes in `added_specifications`.
 - **Product Constraints:** Never include countdowns, start/end times, payment processing, or footfall promises. Carry dates only (12:00 AM to 11:59 PM).
 

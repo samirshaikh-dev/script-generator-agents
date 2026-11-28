@@ -101,6 +101,7 @@ For meelTe app promotion videos, fail the script (`revise`) if ANY of these crit
 - [ ] Are acted customers presented as a story, not as real testimonials?
 - [ ] Is AI-generated content labelled where the platform requires it?
 - [ ] Does the hook count in the hook library header match the number of hooks in the list?
+- [ ] Are beats 3–7s and 7–11s organically written for this specific scenario (not copied boilerplate from previous scripts)?
 
 ## Example
 

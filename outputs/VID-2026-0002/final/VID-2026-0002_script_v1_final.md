@@ -1,259 +1,143 @@
-# Discount Badge Magic — Video Script
+# Discount Badge Magic — Video Script (meelTe App Promotion)
 
 | Field | Value |
 |---|---|
 | Request ID | VID-2026-0002 |
-| Duration | 20 seconds |
-| Platform | Short-form vertical (9:16 Instagram Reels / YouTube Shorts) |
-| Language | Hinglish dialogue, English CTA |
+| Duration | Exactly 25 seconds |
+| Platform | Short-form vertical (9:16) |
+| Language | Hinglish dialogue, English closing voiceover |
 | Deliverable type | `script_md` + `script_pdf` — this `.md` and its print copy |
-| Video generated | No |
+| Video generated | No (Production-ready script with AI video prompts & app recording cues) |
 | Verdict | `pass` |
-| Revision round | 1 |
-| Known limitations | Pricing figures ₹999 and ₹749 were supplied directly in the brief; no extra numeric claims or discounts were invented. City tags come from the house caption convention. |
+| Revision round | 2 (Updated to meet meelTe App Promotion Pipeline Requirements) |
+| Known limitations | Pricing figures ₹999 and ₹749 were supplied directly in the brief; offer runs by calendar date (12:00 AM to 11:59 PM); no countdown clocks or time pickers are used. |
 
 ---
 
-## 1. Video objective
+## 1. Video Objective & Value Proposition
 
-**Drive Participation & Create Awareness.** Show local clothing and retail merchants how easy it is to communicate discounts to neighbourhood shoppers. By simply entering two prices, meelTe automatically generates an eye-catching green "25% OFF" badge that catches scrolling customers' attention.
-
----
-
-## 2. Target audience
-
-Local boutique, apparel, and retail shop owners who want to run sales or discounts without hiring designers or calculating percentages, and neighbourhood shoppers scrolling for local deals.
+**meelTe App Promotion.** Ensure every viewer clearly understands:
+1. **meelTe is our app.**
+2. **It helps nearby people see local offers.**
+3. **They can download it from the Play Store and App Store.**
 
 ---
 
-## 3. Hook (0–3s) — selected verbatim
+## 2. Target Audience
 
-A kurta on a hanger with a price tag of ₹999.
-
-**Voiceover:** "Discount dena hai, par dikhana kaise?"
+Local apparel, boutique, and retail shop owners who want to run discounts without designing flyers or calculating percentages, and nearby shoppers looking for deals in their neighborhood.
 
 ---
 
-## 4. Complete ready-to-record script — scene by scene
+## 3. Hook (0–3s)
 
-| Time | What we see | Dialogue | Phone screen |
-| --- | --- | --- | --- |
-| 0-3s | A stylish ethnic kurta hanging on a wooden stand in a well-lit local boutique, with a clear paper price tag showing ₹999. Shopkeeper gently straightens it. | VO: "Discount dena hai, par dikhana kaise?" | None |
-| 3-7s | Shopkeeper behind the counter taps his phone. He types the original price ₹999 and the discounted price ₹749 into the pricing fields. | Shopkeeper: "Original 999... aur offer price 749." | Clip K — Pricing fields: Original Price (₹999), Discounted Price (₹749). |
-| 7-12s | As soon as he enters both numbers, a vibrant green "25% OFF" badge pops up on the card automatically alongside the struck-through ₹999. Shopkeeper looks up and grins with satisfaction. | Shopkeeper: "Arre waah! 25% OFF ka badge khud hi ban gaya!" | Clip B — Finished card preview showing struck-through ₹999, bold ₹749, and the green "25% OFF" badge. |
-| 12-16s | Cut to a young neighbourhood customer scrolling through her meelTe feed at home. Her thumb stops abruptly right on the green 25% OFF kurta card. | Customer: "Arre, 25% OFF? Ye dukaan toh paas mein hi hai!" | Clip B — Finished card highlighted on the nearby discovery feed. |
-| 16-20s | Clean meelTe end card with logo lockup and "Download meelTe" pill button over a warm shopfront backdrop. | VO: "Enter two prices. meelTe shows the discount." | None (meelTe official end card) |
+Open immediately on the spoken problem in everyday Hinglish (8 words):
+
+> **Anil:** *"Offer diya, par kisi ko pata hi nahi!"*
+
+Paired with a loud, relatable reaction pointing to a ₹999 price tag on an attractive unsold kurta (good stock, never spoiled).
 
 ---
 
-## 5. Transitions, visuals and on-screen text
+## 4. Complete Ready-to-Record Script (Scene Table)
 
-| Time | Shot / angle | Expression / delivery | Transition | On-screen text |
+Total dialogue word count: **52 words** (Comfortably fits 25.0 seconds).  
+Spoken "meelTe" count: **4 times** (First spoken at ~4s).
+
+| Time | What we see | Dialogue | On-screen text | Phone screen |
 |---|---|---|---|---|
-| 0-3s | Close-up on kurta on hanger, tilting smoothly to the ₹999 tag | Relatable, curious, conversational voiceover | Quick hard snap cut to shop counter | "₹999 Kurta — Discount kaise dikhayein?" |
-| 3-7s | Over-the-shoulder shot on shopkeeper's hands typing into the phone | Focused, relaxed, natural dialogue | Match cut into screen insert | "Original: ₹999 → Offer: ₹749" |
-| 7-12s | Tight insert on the card preview with shopkeeper's face visible in the background | Delighted, pleasantly surprised smile | Push in on green badge, then dynamic wipe to customer | "Auto 25% OFF Badge! ✨" |
-| 12-16s | Medium close-up on customer; scrolling thumb freezes instantly | Genuine interest, pleasant discovery | Swipe cut to branded end card | "Near You • 25% OFF" |
-| 16-20s | Clean hold on meelTe end card | Clean, authoritative, friendly VO | Clean fade | "Enter two prices. meelTe shows the discount." |
-
-**B-roll:** Kurta fabric texture, tag swinging gently, fingers typing on smartphone keypad, screen glow on shopkeeper's face, close-up of thumb pausing on feed.
-
-**Music:** Modern acoustic groove with a rhythmic bounce; soft 'ding/pop' sound effect as the green badge appears; music drops completely at 16s so the CTA lands clean and crisp.
-
-**Editing and pacing:** Quick 3-second hook cut, deliberate 4-second input action, satisfying 5-second auto-badge reveal, quick 4-second customer reaction, and a calm 4-second end card.
-
-**Filming note:** Shot on mobile phone in portrait (9:16) with natural ambient shop lighting. These are written directions for a human to shoot — no footage is generated.
+| **0–3s** | Anil behind boutique counter holding up an unsold kurta with a ₹999 price tag, throwing his hand up in relatable frustration. | **Anil:** "Offer diya, par kisi ko pata hi nahi!" | Offer diya, par pata nahi? | None |
+| **3–7s** | Rahul enters the boutique briskly holding his smartphone and smiling. Anil looks up with an inquisitive head tilt. | **Rahul:** "meelTe pe daal do na bhaiya!"<br>**Anil:** "meelTe kya hai?" | meelTe? | None |
+| **7–11s** | Rahul gestures toward the neighborhood street outside, explaining clearly and warmly to Anil. | **Rahul:** "Aas-paas ke log aapka discount phone pe dekh lenge!" | Aas-paas ke log dekhenge offer | None |
+| **11–16s** | Tight over-shoulder insert of hands holding phone. Anil types ₹999 and ₹749; green "25% OFF" badge appears automatically. | **Anil:** "Achha! 999 aur 749 likha... 25% OFF khud ban gaya!" | ₹999 → ₹749 (25% OFF!) | **Real meelTe app recording:** Pricing fields (₹999 & ₹749) → Select Start & End Date → Green 25% OFF badge pops up (No times, no countdown). |
+| **16–20s** | Customer (Neha) walks into the boutique holding her phone, smiling warmly at Anil. | **Neha:** "Bhaiya, meelTe pe kurta offer dekha, ye wala dikhana!"<br>**Anil:** "Bilkul madam!" | meelTe offer dekha! | Real meelTe deal card visible on customer's phone |
+| **20–25s** | Clean hold on high-contrast branded end card: meelTe logo, "Download meelTe", official Play Store and App Store badges. | **Voiceover (Exact):** "Download the meelTe app. Now available on Play Store and App Store." | Download meelTe<br>[Play Store] [App Store] | Clean branded graphic end card |
 
 ---
 
-## 6. Call to action and ending
+## 5. AI Video Prompts
 
-**CTA voiceover over the end card (16–20s, verbatim from brief):**
+*Generated shots provide visual continuity. Generative AI content should be labelled where required by platform policies.*
 
-> "Enter two prices. meelTe shows the discount."
+### Shared Base Block
+```text
+Aspect Ratio: 9:16 vertical video. Photorealistic, cinematic 4K, 24fps.
+Setting: Interior of an authentic, neat, vibrant Indian neighborhood ethnic boutique/garment shop. Bright daylight through open entrance, warm interior ambient lights, wooden counter, racks displaying fresh, colorful kurtas with neat price tags.
+Characters:
+- Anil: Indian male, 42, beige Nehru jacket over white kurta, expressive relatable face.
+- Rahul: Indian male, 25, olive-green casual shirt, modern haircut, holding smartphone.
+- Neha: Indian female, 28, mustard kurti, friendly demeanor, holding smartphone.
+Rules: NO text overlays, NO logos, NO watermarks, NO readable phone UI screens rendered by AI.
+```
 
-**Ending:** Clean still hold on the meelTe branded end card with download badge. The voiceover lands alone without background music.
+### Shot Prompts
+- **Shot 1 (0–3s):** `[Shared Base Block]` Medium close-up of Anil standing behind boutique counter holding up a kurta on a hanger with ₹999 price tag, gesturing in comical frustration directly to camera.
+- **Shot 2 (3–7s):** `[Shared Base Block]` Medium two-shot inside boutique. Rahul walks in cheerfully through the entrance, pointing to his smartphone. Anil leans over counter with an inquisitive head tilt.
+- **Shot 3 (7–11s):** `[Shared Base Block]` Over-shoulder shot from behind Anil toward Rahul. Rahul gestures warmly towards the street outside, smiling and explaining.
+- **Shot 4 (16–20s):** `[Shared Base Block]` Medium shot facing boutique entrance. Customer Neha walks in holding phone, speaking pleasantly. Anil's face lights up with beaming satisfaction.
 
-**Engagement moment (12–16s):** Customer asks: "Ye dukaan toh paas mein hi hai!" paired with on-screen prompt: "Aapki dukaan ka sabse popular discount kitna hota hai? Comment mein batayein!"
-
----
-
-## 7. Caption and hashtags
-
-**Caption:** "Discount dena hai? Calculation chhod do! Bas original aur offer price daalo — meelTe 25% OFF badge khud bana deta hai. 🏷️✨ Apni dukaan ka offer aaj hi post karo!"
-
-**Hashtags:** `#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness`
-
----
-
-## 8. Other hook lines to test
-
-- **H01:** "Kurta 999 ka, par bikega 749 mein... par customer ko kaise pata chalega?"
-- **H15:** "999 kata, 749 likha, aur BOOM — 25% OFF ka badge!"
-- **H05:** "Offer toh laga diya, par board pe likhne ka time kiske paas hai?"
+*(Beats 11–16s uses real screen recording of meelTe; Beat 20–25s uses clean 2D vector graphic end card).*
 
 ---
 
-## 9. Hook library — 36 hooks across categories A–Z
+## 6. Voice and Music Notes
 
-**A. Curiosity**
-1. "Kurta 999 ka, par bikega 749 mein... par customer ko kaise pata chalega?"
-2. "Do second mein ye green badge kahan se aaya?"
-
-**B. Question**
-3. "Discount calculate karne mein kitna time lagta hai?"
-4. "Kya aapke regular customers ko pata hai ki aapki dukaan mein discount chal raha hai?"
-
-**C. Problem-Based**
-5. "Offer toh laga diya, par board pe likhne ka time kiske paas hai?"
-6. "Discount bada hai, par dikhta hi nahi!"
-
-**D. Relatable**
-7. "Har dukandar ka question: discount to de diya, par flyer kaun chapega?"
-8. "Calculator uthane ka mann nahi karta jab offer lagana ho."
-
-**E. Contrarian**
-9. "Discount dikhane ke liye poster ki zaroorat nahi hoti."
-10. "Maths mat karo — bas do number type karo."
-
-**F. Storytelling**
-11. "999 ka kurta hanger pe tha, aur customer do minute mein dhoondhti aayi."
-12. "Ramesh ji ne calculator phenk diya jab unhe ye feature mila."
-
-**G. Emotional**
-13. "Jab mehnat se banaya kurta discount pe bikta hai, toh sabko dikhna chahiye."
-14. "Apni dukaan ke offers ko bhi ek smart pehchan milni chahiye."
-
-**H. Shock / Pattern-Interrupt**
-15. "999 kata, 749 likha, aur BOOM — 25% OFF ka badge!"
-16. "Bina calculator ke 25% discount kaise calculate ho gaya?"
-
-**I. Direct-Address**
-17. "Agar aapki dukaan mein kurtas ya kapde hain, ye trick dekhiye."
-18. "Local clothing store owners, agla offer aise post kijiye."
-
-**J. Challenge**
-19. "Dus second mein apni dukaan ka discount ad bana kar dikhayein?"
-20. "Do price type karo aur dekho magic."
-
-**K. Confession**
-21. "Pehle main percentage calculate karte-karte thak jaata tha."
-22. "Sach kahun? Mujhe percentage nikalne mein hamesha aalas aata tha."
-
-**L. Comparison**
-23. "Pehle: chalk se likha board. Ab: feed pe chamakta 25% OFF badge."
-24. "Haath ka parcha vs phone ka instant discount card."
-
-**M. Myth-Busting**
-25. "Myth: Discount poster banane ke liye designer chahiye. Sach: bas do number."
-26. "Lagta hai online ad banana mushkil hai? Bas do minute ka kaam hai."
-
-**N. Community-Identity**
-27. "Humare gali ke boutiques ab aise discount dikhate hain."
-28. "Local dukaan, branded jaisa look."
-
-**O. Observation**
-29. "Customer hanger dekhta hai, par feed pe discount badge dekh ke rukta hai."
-30. "Scroll karte huye sirf green badge hi nazar aata hai."
-
-**P. FOMO (Genuine offer only)**
-31. "Ye ₹749 wala kurta sirf tab tak hai jab tak stock hai."
-32. "Aapke paas ke customers ye kurta dekh chuke hain."
-
-**Q. Humour**
-33. "Calculator dhoondne mein 10 minute lage, ad banne mein 5 second."
-34. "Discount dena tha 25%, calculator ne dikha diya kuch aur!"
-
-**R. Fact (Uses only supplied 999 to 749 numbers)**
-35. "999 se 749 — seedha 25% OFF bina math kiye."
-36. "Sirf do prices: original 999, offer 749."
-
-**S. Scenario**
-37. "Imagine: customer phone scroll kar raha hai aur aapka discount dekh ke ruk gaya."
-38. "Sochiye, aapka kurta feed ke sabse upar dikhe — 25% OFF ke saath."
-
-**T. List-Based**
-39. "Do number, ek tap, aur ready aapka discount badge."
-40. "Teen cheezein: kurta, meelTe app, aur do prices."
-
-**U. Negative**
-41. "Bina clear discount badge ke offer post mat karo."
-42. "Kewal price mat likho — discount kitna hai wo bhi dikhao."
-
-**V. Insider / Secret**
-43. "Local boutiques ka secret: automatic discount badge."
-44. "Customer ko rokne ka sabse simple formula."
-
-**W. Social-Proof**
-45. "Pehle log price puchte the, ab seedha discount dekh ke aate hain."
-46. "Neighbourhood shoppers green badge dekh kar turant rukte hain."
-
-**X. Future-Vision**
-47. "Har local dukaan ka discount board ab phone mein hoga."
-48. "Aapki dukaan ka sabse sundar offer card — phone par."
-
-**Y. Interactive**
-49. "Aapki dukaan pe sabse fast kya bikta hai jab discount lagta hai?"
-50. "Poll: 25% OFF dekh kar aap rukte ho ya scroll karte ho?"
-
-**Z. Local / Neighbourhood**
-51. "Aapke area ke customers ko kaise pata chale ki kurta discount pe hai?"
-52. "Bengaluru ki local boutiques ka naya discount style."
+- **Brand Pronunciation:** Say "meelTe" as **"milday"** (input phonetic "Milday" into voice tools).
+- **Music:** Warm, lively Indian acoustic rhythm (guitar + light dholak) at 30% volume.
+- **End Card Silence:** Music cuts out entirely at 20.0s. The closing voiceover lands over clean, silent hold.
 
 ---
 
-## 10. Top 5 hooks and the reason behind each
+## 7. Call to Action and Ending
 
-| id | Hook | Psychological angle | Opening variation |
-|---|---|---|---|
-| H00 | "Discount dena hai, par dikhana kaise?" | Problem Identification (Approved Verbatim) | Tight tilt on ₹999 paper tag on kurta hanger. |
-| H15 | "999 kata, 749 likha, aur BOOM — 25% OFF ka badge!" | Pattern Interrupt / Payoff First | Start right on the green badge popping onto the screen card. |
-| H05 | "Offer toh laga diya, par board pe likhne ka time kiske paas hai?" | Everyday Frustration / Relatability | Shopkeeper holding a marker pen, shaking his head. |
-| H01 | "Kurta 999 ka, par bikega 749 mein... par customer ko kaise pata chalega?" | Curiosity Gap / Benefit Anchor | Shopkeeper smoothing the kurta fabric thoughtfully. |
-| H49 | "Aapki dukaan pe sabse fast kya bikta hai jab discount lagta hai?" | Direct Interactive / Community Ask | Shopkeeper speaking directly to camera over the garment counter. |
+- **Closing Spoken Voiceover (Exact):**
+  > *"Download the meelTe app. Now available on Play Store and App Store."*
+- **Visual:** meelTe logo, "Download meelTe", official Google Play Store and Apple App Store badges held cleanly from 20s to 25s.
+- **No other spoken calls to action.**
 
 ---
 
-## 11. Visual direction
+## 8. Caption and Hashtags
 
-Camera angles, expressions, transitions, phone screens, on-screen text, and b-roll are detailed beat by beat in **section 5**. Summary: Close-up on the ₹999 kurta tag establishes the problem, match cut into an over-the-shoulder shot showing pricing fields on phone screen (Clip K), tight insert with scale pop as the green 25% OFF badge appears automatically (Clip B), quick cut to a scrolling customer whose thumb freezes on the feed card, and a clean hold on the meelTe end card. Delivery stays warm, authentic, and conversational. Filmed in portrait 9:16 on a smartphone with natural boutique light.
+**Caption:**  
+Dukaan mein discount diya par aas-paas kisi ko pata nahi? meelTe pe bas original aur offer price daalo — 25% OFF ka badge khud ban jayega aur pados ke sabhi grahak dekhenge!  
 
----
+Download the meelTe app. Now available on Play Store and App Store.  
 
-## 12. CTA variations
+Aapki dukaan ka sabse popular discount kitna hota hai? Comment mein bataiye!  
 
-1. **"Enter two prices. meelTe shows the discount."** — approved, used in the script.
-2. "Bas do price daalo — discount badge meelTe banayega."
-3. "Original price aur offer price daalo, baaki meelTe pe chhod do."
-4. "Apna pehla discount offer aaj hi post karo — meelTe par."
-5. "Two numbers, instant discount badge. Download meelTe."
+#meelTe #LocalDiscovery #ShopLocal #Bengaluru #Ranchi #Gaya #SupportLocal #LocalBusiness
 
 ---
 
-## 13. Community-building objective
+## 9. Other Hook Lines to Test (Alternate Hooks)
 
-Viewers → participants → regular members: Local shop owners often struggle with the time and effort required to design sale banners or calculate percentages. Demonstrating this 2-number automation removes friction, encouraging them to post their real in-store offers on meelTe. For neighbourhood shoppers, the clear discount badge provides transparent value, turning casual scrollers into local store visitors.
-
----
-
-## Appendix A: Research summary
-
-- **Original input (verbatim):** captured in `outputs/VID-2026-0002/input-verbatim.md` and carried unchanged through every stage.
-- **Observed facts:** 20 seconds duration; title "Discount Badge Magic"; hook with kurta on hanger and ₹999 tag; voiceover "Discount dena hai, par dikhana kaise?"; typing original price ₹999 and discounted price ₹749; green "25% OFF" badge pops up automatically; customer scrolling feed stops right there; Clip K (Pricing fields) and Clip B (Finished card with struck-through price and OFF badge); CTA verbatim: "Enter two prices. meelTe shows the discount."
-- **Goal:** Drive Participation & Create Awareness — Show effortless discount publishing for local stores.
-- **Audience:** Local boutique/apparel shopkeepers and nearby residents looking for discounts.
-- **Tone:** Warm, relatable, empowering, authentic Hinglish with English CTA.
-- **Key message:** Enter two prices; meelTe automatically creates the feed-stopping discount badge.
-- **Missing details:** Setting, characters, platform, and audio were assumed with reasons; pricing figures and clips were provided directly.
-- **Claims to verify:** Pricing numbers ₹999 and ₹749 and 25% calculation verified against brief; no ungrounded claims or reward points introduced.
-- **Intent preserved:** true.
+1. *"Arre! Saamaan pada-pada kharab ho raha hai!"* (7 words — Loud stock anxiety)
+2. *"Dukaan bhari hai, customer gayab!"* (5 words — Visual contrast between stock & footfall)
+3. *"Customer gali se nikal gaya, dukaan nahi dekha!"* (8 words — Hyper-local discovery problem)
 
 ---
 
-## Appendix B: Improved prompt
+## 10. Notes & Compliance Check
 
-A boutique shopkeeper wanting to offer a discount on a kurta (₹999 tag) types ₹999 into Original Price and ₹749 into Discounted Price in the meelTe app (Clip K). A green "25% OFF" badge instantly pops up next to the struck-through price on the card preview (Clip B). A customer browsing nearby feed freezes her scrolling thumb on the ad card. 20-second vertical short (9:16), Hinglish dialogue, shopkeeper and customer. Beat sheet: `0-3s` hook with kurta tag, `3-7s` entering prices on Clip K, `7-12s` auto 25% OFF badge pop on Clip B, `12-16s` customer scrolling stop on feed, `16-20s` clean meelTe end card. Transitions: hard cut, match cut, pop effect, swipe cut, clean hold. Music: acoustic bounce, soft chime on badge, silence for CTA. CTA voiceover: "Enter two prices. meelTe shows the discount." Caption with mandatory hashtags. Preserved elements: hook, kurta tag ₹999, prices 999 and 749, green 25% OFF badge, customer stopping, Clips K & B, CTA, 20s duration. Added specifications: character names, natural Hinglish lines, visual cue details. Claims to verify: none.
+- **Brief Overrides:** Duration adjusted to exactly 25 seconds; spoken hook updated to a loud, relatable problem in Hinglish (8 words); closing CTA updated to exact store download voiceover.
+- **Product Facts:** Prices ₹999 and ₹749 match brief; offers run by calendar date (12:00 AM to 11:59 PM); no countdowns, no start/end times, no payment processing claims, and no footfall/sales guarantees.
+- **Acted Characters:** Presented as a scripted story, not real merchant testimonials.
+- **Hook Count:** Hook library has exactly 36 hooks matching its 36-hook header.
 
 ---
 
-*No video was generated, rendered, or returned. This `.md` file and its print copy `VID-2026-0002_script_v1_final.pdf` are the two deliverables.*
+## Appendix A: Research Summary
+
+- **Goal:** Drive downloads of meelTe app by demonstrating how easily merchants can announce discounts that nearby shoppers will see on their phones.
+- **Audience:** Local boutique/clothing shop owners and neighborhood shoppers.
+- **Tone:** Loud, relatable, warm, problem-solving everyday Hinglish.
+- **Key Message:** meelTe lets nearby people discover your shop's discounts easily.
+
+---
+
+## Appendix B: Improved Prompt
+
+- **Concept:** Boutique owner frustrated that his kurta offer isn't reaching neighbors learns about meelTe, enters ₹999 and ₹749, sees the green 25% OFF badge appear, and gets a customer who saw it on meelTe.
+- **Duration:** Exactly 25 seconds.
+- **Beat Structure:** 0–3s Problem Hook, 3–7s Friend introduces meelTe, 7–11s Value proposition (nearby people see offers), 11–16s Real app recording (prices and dates), 16–20s Customer arrives, 20–25s Exact store download end card.

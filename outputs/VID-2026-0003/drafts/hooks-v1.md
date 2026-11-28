@@ -1,129 +1,118 @@
-# Hook Library — VID-2026-0003
+# Hook Library — 36 Hooks Across Categories A–Z
 
-Topic: Likes Today, Customers Tomorrow (Online engagement converting to local shop footfall)
-Duration: 22s
-Audience: Local small business owners experiencing quiet afternoon hours & local shoppers
+Total hooks generated: 36 (Count matches header exactly).
+MeelTe App Promotion Rule Applied: All hooks focus on loud, relatable shopkeeper problems in everyday Hinglish (8 words or fewer).
 
-## Selected Hook (Verbatim Input)
-- **H00:** An empty shop at noon, the owner on his phone. Sad music.
-  - *Spoken Line / Thought:* "Dopahar ke do baje... dukaan bilkul shant."
+### Top 5 Recommended Hooks for meelTe App Promotion:
+1. **[Recommended] Hook #6 (C. Problem-Based):**
+   - *Text:* "Dukaan bhari hai, customer gayab!" (5 words)
+   - *Psychological Angle:* Visual contrast between fully stocked shelves and an empty shop floor.
+   - *Opening Variation:* [Throwing hands up in disbelief at empty shop counter] "Dukaan bhari hai, customer gayab!"
+2. **Hook #5 (C. Problem-Based):**
+   - *Text:* "Arre! Saamaan pada-pada kharab ho raha hai!" (7 words)
+   - *Psychological Angle:* Urgency & anxiety over capital tied up in unsold retail inventory.
+   - *Opening Variation:* [Gesturing at packed product shelves] "Arre! Saamaan pada-pada kharab ho raha hai!"
+3. **Hook #7 (C. Problem-Based):**
+   - *Text:* "Offer diya, par kisi ko pata hi nahi!" (8 words)
+   - *Psychological Angle:* Merchant frustration when in-store offers aren't seen by neighborhood foot traffic.
+   - *Opening Variation:* [Pointing at counter offer poster] "Offer diya, par kisi ko pata hi nahi!"
+4. **Hook #15 (H. Pattern-Interrupt):**
+   - *Text:* "Bheed bahar hai, meri dukaan khali kyun?" (7 words)
+   - *Psychological Angle:* The irony of busy street footfall passing by an unnoticed shop.
+   - *Opening Variation:* [Direct to camera with hand on cheek] "Bheed bahar hai, meri dukaan khali kyun?"
+5. **Hook #8 (D. Relatable):**
+   - *Text:* "Customer gali se nikal gaya, dukaan nahi dekha!" (8 words)
+   - *Psychological Angle:* The hyper-local discovery problem where neighbors walk past without noticing deals.
+   - *Opening Variation:* [Looking through shop door at passing crowd] "Customer gali se nikal gaya, dukaan nahi dekha!"
 
 ---
 
-## 36 Hooks Across Categories A–Z
+### Full 36 Hook Pool (Categories A–Z)
 
 **A. Curiosity**
-1. "Dopahar ko phone pe like kiya, aur sham ko dukaan pe khadi thi?"
-2. "Ye digital hearts sach mein dukaan mein cash ban sakte hain?"
+1. "Itna badhiya stock, phir bhi bheed gayab?" (7 words)
+2. "Gali ke log meri dukaan kyun bhool gaye?" (8 words)
 
 **B. Question**
-3. "Dopahar ko jab dukaan khali hoti hai, tab aap kya karte hain?"
-4. "Kya online likes se sach mein dukaan pe customer aata hai?"
+3. "Aapke offer ka pata kisi ko hai kya?" (8 words)
+4. "Stock bhara hai, par customer kahan gaye?" (7 words)
 
 **C. Problem-Based**
-5. "Dopahar ke do baje, pankha chal raha hai... aur dukaan mein sannata."
-6. "Customer dhoondhne ke liye sadak pe thodi khade ho sakte hain?"
+5. "Arre! Saamaan pada-pada kharab ho raha hai!" (7 words)
+6. "Dukaan bhari hai, customer gayab!" (5 words)
+7. "Offer diya, par kisi ko pata hi nahi!" (8 words)
 
 **D. Relatable**
-7. "Har dukandar ka dopahar ka waqt: counter pe baith ke phone scroll karna."
-8. "Jab market mein koi na ho, toh lagta hai aaj ka din gaya."
+8. "Customer gali se nikal gaya, dukaan nahi dekha!" (8 words)
+9. "Offer lagaya board pe, dekha kisi ne nahi!" (8 words)
 
 **E. Contrarian**
-9. "Online likes sirf timepass nahi hain — ye kal ke customers hain."
-10. "Dukaan khali hai, iska matlab business band nahi hai."
+10. "Bada board lagane se customer nahi aate!" (7 words)
+11. "Discount bada hai, par dikh kisi ko nahi!" (8 words)
 
 **F. Storytelling**
-11. "12 baje comment aaya 'Kitne ka hai?', aur 4 baje wahi customer counter pe tha."
-12. "Anil ji ne socha tha dopahar kharab gayi... par phone ne sab badal diya."
+12. "Subah se baithe hain, boney tak nahi hui!" (8 words)
+13. "Tyohar ka stock laya, sab counter pe pada!" (8 words)
 
 **G. Emotional**
-13. "Khali dukaan dekh ke darr lagta hai, par ek comment umeed jagata hai."
-14. "Pehle lagta tha hum akele hain, ab poora mohalla phone pe juda hai."
+14. "Mehnat poori ki, par dukaan ab bhi khali!" (8 words)
 
 **H. Shock / Pattern-Interrupt**
-15. "Sad music baj raha tha... aur achanak hearts ki barsaat ho gayi!"
-16. "Khali counter pe achanak 'Kitne ka hai?' ka notification aaya."
+15. "Bheed bahar hai, meri dukaan khali kyun?" (7 words)
+16. "Arre baap re! Yeh stock kab bikega?" (7 words)
 
 **I. Direct-Address**
-17. "Agar aapki dukaan dopahar ko sunsaan lagti hai, ye zaroor dekhiye."
-18. "Local shopkeepers, aapke mohalle ke log abhi phone pe hain."
+17. "Shopkeeper bhai, aapka offer padosi ko pata hai?" (8 words)
+18. "Agar dukaan mein sale hai, ye turant dekho!" (8 words)
 
 **J. Challenge**
-19. "Apni dukaan ka ek photo dalo, aur dekho dopahar kaise badalti hai."
-20. "Test karke dekho: ek ad aur do replies."
+19. "Apna offer pure mohalle ko dikha ke dekho!" (8 words)
 
 **K. Confession**
-21. "Mujhe lagta tha likes se kya hota hai... jab tak pehla customer nahi aaya."
-22. "Main bhi sochta tha ki online post se log dukaan kyun aayenge."
+20. "Sach bolun? Stock dekh ke darr lagta hai!" (8 words)
 
 **L. Comparison**
-23. "Pehle: khali baithe intezaar. Ab: comments pe customer se baat."
-24. "Gali ka board vs phone ka active card."
+21. "Padosi ki dukaan full, meri dukaan khali!" (7 words)
 
 **M. Myth-Busting**
-25. "Myth: Online likes se sales nahi hoti. Sach: Paas wale hi like karte hain!"
-26. "Lagta hai online marketing mushkil hai? Bas ek comment ka reply dena hai."
+22. "Online customer ke liye website banana zaroori nahi!" (8 words)
 
 **N. Community-Identity**
-27. "Humare mohalle ki dukaan ab neighbourhood ke feed pe live hai."
-28. "Local shop, local phone, local customer."
+23. "Apne mohalle ke log hi offer nahi jante!" (8 words)
 
 **O. Observation**
-29. "Log sadak pe nahi dikh rahe kyunki sab phone pe hain."
-30. "Jab dopahar mein dhoop hoti hai, log phone se dukaan explore karte hain."
+24. "Grahak phone dekh rahe hain, dukaan nahi!" (7 words)
 
 **P. FOMO**
-31. "Aapke paas wale customers abhi dusri dukaan ka ad dekh rahe hain."
-32. "Mohalle ke log puch rahe hain: 'ye kahan milega?'"
+25. "Offer nikal jayega, kisi ko khabar nahi hogi!" (8 words)
 
 **Q. Humour**
-33. "Pankha ghoom raha tha, dimaag ghoom raha tha... aur phone ne bacha liya!"
-34. "Sad music ko beat drop banne mein bas ek comment laga."
+26. "Stock se dukaan pack, customer pata nahi kahan!" (8 words)
 
-**R. Fact**
-35. "Nearby discovery feed pe paas ke log hi react karte hain."
-36. "Har like ek potential customer ka darwaaza hai."
+**R. Data/Fact**
+27. "Pados ke log roz nikalte hain bina dekhe!" (8 words)
 
 **S. Scenario**
-37. "Imagine: dopahar ko notification aaye aur sham ko customer counter pe."
-38. "Socho, jisne like kiya wahi agle din 'bhaiya' bolte huye dukaan mein aaye."
+28. "Festival aaya, par dukaan mein sannata chhaya!" (7 words)
 
 **T. List-Based**
-39. "Teen steps: photo dalo, comment ka reply do, customer ko welcome karo."
-40. "Ek post, teen hearts, ek comment, ek customer."
+29. "Dukaan khali hone ki sabse badi wajah ye!" (8 words)
 
 **U. Negative**
-41. "Khali time mein bekaar mat baitho — offer post karo."
-42. "Sirf dukaan kholna kaafi nahi hai, phone pe dikhna zaroori hai."
+30. "Board lagane se grahak nahi aate ab!" (7 words)
 
-**V. Insider / Secret**
-43. "Local shopkeepers ka smart move: dopahar ko active hona."
-44. "Customer ko counter tak lane ka sabse tez tareeka."
+**V. Insider/Secret**
+31. "Padosi grahak lane ka asli tareeqa ye hai!" (8 words)
 
 **W. Social-Proof**
-45. "Customer ne kaha: 'Bhaiya, maine aapka meelTe post dekha tha!'"
-46. "Mohalle wale pehle ad dekhte hain, phir seedha lene aate hain."
+32. "Mohalle wale pooch rahe hain offer kahan hai?" (8 words)
 
 **X. Future-Vision**
-47. "Kal ki har dukaan ka customer pehle phone pe baat karega."
-48. "Aapki dukaan ka counter aur mohalle ka phone — seedha connection."
+33. "Aaj offer daalo, kal subah bheed dekho!" (7 words)
 
 **Y. Interactive**
-49. "Aapki dukaan ka sabse quiet time kaunsa hota hai? 12 to 3 ya 2 to 5?"
-50. "Kya aapke kisi online customer ne dukaan aakar bola hai 'Maine ad dekha tha'?"
+34. "Aapki dukaan pe bhi stock pada rehta hai?" (8 words)
 
-**Z. Local / Neighbourhood**
-51. "Bengaluru ke local shopkeepers ab dopahar ko bhi busy hain."
-52. "Mohalle ki dukaan, mohalle ka customer — meelTe par."
-
----
-
-## Top 5 Hooks
-
-| ID | Hook | Psychological Angle | Opening Variation |
-|---|---|---|---|
-| H00 | "An empty shop at noon, owner on phone. Sad music." | Relatable Reality (Approved Verbatim) | Wide slow push on empty counter and slowly rotating fan. |
-| H11 | "12 baje comment aaya 'Kitne ka hai?', aur 4 baje wahi customer counter pe tha." | Storytelling Curiosity | Fast split-screen: phone notification on left, customer entering on right. |
-| H05 | "Dopahar ke do baje, pankha chal raha hai... aur dukaan mein sannata." | Shared Pain Point Recognition | Close-up of wall clock at 2:00 PM ticking slowly. |
-| H09 | "Online likes sirf timepass nahi hain — ye kal ke customers hain." | Contrarian Reframe | Cut from a tap on heart button to customer handing cash. |
-| H49 | "Aapki dukaan ka sabse quiet time kaunsa hota hai? 12 to 3 ya 2 to 5?" | Direct Community Engagement | Shopkeeper directly addressing camera with an understanding smile. |
+**Z. Local/Neighbourhood**
+35. "Aas-paas ke logon ko aapka discount dikhao!" (7 words)
+36. "Gali ke grahak ko dukaan tak kaise layein?" (8 words)
